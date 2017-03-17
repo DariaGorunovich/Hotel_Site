@@ -31,10 +31,10 @@ public class DatabaseAccess extends HttpServlet {
                 out.println("<td>" + resultSet.getInt("beds_count") + "</td>");
                 out.println("<td>" + resultSet.getDouble("cost_per_day") + "</td>");
                 out.println("<td>" + resultSet.getString("additional_inf") + "</td>");
-//                out.println("<td>" + resultSet.getString("surname") + "</td>");
                 out.println("</tr>");
             }
             out.println("</table>");
+            connect.close();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
