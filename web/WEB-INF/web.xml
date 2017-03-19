@@ -5,7 +5,7 @@
          version="3.1">
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext.xml</param-value>
+        <param-value>WEB-INF/applicationContext.xml</param-value>
     </context-param>
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -21,7 +21,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>DatabaseAccess</servlet-name>
-        <servlet-class>com.aliaksey.DatabaseAccess</servlet-class>
+        <servlet-class>com.aliaksey.controller.DatabaseAccess</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DatabaseAccess</servlet-name>

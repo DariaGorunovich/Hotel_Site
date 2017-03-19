@@ -1,4 +1,4 @@
-package com.aliaksey;
+package com.aliaksey.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
