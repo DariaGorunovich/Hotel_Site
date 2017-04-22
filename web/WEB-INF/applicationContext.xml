@@ -10,4 +10,8 @@
         <!--<mvc:resources mapping="/resources/**" location="/resources/themeBlue" />-->
         <!--<mvc:resources mapping="/resources/**" location="/resources/themeGreen" />-->
      <!--&ndash;&gt;-->
+
+    <!--use int RestController to produce pretty json response-->
+
+
 </beans>

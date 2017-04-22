@@ -58,7 +58,7 @@ public class Room implements Serializable {
         this.phone = phone;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "Room")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "room")
     public Set<Reservation> getReservations() {
         return this.reservations;
     }
@@ -67,7 +67,7 @@ public class Room implements Serializable {
         this.reservations = reservations;
     }
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "Room")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "room")
     public Set<UserRoom> getUserRooms() {
         return  this.userRooms;
     }

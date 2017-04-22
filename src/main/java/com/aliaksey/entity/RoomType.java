@@ -23,7 +23,7 @@ public class RoomType implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "restroom_type_id", unique = true, nullable = false)
+    @Column(name = "room_type_id", unique = true, nullable = false)
     public Integer getRoomTypeId() {
         return this.roomTypeId;
     }
@@ -87,7 +87,7 @@ public class RoomType implements Serializable {
         this.additionalInformation = additionalInformation;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "room_type")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "roomType")
     public Set<Room> getRooms() {
         return this.rooms;
     }

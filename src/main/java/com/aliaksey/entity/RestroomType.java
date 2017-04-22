@@ -16,6 +16,7 @@ public class RestroomType implements Serializable{
     private ToiletType toiletType;
     private Integer toiletsCount;
     private Integer bathroomsCount;
+    private String name;
     private Set<RoomType> roomTypes = new HashSet<RoomType>(0);
 
     @Id
@@ -27,6 +28,15 @@ public class RestroomType implements Serializable{
 
     public void setRestroomTypeId(Integer restroomTypeId) {
         this.restroomTypeId = restroomTypeId;
+    }
+
+    @Column(name = "name", nullable = false)
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Column(name = "toilet_type", nullable = false)
@@ -48,7 +58,7 @@ public class RestroomType implements Serializable{
         this.toiletsCount = toiletsCount;
     }
 
-    @Column(name = "bathrooms_count", nullable = false)
+    @Column(name = "bathromms_count", nullable = false)
     public Integer getBathtoomsCount() {
         return this.bathroomsCount;
     }
@@ -57,7 +67,7 @@ public class RestroomType implements Serializable{
         this.bathroomsCount = bathtoomsCount;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restroom_type")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "restroomType")
     public Set<RoomType> getRoomTypes() {
         return  this.roomTypes;
     }

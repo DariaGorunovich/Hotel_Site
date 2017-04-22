@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="spp_hotels_db@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="spp_hotels_db">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mydb"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="spp_hotels_db_ver2"/>
+    <schema id="8" parent="1" name="spp_hotels_db_ver4"/>
+    <schema id="9" parent="1" name="sys"/>
+    <table id="10" parent="2" name="auth"/>
+    <table id="11" parent="2" name="reservation"/>
+    <table id="12" parent="2" name="restroom_type"/>
+    <table id="13" parent="2" name="review"/>
+    <table id="14" parent="2" name="role"/>
+    <table id="15" parent="2" name="room"/>
+    <table id="16" parent="2" name="room_type"/>
+    <table id="17" parent="2" name="transaction"/>
+    <table id="18" parent="2" name="user"/>
+    <table id="19" parent="2" name="user_has_role"/>
+    <table id="20" parent="2" name="user_has_room"/>
+    <column id="21" parent="10" name="auth_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="22" parent="10" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="10" name="email">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="10" name="password_hash">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="25" parent="10" name="fk_auth_user1_idx">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="26" parent="10" name="PRIMARY">
+      <ColNames>auth_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="27" parent="10" name="fk_auth_user1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="28" parent="11" name="reservation_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="11" name="transaction_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="11" name="room_number">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="11" name="user_id">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="11" name="date-in">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="11" name="date-out">
+      <Position>6</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="34" parent="11" name="fk_Reservation_Room1_idx">
+      <ColNames>room_number</ColNames>
+    </index>
+    <index id="35" parent="11" name="fk_Reservation_transaction1_idx">
+      <ColNames>transaction_id</ColNames>
+    </index>
+    <index id="36" parent="11" name="fk_Reservation_user1_idx">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="37" parent="11" name="PRIMARY">
+      <ColNames>reservation_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="38" parent="11" name="fk_Reservation_transaction1">
+      <ColNames>transaction_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>transaction</RefTableName>
+      <RefColNames>transaction_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="39" parent="11" name="fk_Reservation_Room1">
+      <ColNames>room_number</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>room</RefTableName>
+      <RefColNames>room_number</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="40" parent="11" name="fk_Reservation_user1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="41" parent="12" name="restroom_type_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="12" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="12" name="toilet_type">
+      <Position>3</Position>
+      <DataType>enum(&apos;Combined&apos;, &apos;Not_combined&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="12" name="toilets_count">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="12" name="bathromms_count">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="12" name="restroom_type_id_UNIQUE">
+      <ColNames>restroom_type_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="12" name="PRIMARY">
+      <ColNames>restroom_type_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="48" parent="12" name="restroom_type_id_UNIQUE">
+      <ColNames>restroom_type_id</ColNames>
+      <UnderlyingIndexName>restroom_type_id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="49" parent="13" name="review_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="13" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="13" name="text">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="13" name="date">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="13" name="mark">
+      <Position>5</Position>
+      <DataType>enum(&apos;Like&apos;, &apos;Dislike&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="54" parent="13" name="fk_review_user1_idx">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="55" parent="13" name="PRIMARY">
+      <ColNames>review_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="56" parent="13" name="fk_review_user1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="57" parent="14" name="role_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="58" parent="14" name="role_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="59" parent="14" name="PRIMARY">
+      <ColNames>role_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="15" name="room_number">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="61" parent="15" name="room_type_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="15" name="floor">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="15" name="phone">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="64" parent="15" name="fk_Room_room_type1_idx">
+      <ColNames>room_type_id</ColNames>
+    </index>
+    <key id="65" parent="15" name="PRIMARY">
+      <ColNames>room_number</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="66" parent="15" name="fk_Room_room_type1">
+      <ColNames>room_type_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>room_type</RefTableName>
+      <RefColNames>room_type_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="67" parent="16" name="room_type_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="68" parent="16" name="restroom_type_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="16" name="room_name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="16" name="blocks_count">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="16" name="beds_count">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="16" name="cost_per_day">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="16" name="additional_inf">
+      <Position>7</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="74" parent="16" name="fk_room_type_restroom_type1_idx">
+      <ColNames>restroom_type_id</ColNames>
+    </index>
+    <index id="75" parent="16" name="room_name_UNIQUE">
+      <ColNames>room_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="76" parent="16" name="room_type_id_UNIQUE">
+      <ColNames>room_type_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="77" parent="16" name="PRIMARY">
+      <ColNames>room_type_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="78" parent="16" name="room_type_id_UNIQUE">
+      <ColNames>room_type_id</ColNames>
+      <UnderlyingIndexName>room_type_id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <key id="79" parent="16" name="room_name_UNIQUE">
+      <ColNames>room_name</ColNames>
+      <UnderlyingIndexName>room_name_UNIQUE</UnderlyingIndexName>
+    </key>
+    <foreign-key id="80" parent="16" name="fk_room_type_restroom_type1">
+      <ColNames>restroom_type_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>restroom_type</RefTableName>
+      <RefColNames>restroom_type_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="81" parent="17" name="transaction_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="82" parent="17" name="date">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="17" name="payment_data">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="84" parent="17" name="PRIMARY">
+      <ColNames>transaction_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="85" parent="18" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="86" parent="18" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="18" name="patronimyc">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="18" name="surname">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="18" name="mobile_phone">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="18" name="sex">
+      <Position>6</Position>
+      <DataType>enum(&apos;Male&apos;, &apos;Female&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="91" parent="18" name="PRIMARY">
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="92" parent="19" name="user_user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="19" name="role_role_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="94" parent="19" name="fk_user_has_role_role1_idx">
+      <ColNames>role_role_id</ColNames>
+    </index>
+    <index id="95" parent="19" name="fk_user_has_role_user1_idx">
+      <ColNames>user_user_id</ColNames>
+    </index>
+    <key id="96" parent="19" name="PRIMARY">
+      <ColNames>user_user_id
+role_role_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="97" parent="19" name="fk_user_has_role_user1">
+      <ColNames>user_user_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="98" parent="19" name="fk_user_has_role_role1">
+      <ColNames>role_role_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>role</RefTableName>
+      <RefColNames>role_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="99" parent="20" name="user_room_number_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="20" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="20" name="room_number">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="20" name="date-in">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="103" parent="20" name="date-out">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="104" parent="20" name="fk_user_has_Room_Room1_idx">
+      <ColNames>room_number</ColNames>
+    </index>
+    <index id="105" parent="20" name="fk_user_has_Room_user1_idx">
+      <ColNames>user_id</ColNames>
+    </index>
+    <index id="106" parent="20" name="user_room_number_id_UNIQUE">
+      <ColNames>user_room_number_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="107" parent="20" name="PRIMARY">
+      <ColNames>user_id
+room_number
+user_room_number_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="108" parent="20" name="user_room_number_id_UNIQUE">
+      <ColNames>user_room_number_id</ColNames>
+      <UnderlyingIndexName>user_room_number_id_UNIQUE</UnderlyingIndexName>
+    </key>
+    <foreign-key id="109" parent="20" name="fk_user_has_Room_user1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>user_id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="110" parent="20" name="fk_user_has_Room_Room1">
+      <ColNames>room_number</ColNames>
+      <RefSchemaName>spp_hotels_db</RefSchemaName>
+      <RefTableName>room</RefTableName>
+      <RefColNames>room_number</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Aliaksey
@@ -11,6 +12,23 @@
     <title>Title</title>
 </head>
 <body>
-    index
+<table border="1">
+
+    <th>FirstName</th>
+    <th>Surname</th>
+    <th>Patronimyc</th>
+    <th>mobilePhone</th>
+
+    <c:forEach var="user" items="${users}">
+        <tr>
+
+            <td>${user.firstName}</td>
+            <td>${user.surname}</td>
+            <td>${user.patronimyc}</td>
+            <td>${user.mobilePhone}</td>
+        </tr>
+    </c:forEach>
+</table>
+
 </body>
 </html>

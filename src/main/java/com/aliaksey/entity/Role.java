@@ -1,5 +1,8 @@
 package com.aliaksey.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -12,22 +15,22 @@ import java.util.Set;
 @Table(name = "role")
 public class Role implements Serializable{
 
-    private Integer roleId;
+    private Integer id;
     private String roleName;
     private Set<User> users = new HashSet<User>(0);
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "role_id", unique = true, nullable = false)
-    public Integer getRoleId() {
-        return  this.roleId;
+    public Integer getId() {
+        return  this.id;
     }
 
-    public void setRoleId(Integer roleId) {
-        this.roleId = roleId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "role")
+    @ManyToMany(mappedBy = "roles")
     public Set<User> getUsers() {
         return this.users;
     }

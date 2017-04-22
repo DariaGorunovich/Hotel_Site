@@ -58,7 +58,7 @@ public class Review implements Serializable{
     }
 
     @Column(name = "mark", nullable = false)
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     public ReviewMark getReviewMark() {
         return this.reviewMark;
     }

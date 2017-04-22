@@ -1,5 +1,10 @@
 package com.aliaksey.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -13,16 +18,21 @@ import java.util.Set;
 public class User implements Serializable {
 
     private Integer userId;
-    private Role role;
     private String firstName;
     private String patronimyc;
     private String surname;
     private String mobilePhone;
     private UserSex userSex;
-    private Set<Review> reviews = new HashSet<Review>(0);
-    private Set<Reservation> reservations = new HashSet<Reservation>(0);
-    private Set<UserRoom> userRooms = new HashSet<UserRoom>(0);
     private Auth auth;
+
+    private Set<Role> roles = new HashSet<Role>(0);
+
+    private Set<Review> reviews = new HashSet<Review>(0);
+
+    private Set<Reservation> reservations = new HashSet<Reservation>(0);
+
+    private Set<UserRoom> userRooms = new HashSet<UserRoom>(0);
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,8 +41,8 @@ public class User implements Serializable {
         return this.userId;
     }
 
-    public void setUserId(Integer transactionId) {
-        this.userId = transactionId;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     @Column(name = "first_name", nullable = false, length = 45)
@@ -72,7 +82,7 @@ public class User implements Serializable {
     }
 
     @Column(name = "sex", nullable = false)
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     public UserSex getUserSex() {
         return this.userSex;
     }
@@ -81,7 +91,7 @@ public class User implements Serializable {
         this.userSex = userSex;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "User")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     public Set<Reservation> getReservations() {
         return this.reservations;
     }
@@ -90,17 +100,17 @@ public class User implements Serializable {
         this.reservations = reservations;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "role_id", nullable = false)
-    public Role getRole() {
-        return this.role;
+    @ManyToMany
+    @JoinTable(name = "user_has_role", joinColumns = @JoinColumn(name = "user_user_id"), inverseJoinColumns = @JoinColumn(name = "role_role_id"))
+    public Set<Role> getRoles() {
+        return this.roles;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
-    @OneToOne(fetch = FetchType.LAZY,mappedBy = "User")
+    @OneToOne(fetch = FetchType.LAZY,mappedBy = "user")
     public Auth getAuth() {
         return this.auth;
     }
@@ -109,7 +119,7 @@ public class User implements Serializable {
         this.auth = auth;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "User")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     public Set<Review> getReviews() {
         return this.reviews;
     }
@@ -118,7 +128,7 @@ public class User implements Serializable {
         this.reviews = reviews;
     }
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "User")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "user")
     public Set<UserRoom> getUserRooms() {
         return  this.userRooms;
     }

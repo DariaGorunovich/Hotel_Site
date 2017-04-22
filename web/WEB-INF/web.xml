@@ -19,12 +19,12 @@
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>DatabaseAccess</servlet-name>
-        <servlet-class>com.aliaksey.controller.DatabaseAccess</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DatabaseAccess</servlet-name>
-        <url-pattern>/DatabaseAccess</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>DatabaseAccess</servlet-name>-->
+        <!--<servlet-class>com.aliaksey.controller.DatabaseAccess</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>DatabaseAccess</servlet-name>-->
+        <!--<url-pattern>/DatabaseAccess</url-pattern>-->
+    <!--</servlet-mapping>-->
 </web-app>
