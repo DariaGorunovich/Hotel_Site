@@ -1,5 +1,7 @@
 package com.aliaksey.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -12,6 +14,7 @@ import java.util.Date;
 public class UserRoom implements Serializable{
 
     private Integer userRoomNumberId;
+    //@JsonManagedReference
     private User user;
     private Room room;
     private Date dateIn;

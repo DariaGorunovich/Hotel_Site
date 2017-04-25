@@ -1,5 +1,7 @@
 package com.aliaksey.entity;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -10,6 +12,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "restroom_type")
+@Transactional
 public class RestroomType implements Serializable{
 
     private Integer restroomTypeId;
@@ -40,7 +43,7 @@ public class RestroomType implements Serializable{
     }
 
     @Column(name = "toilet_type", nullable = false)
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     public ToiletType getToiletType() {
         return this.toiletType;
     }

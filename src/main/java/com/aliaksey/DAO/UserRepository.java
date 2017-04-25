@@ -1,4 +1,4 @@
-package com.aliaksey.repository;
+package com.aliaksey.DAO;
 
 import com.aliaksey.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

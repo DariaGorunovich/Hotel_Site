@@ -1,5 +1,7 @@
 package com.aliaksey.entity;
 
+import com.aliaksey.controller.Util.CustomSerializer;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -15,7 +17,9 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "user")
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "@Id")
 public class User implements Serializable {
+
 
     private Integer userId;
     private String firstName;
@@ -27,10 +31,11 @@ public class User implements Serializable {
 
     private Set<Role> roles = new HashSet<Role>(0);
 
+    @JsonBackReference
     private Set<Review> reviews = new HashSet<Review>(0);
-
+    @JsonBackReference
     private Set<Reservation> reservations = new HashSet<Reservation>(0);
-
+    //@JsonBackReference
     private Set<UserRoom> userRooms = new HashSet<UserRoom>(0);
 
 
@@ -100,15 +105,16 @@ public class User implements Serializable {
         this.reservations = reservations;
     }
 
-    @ManyToMany
-    @JoinTable(name = "user_has_role", joinColumns = @JoinColumn(name = "user_user_id"), inverseJoinColumns = @JoinColumn(name = "role_role_id"))
-    public Set<Role> getRoles() {
-        return this.roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
+//    @ManyToMany
+//    //@JsonSerialize(using = CustomSerializer.class)
+//    @JoinTable(name = "user_has_role", joinColumns = @JoinColumn(name = "user_user_id"), inverseJoinColumns = @JoinColumn(name = "role_role_id"))
+//    public Set<Role> getRoles() {
+//        return this.roles;
+//    }
+//
+//    public void setRoles(Set<Role> roles) {
+//        this.roles = roles;
+//    }
 
     @OneToOne(fetch = FetchType.LAZY,mappedBy = "user")
     public Auth getAuth() {

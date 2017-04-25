@@ -13,8 +13,8 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "role")
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Role implements Serializable{
-
     private Integer id;
     private String roleName;
     private Set<User> users = new HashSet<User>(0);
@@ -23,21 +23,21 @@ public class Role implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "role_id", unique = true, nullable = false)
     public Integer getId() {
-        return  this.id;
-    }
-
+        return
+    this.id;
+}
     public void setId(Integer id) {
         this.id = id;
     }
 
-    @ManyToMany(mappedBy = "roles")
-    public Set<User> getUsers() {
-        return this.users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
+//    @ManyToMany(mappedBy = "roles")
+//    public Set<User> getUsers() {
+//        return this.users;
+//    }
+//
+//    public void setUsers(Set<User> users) {
+//        this.users = users;
+//    }
 
     @Column(name = "role_name", nullable = false, length = 45)
     public String getRoleName() {

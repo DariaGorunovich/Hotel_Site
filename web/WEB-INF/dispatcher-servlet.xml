@@ -5,20 +5,29 @@
        xmlns:jpa="http://www.springframework.org/schema/data/jpa" xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven>
+        <!--<mvc:message-converters>-->
+            <!--<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+                <!--<property name="objectMapper">-->
+                    <!--<bean class="com.pastelstudios.json.HibernateAwareObjectMapper" />-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</mvc:message-converters>-->
+    </mvc:annotation-driven>
 
-    <context:component-scan base-package="com.aliaksey.controller"/>
+    <context:component-scan base-package="com.aliaksey"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <tx:annotation-driven transaction-manager="transactionManager" />
+    <tx:annotation-driven/>
+    <!--<tx:annotation-driven transaction-manager="transactionManager" />-->
 
-    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="emf"/>
-    </bean>
+    <!--<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">-->
+        <!--<property name="entityManagerFactory" ref="emf"/>-->
+    <!--</bean>-->
 
     <context:property-placeholder location="classpath:jdbc.properties" />
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
@@ -29,20 +38,43 @@
         <property name="password" value="${database.password}"></property>
     </bean>
 
-    <bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="dataSource" ref="dataSource" />
-        <!--Поставщик данных - hibernate-->
-        <property name="jpaVendorAdapter">
-            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+    <!--<bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">-->
+        <!--<property name="dataSource" ref="dataSource" />-->
+        <!--&lt;!&ndash;Поставщик данных - hibernate&ndash;&gt;-->
+        <!--<property name="jpaVendorAdapter">-->
+            <!--<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />-->
+        <!--</property>-->
+        <!--&lt;!&ndash;поиск сущностей в этом пакете&ndash;&gt;-->
+        <!--<property name="packagesToScan" value="com.aliaksey.entity"/>-->
+    <!--</bean>-->
+
+
+
+    <!--<jpa:repositories base-package="com.aliaksey.DAO" entity-manager-factory-ref="emf"-->
+                      <!--transaction-manager-ref="transactionManager"/>-->
+
+    <!-- Hibernate SessionFactory -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+            </props>
         </property>
-        <!--поиск сущностей в этом пакете-->
-        <property name="packagesToScan" value="com.aliaksey.entity"/>
+        <property name="packagesToScan" value="com.aliaksey"></property>
     </bean>
 
+    <!-- Transaction -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
 
-
-    <jpa:repositories base-package="com.aliaksey.repository" entity-manager-factory-ref="emf"
-                      transaction-manager-ref="transactionManager"/>
+    <tx:annotation-driven transaction-manager="transactionManager" />
 
 
      <!--Configure to plugin JSON as request and response in method handler -->
