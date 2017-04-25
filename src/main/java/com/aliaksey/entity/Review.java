@@ -13,7 +13,6 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "review")
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "@Id")
 public class Review implements Serializable{
 
     private Integer reviewId;

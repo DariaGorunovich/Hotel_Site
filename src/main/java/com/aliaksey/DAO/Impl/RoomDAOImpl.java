@@ -5,12 +5,17 @@ import com.aliaksey.entity.Room;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 /**
  * Created by Aliaksey on 25.04.2017.
  */
+
+@Repository
+@Transactional
 public class RoomDAOImpl implements RoomDAO {
     @Autowired
     private SessionFactory sessionFactory;

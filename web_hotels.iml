@@ -28,7 +28,7 @@
         <setting name="provider-name" value="" />
         <datasource-mapping>
           <factory-entry name="noname-a.xml@0" value="6c6fc3ab-fc7f-4fb1-9a38-cafee5763119" />
-          <factory-entry name="sessionFactory" value="afa568ba-42d3-4c6f-8ca8-82e0d03d1be6" />
+          <factory-entry name="sessionFactory" value="a0b2b53d-5621-406c-ac46-db24f9d6ea96" />
         </datasource-mapping>
       </configuration>
     </facet>

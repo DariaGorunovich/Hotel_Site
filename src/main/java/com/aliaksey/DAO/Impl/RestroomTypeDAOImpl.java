@@ -41,7 +41,8 @@ public class RestroomTypeDAOImpl implements RestroomTypeDAO {
     }
 
     public RestroomType update(RestroomType item) {
-        return null;
+        sessionFactory.getCurrentSession().update(item);
+        return item;
     }
 
     public RestroomType get(Integer id) {

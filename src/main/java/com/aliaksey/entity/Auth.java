@@ -1,5 +1,7 @@
 package com.aliaksey.entity;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -46,7 +48,7 @@ public class Auth implements Serializable{
     }
 
     @Column(name = "password_hash", nullable = false, length = 45)
-    public String getPasswordHash() {
+    public String getPasswordHash(String s) {
         return this.passwordHash;
     }
 
