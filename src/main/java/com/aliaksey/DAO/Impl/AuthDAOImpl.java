@@ -1,0 +1,43 @@
+package com.aliaksey.DAO.Impl;
+
+import com.aliaksey.DAO.AuthDAO;
+import com.aliaksey.entity.Auth;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+
+/**
+ * Created by Aliaksey on 25.04.2017.
+ */
+public class AuthDAOImpl implements AuthDAO {
+
+    @Autowired
+    private SessionFactory sessionFactory;
+
+    public void add(Auth item) {
+        sessionFactory.getCurrentSession().persist(item);
+    }
+
+    public List<Auth> getAll() {
+        Session session = sessionFactory.getCurrentSession();
+        List<Auth> authList = session.createQuery("from Auth").list();
+        return authList;
+    }
+
+    public void delete(Integer id) {
+        Auth auth = sessionFactory.getCurrentSession().get(Auth.class, id);
+        if (auth != null)  {
+            this.sessionFactory.getCurrentSession().delete(auth);
+        }
+    }
+
+    public Auth update(Auth item) {
+        return null;
+    }
+
+    public Auth get(Integer id) {
+        return sessionFactory.getCurrentSession().get(Auth.class, id);
+    }
+}

@@ -14,7 +14,6 @@ import java.util.Date;
 public class UserRoom implements Serializable{
 
     private Integer userRoomNumberId;
-    //@JsonManagedReference
     private User user;
     private Room room;
     private Date dateIn;
