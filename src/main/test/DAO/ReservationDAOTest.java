@@ -6,12 +6,16 @@ import com.aliaksey.DAO.TransactionDAO;
 import com.aliaksey.DAO.UserDAO;
 import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Reservation;
+import com.aliaksey.entity.Transaction;
+import org.hibernate.PropertyValueException;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.Date;
 import java.util.List;
@@ -36,11 +40,21 @@ public class ReservationDAOTest {
     @Autowired(required = true)
     public UserDAO userDAO;
 
+
+    @BeforeMethod
+    public Transaction newTransaction() {
+        Transaction transaction = new Transaction();
+        transaction.setDate(new Date());
+        transaction.setPaymentData("Payment Info...");
+        transactionDAO.add(transaction);
+        return  transaction;
+    }
+
     @Test
     public void add() {
         Reservation reservation = new Reservation();
-        reservation.setTransaction(transactionDAO.get(30));
-        reservation.setRoom(roomDAO.get(26));
+        reservation.setTransaction(newTransaction());
+        reservation.setRoom(roomDAO.get(1));
         reservation.setUser(userDAO.get(1));
         reservation.setDateIn(new Date());
         reservation.setDateOut(new Date());
@@ -73,7 +87,7 @@ public class ReservationDAOTest {
 
     @Test
     public void update() {
-        Reservation reservation = reservationDAO.get(2);
+        Reservation reservation = reservationDAO.get(1);
         reservation.setDateIn(new Date());
         reservation.setDateOut(new Date());
         reservationDAO.update(reservation);
@@ -82,19 +96,21 @@ public class ReservationDAOTest {
     @Test
     public void delete() {
 
-        reservationDAO.delete(3);
+        reservationDAO.delete(10000);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = DataIntegrityViolationException.class)
     public void setNegativeId() throws Exception {
         Reservation reservation = new Reservation();
         reservation.setReservationId(-1);
+        reservationDAO.update(reservation);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNullData() throws Exception {
         Reservation reservation = new Reservation();
         reservation.setDateOut(null);
+        reservationDAO.add(reservation);
     }
 
     @Test(expected = NullPointerException.class)
@@ -108,7 +124,7 @@ public class ReservationDAOTest {
                 "\nData_Out: " + reservation.getDateOut());
     }
 
-    @Test(expected = DataIntegrityViolationException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void updateError() throws Exception {
         Reservation reservation = reservationDAO.get(2);
         reservation.setDateIn(new Date(null));

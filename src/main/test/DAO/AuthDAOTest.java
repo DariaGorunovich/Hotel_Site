@@ -3,12 +3,16 @@ package DAO;
 import com.aliaksey.DAO.AuthDAO;
 import com.aliaksey.DAO.UserDAO;
 import com.aliaksey.entity.Auth;
+import com.aliaksey.entity.User;
+import com.aliaksey.entity.UserSex;
+import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.List;
 
@@ -27,12 +31,25 @@ public class AuthDAOTest {
     @Autowired(required = true)
     public UserDAO userDAO;
 
+
+    @BeforeMethod
+    public User newUser() {
+        User user = new User();
+        user.setFirstName("Kirill");
+        user.setPatronimyc("Aleksandrovich");
+        user.setSurname("Sokolov");
+        user.setMobilePhone("1587458");
+        user.setUserSex(UserSex.Male);
+        userDAO.add(user);
+        return user;
+    }
+
     @Test
     public  void add() {
       Auth auth = new Auth();
       auth.setEmail("auth4@gmail.com");
       auth.setPasswordHash("123456");
-      auth.setUser(userDAO.get(15));
+      auth.setUser(newUser());
       authDAO.add(auth);
     }
 
@@ -49,7 +66,7 @@ public class AuthDAOTest {
 
     @Test
     public void getById() {
-        Auth auth = authDAO.get(12);
+        Auth auth = authDAO.get(1);
         System.out.println("\n\nTest result:\nAuth_ID: " + auth.getAuthId() +
                 "\nUser_ID: " + auth.getUser() +
                 "\nE-mail: " + auth.getEmail() +
@@ -59,7 +76,7 @@ public class AuthDAOTest {
 
     @Test
     public void update() {
-        Auth auth = authDAO.get(14);
+        Auth auth = authDAO.get(1);
         auth.setEmail("auth111@gmail.com");
         auth.setPasswordHash("1234");
         authDAO.update(auth);
@@ -68,19 +85,21 @@ public class AuthDAOTest {
     @Test
     public void delete() {
 
-        authDAO.delete(3);
+        authDAO.delete(10000);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = DataIntegrityViolationException.class)
     public void setNegativeId() throws Exception {
         Auth auth = new Auth();
         auth.setAuthId(-1);
+        authDAO.update(auth);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNullData() throws Exception {
         Auth auth = new Auth();
         auth.setEmail(null);
+        authDAO.add(auth);
     }
 
     @Test(expected = NullPointerException.class)
@@ -94,7 +113,7 @@ public class AuthDAOTest {
 
     @Test(expected = DataIntegrityViolationException.class)
     public void updateError() throws Exception {
-        Auth auth = authDAO.get(14);
+        Auth auth = authDAO.get(1);
         auth.setEmail(null);
         auth.setPasswordHash(null);
         authDAO.update(auth);

@@ -3,6 +3,7 @@ package DAO;
 import com.aliaksey.DAO.RoleDAO;
 import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Role;
+import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,14 +43,14 @@ public class RoleDAOTest {
 
     @Test
     public void getById() {
-        Role role = roleDAO.get(20);
+        Role role = roleDAO.get(4);
         System.out.println("\n\nTest result:\nRole_ID: " + role.getId() +
                 "\nRole_Name: " + role.getRoleName());
     }
 
     @Test
     public  void update() {
-        Role role = roleDAO.get(21);
+        Role role = roleDAO.get(4);
         role.setRoleName("User");
         roleDAO.update(role);
     }
@@ -57,19 +58,21 @@ public class RoleDAOTest {
     @Test
     public void delete() {
 
-        roleDAO.delete(3);
+        roleDAO.delete(10000);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNegativeId() throws Exception {
         Role role = new Role();
         role.setId(-1);
+        roleDAO.add(role);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNullData() throws Exception {
         Role role = new Role();
         role.setRoleName(null);
+        roleDAO.add(role);
     }
 
     @Test(expected = NullPointerException.class)
@@ -81,7 +84,7 @@ public class RoleDAOTest {
 
     @Test(expected = DataIntegrityViolationException.class)
     public void updateError() throws Exception {
-        Role role = roleDAO.get(21);
+        Role role = roleDAO.get(4);
         role.setRoleName(null);
         roleDAO.update(role);
     }

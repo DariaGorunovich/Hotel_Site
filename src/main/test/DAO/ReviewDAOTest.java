@@ -6,6 +6,7 @@ import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Review;
 import com.aliaksey.entity.ReviewMark;
 import com.aliaksey.entity.User;
+import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +54,7 @@ public class ReviewDAOTest {
 
     @Test
     public void getById() {
-        Review review = reviewDAO.get(2);
+        Review review = reviewDAO.get(1);
         System.out.println("\n\nTest result:\nReview_ID: " + review.getReviewId() +
                 "\nUser_ID: " + review.getUser() +
                 "\nText: " + review.getText() +
@@ -63,7 +64,7 @@ public class ReviewDAOTest {
 
     @Test
     public  void update() {
-        Review review = reviewDAO.get(18);
+        Review review = reviewDAO.get(1);
         review.setText("AZAZAZAZAZ!");
         review.setDate(new Date());
         review.setReviewMark(ReviewMark.Dislike);
@@ -73,19 +74,21 @@ public class ReviewDAOTest {
     @Test
     public void delete() {
 
-        reviewDAO.delete(3);
+        reviewDAO.delete(10000);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = DataIntegrityViolationException.class)
     public void setNegativeId() throws Exception {
         Review review = new Review();
         review.setReviewId(-1);
+        reviewDAO.update(review);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNullData() throws Exception {
         Review review = new Review();
        review.setReviewMark(null);
+       reviewDAO.add(review);
     }
 
     @Test(expected = NullPointerException.class)
@@ -98,7 +101,7 @@ public class ReviewDAOTest {
                 "\nMark: " + review.getReviewMark());
     }
 
-    @Test(expected = DataIntegrityViolationException.class)
+    @Test(expected = NullPointerException.class)
     public void updateError() throws Exception {
         Review review = reviewDAO.get(18);
         review.setText(null);

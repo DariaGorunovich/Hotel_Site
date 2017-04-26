@@ -3,6 +3,7 @@ package DAO;
 import com.aliaksey.DAO.TransactionDAO;
 import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Transaction;
+import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,15 +45,15 @@ public class TransactionDAOTest {
 
     @Test
     public void getById() {
-        Transaction transaction = transactionDAO.get(30);
+        Transaction transaction = transactionDAO.get(1);
         System.out.println("\n\nTest result:\nTransaction_ID: " + transaction.getTransactionId() +
                 "\nDate: " + transaction.getDate() +
                 "\nPayment_Data: " + transaction.getPaymentData());
     }
 
     @Test
-    public void updates() {
-        Transaction transaction = transactionDAO.get(33);
+    public void update() {
+        Transaction transaction = transactionDAO.get(1);
         transaction.setDate(new Date());
         transaction.setPaymentData("New Payment Info...");
         transactionDAO.update(transaction);
@@ -61,19 +62,21 @@ public class TransactionDAOTest {
     @Test
     public void delete() {
 
-        transactionDAO.delete(3);
+        transactionDAO.delete(10000);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = DataIntegrityViolationException.class)
     public void setNegativeId() throws Exception {
         Transaction transaction = new Transaction();
         transaction.setTransactionId(-9);
+        transactionDAO.update(transaction);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNullData() throws Exception {
         Transaction transaction = new Transaction();
         transaction.setDate(null);
+        transactionDAO.add(transaction);
     }
 
     @Test(expected = NullPointerException.class)
@@ -84,7 +87,7 @@ public class TransactionDAOTest {
                 "\nPayment_Data: " + transaction.getPaymentData());
     }
 
-    @Test(expected = DataIntegrityViolationException.class)
+    @Test(expected = NullPointerException.class)
     public void updateError() throws Exception {
         Transaction transaction = transactionDAO.get(0);
         transaction.setDate(new Date(-1));

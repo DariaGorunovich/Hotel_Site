@@ -5,6 +5,7 @@ import com.aliaksey.DAO.RoomTypeDAO;
 import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Room;
 import com.aliaksey.entity.RoomType;
+import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,14 +26,10 @@ public class RoomTypeDAOTest {
     @Autowired(required = true)
     public RoomTypeDAO roomTypeDAO;
 
-    @Autowired(required = true)
-    public RestroomTypeDAO restroomTypeDAO;
-
     @Test
     public void add() {
         RoomType roomType = new RoomType();
-       // roomType.setRestroomType(restroomTypeDAO.get(25));
-        roomType.setRoomName("SuperRoom1");
+        roomType.setRoomName("SuperRoom");
         roomType.setBlocksCount(3);
         roomType.setBedsCount(3);
         roomType.setCostPerDay(100);
@@ -56,7 +53,7 @@ public class RoomTypeDAOTest {
 
     @Test
     public void getById() {
-        RoomType roomType = roomTypeDAO.get(25);
+        RoomType roomType = roomTypeDAO.get(1);
         System.out.println("\n\nTest result:\nRoom_Type_ID: " + roomType.getRoomTypeId() +
                 //"\nRestroom_Type_ID " + roomType.getRestroomType() +
                 "\nRoom_Name: " + roomType.getRoomName() +
@@ -68,7 +65,7 @@ public class RoomTypeDAOTest {
 
     @Test
     public void update() {
-        RoomType roomType = roomTypeDAO.get(25);
+        RoomType roomType = roomTypeDAO.get(1);
         roomType.setRoomName("WooowRoom");
         roomType.setBlocksCount(10);
         roomType.setBedsCount(3);
@@ -80,19 +77,21 @@ public class RoomTypeDAOTest {
     @Test
     public  void delete() {
 
-        roomTypeDAO.delete(3);
+        roomTypeDAO.delete(10000);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNegativeId() throws Exception {
         RoomType roomType = new RoomType();
         roomType.setRoomTypeId(-100);
+        roomTypeDAO.add(roomType);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNullData() throws Exception {
         RoomType roomType = new RoomType();
-       // roomType.setRestroomType(null);
+        roomType.setRoomName(null);
+        roomTypeDAO.add(roomType);
     }
 
     @Test(expected = NullPointerException.class)
@@ -107,7 +106,7 @@ public class RoomTypeDAOTest {
                 "\nAdditional_Inf: " + roomType.getAdditionalInformation());
     }
 
-    @Test(expected = DataIntegrityViolationException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void updateError() throws Exception {
         RoomType roomType = roomTypeDAO.get(null);
         roomType.setRoomName(null);

@@ -5,6 +5,7 @@ import com.aliaksey.DAO.RestroomTypeDAO;
 import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.RestroomType;
 import com.aliaksey.entity.ToiletType;
+import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +51,7 @@ public class RestroomTypeDAOTest {
 
     @Test
     public void getById() {
-        RestroomType restroomType = restroomTypeDAO.get(15);
+        RestroomType restroomType = restroomTypeDAO.get(1);
         System.out.println("\n\nTest result:\nRestroom_Type_ID: " + restroomType.getRestroomTypeId() +
                 "\nRestroom_Type_Name: " + restroomType.getName() +
                 "\nRestroom_Toilet_Type: " + restroomType.getToiletType() +
@@ -60,7 +61,7 @@ public class RestroomTypeDAOTest {
 
     @Test
     public void update() {
-        RestroomType restroomType = restroomTypeDAO.get(16);
+        RestroomType restroomType = restroomTypeDAO.get(1);
         restroomType.setName("Five+Five");
         restroomType.setBathtoomsCount(5);
         restroomType.setToiletsCount(5);
@@ -70,20 +71,21 @@ public class RestroomTypeDAOTest {
 
     @Test
     public void delete() {
-
-        restroomTypeDAO.delete(4);
+        restroomTypeDAO.delete(1000);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNegativeId() throws Exception {
         RestroomType restroomType = new RestroomType();
         restroomType.setRestroomTypeId(-1);
+        restroomTypeDAO.add(restroomType);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNullData() throws Exception {
         RestroomType restroomType = new RestroomType();
         restroomType.setName(null);
+        restroomTypeDAO.add(restroomType);
     }
 
     @Test(expected = NullPointerException.class)
@@ -98,7 +100,7 @@ public class RestroomTypeDAOTest {
 
     @Test(expected = DataIntegrityViolationException.class)
     public void updateError() throws Exception {
-        RestroomType restroomType = restroomTypeDAO.get(16);
+        RestroomType restroomType = restroomTypeDAO.get(1);
         restroomType.setName(null);
         restroomType.setBathtoomsCount(-1000000);
         restroomType.setToiletsCount(10000000);

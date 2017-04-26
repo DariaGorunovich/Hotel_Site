@@ -5,6 +5,7 @@ import com.aliaksey.DAO.UserDAO;
 import com.aliaksey.DAO.UserHasRoomDAO;
 import com.aliaksey.entity.User;
 import com.aliaksey.entity.UserHasRoom;
+import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class UserHasDAOTest {
     public void add() {
         UserHasRoom userHasRoom = new UserHasRoom();
         userHasRoom.setUser(userDAO.get(1));
-        userHasRoom.setRoom(roomDAO.get(26));
+        userHasRoom.setRoom(roomDAO.get(1));
         userHasRoom.setDateIn(new Date());
         userHasRoom.setDateOut(new Date());
         userHasRoomDAO.add(userHasRoom);
@@ -57,7 +58,7 @@ public class UserHasDAOTest {
 
     @Test
     public void getById() {
-        UserHasRoom userHasRoom = userHasRoomDAO.get(35);
+        UserHasRoom userHasRoom = userHasRoomDAO.get(1);
         System.out.println("\n\nTest result:\nUser_Room_Number_ID: " + userHasRoom.getUserRoomNumberId() +
                 "\nUser_ID: " + userHasRoom.getUser() +
                 "\nRoom_Number: " + userHasRoom.getRoom() +
@@ -67,7 +68,7 @@ public class UserHasDAOTest {
 
     @Test
     public void update() {
-        UserHasRoom userHasRoom = userHasRoomDAO.get(36);
+        UserHasRoom userHasRoom = userHasRoomDAO.get(1);
         userHasRoom.setDateIn(new Date());
         userHasRoom.setDateOut(new Date());
         userHasRoomDAO.update(userHasRoom);
@@ -78,16 +79,18 @@ public class UserHasDAOTest {
         userHasRoomDAO.delete(5);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNegativeId() throws Exception {
         UserHasRoom userHasRoom = new UserHasRoom();
         userHasRoom.setUserRoomNumberId(-1);
+        userHasRoomDAO.add(userHasRoom);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNullData() throws Exception {
         UserHasRoom userHasRoom = new UserHasRoom();
         userHasRoom.setUser(null);
+        userHasRoomDAO.add(userHasRoom);
     }
 
     @Test(expected = NullPointerException.class)
@@ -100,10 +103,10 @@ public class UserHasDAOTest {
                 "\nDate_Out: " + userHasRoom.getDateOut());
     }
 
-    @Test(expected = DataIntegrityViolationException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void updateError() throws Exception {
-        UserHasRoom userHasRoom = userHasRoomDAO.get(-3456);
-        userHasRoom.setDateIn(new Date(-1));
+        UserHasRoom userHasRoom = userHasRoomDAO.get(1);
+        userHasRoom.setDateIn(new Date(null));
         userHasRoom.setDateOut(new Date(-1));
         userHasRoomDAO.update(userHasRoom);
     }

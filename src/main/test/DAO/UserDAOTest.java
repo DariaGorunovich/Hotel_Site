@@ -4,6 +4,8 @@ import com.aliaksey.DAO.UserDAO;
 import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.User;
 import com.aliaksey.entity.UserSex;
+import org.hibernate.PropertyValueException;
+import org.hibernate.TransientObjectException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,7 +64,7 @@ public class UserDAOTest {
 
     @Test
     public void update() {
-        User user = userDAO.get(4);
+        User user = userDAO.get(1);
         user.setFirstName("Alex");
         user.setPatronimyc("Aleksandrovich");
         user.setSurname("Alex");
@@ -73,19 +75,21 @@ public class UserDAOTest {
 
     @Test
     public void delete() {
-        userDAO.delete(10);
+        userDAO.delete(10000);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = PropertyValueException.class)
     public void setNegativeId() throws Exception {
         User user = new User();
         user.setUserId(-1);
+        userDAO.add(user);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = TransientObjectException.class)
     public void setNullData() throws Exception {
         User user = new User();
         user.setSurname(null);
+        userDAO.update(user);
     }
 
     @Test(expected = NullPointerException.class)
@@ -99,7 +103,7 @@ public class UserDAOTest {
                 "\nUser_Sex: " + user.getUserSex());
     }
 
-    @Test(expected = DataIntegrityViolationException.class)
+    @Test(expected = NullPointerException.class)
     public void updateError() throws Exception {
         User user = userDAO.get(46546546);
         user.setFirstName(null);
