@@ -38,7 +38,8 @@ public class RoleDAOImpl implements RoleDAO {
     }
 
     public Role update(Role item) {
-        return null;
+        sessionFactory.getCurrentSession().update(item);
+        return item;
     }
 
     public Role get(Integer id) {

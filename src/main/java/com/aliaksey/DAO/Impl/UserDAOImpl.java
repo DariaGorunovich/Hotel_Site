@@ -38,7 +38,8 @@ public class UserDAOImpl implements UserDAO {
     }
 
     public User update(User item) {
-        return null;
+        sessionFactory.getCurrentSession().update(item);
+        return item;
     }
 
     public User get(Integer id) {

@@ -38,7 +38,8 @@ public class AuthDAOImpl implements AuthDAO {
     }
 
     public Auth update(Auth item) {
-        return null;
+        sessionFactory.getCurrentSession().update(item);
+        return item;
     }
 
     public Auth get(Integer id) {

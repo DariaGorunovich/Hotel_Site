@@ -38,7 +38,8 @@ public class ReviewDAOImpl implements ReviewDAO {
     }
 
     public Review update(Review item) {
-        return null;
+        sessionFactory.getCurrentSession().update(item);
+        return item;
     }
 
     public Review get(Integer id) {

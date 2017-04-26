@@ -51,7 +51,7 @@ public class ReviewDAOTest {
 
     @Test
     public void getById() {
-        Review review = reviewDAO.get(1);
+        Review review = reviewDAO.get(2);
         System.out.println("\n\nTest result:\nReview_ID: " + review.getReviewId() +
                 "\nUser_ID: " + review.getUser() +
                 "\nText: " + review.getText() +
@@ -61,7 +61,7 @@ public class ReviewDAOTest {
 
     @Test
     public  void update() {
-        Review review = reviewDAO.get(2);
+        Review review = reviewDAO.get(18);
         review.setText("AZAZAZAZAZ!");
         review.setDate(new Date());
         review.setReviewMark(ReviewMark.Dislike);

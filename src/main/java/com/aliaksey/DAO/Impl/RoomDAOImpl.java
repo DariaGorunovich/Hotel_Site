@@ -38,7 +38,8 @@ public class RoomDAOImpl implements RoomDAO {
     }
 
     public Room update(Room item) {
-        return null;
+        sessionFactory.getCurrentSession().update(item);
+        return item;
     }
 
     public Room get(Integer id) {

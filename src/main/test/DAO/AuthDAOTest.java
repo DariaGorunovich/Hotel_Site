@@ -1,6 +1,7 @@
 package DAO;
 
 import com.aliaksey.DAO.AuthDAO;
+import com.aliaksey.DAO.UserDAO;
 import com.aliaksey.entity.Auth;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,11 +23,15 @@ public class AuthDAOTest {
     @Autowired(required = true)
     public AuthDAO authDAO;
 
+    @Autowired(required = true)
+    public UserDAO userDAO;
+
     @Test
     public  void add() {
       Auth auth = new Auth();
-      auth.setEmail("auth@gmail.com");
-      auth.getPasswordHash("123456");
+      auth.setEmail("auth4@gmail.com");
+      auth.setPasswordHash("123456");
+      auth.setUser(userDAO.get(4));
       authDAO.add(auth);
     }
 
@@ -37,25 +42,25 @@ public class AuthDAOTest {
             System.out.println("\n\nTest result:\nAuth_ID: " + auth.getAuthId() +
                     "\nUser_ID: " + auth.getUser() +
                     "\nE-mail: " + auth.getEmail() +
-                    "\nPassword_Hash " + auth.getPasswordHash("123456"));
+                    "\nPassword_Hash " + auth.getPasswordHash());
         }
     }
 
     @Test
     public void getById() {
-        Auth auth = authDAO.get(1);
+        Auth auth = authDAO.get(12);
         System.out.println("\n\nTest result:\nAuth_ID: " + auth.getAuthId() +
                 "\nUser_ID: " + auth.getUser() +
                 "\nE-mail: " + auth.getEmail() +
-                "\nPassword_Hash " + auth.getPasswordHash("123456"));
+                "\nPassword_Hash " + auth.getPasswordHash());
 
     }
 
     @Test
     public void update() {
-        Auth auth = authDAO.get(2);
+        Auth auth = authDAO.get(14);
         auth.setEmail("auth111@gmail.com");
-        auth.getPasswordHash("145874");
+        auth.setPasswordHash("1234");
         authDAO.update(auth);
     }
 

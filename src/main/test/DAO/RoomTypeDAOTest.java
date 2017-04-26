@@ -1,5 +1,6 @@
 package DAO;
 
+import com.aliaksey.DAO.RestroomTypeDAO;
 import com.aliaksey.DAO.RoomTypeDAO;
 import com.aliaksey.entity.Room;
 import com.aliaksey.entity.RoomType;
@@ -22,13 +23,17 @@ public class RoomTypeDAOTest {
     @Autowired(required = true)
     public RoomTypeDAO roomTypeDAO;
 
+    @Autowired(required = true)
+    public RestroomTypeDAO restroomTypeDAO;
+
     @Test
     public void add() {
         RoomType roomType = new RoomType();
-        roomType.setRoomName("FirstRoom");
-        roomType.setBlocksCount(2);
-        roomType.setBedsCount(2);
-        roomType.setCostPerDay(70);
+        roomType.setRestroomType(restroomTypeDAO.get(16));
+        roomType.setRoomName("SuperRoom");
+        roomType.setBlocksCount(3);
+        roomType.setBedsCount(3);
+        roomType.setCostPerDay(100);
         roomType.setAdditionalInformation("Coooool!");
         roomTypeDAO.add(roomType);
     }
@@ -49,7 +54,7 @@ public class RoomTypeDAOTest {
 
     @Test
     public void getById() {
-        RoomType roomType = roomTypeDAO.get(1);
+        RoomType roomType = roomTypeDAO.get(25);
         System.out.println("\n\nTest result:\nRoom_Type_ID: " + roomType.getRoomTypeId() +
                 "\nRestroom_Type_ID " + roomType.getRestroomType() +
                 "\nRoom_Name: " + roomType.getRoomName() +
@@ -61,12 +66,13 @@ public class RoomTypeDAOTest {
 
     @Test
     public void update() {
-        RoomType roomType = roomTypeDAO.get(2);
+        RoomType roomType = roomTypeDAO.get(25);
         roomType.setRoomName("WooowRoom");
         roomType.setBlocksCount(10);
         roomType.setBedsCount(3);
         roomType.setCostPerDay(10000);
         roomType.setAdditionalInformation("Good room!");
+        roomTypeDAO.update(roomType);
     }
 
     @Test

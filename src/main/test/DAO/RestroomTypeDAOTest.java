@@ -26,10 +26,10 @@ public class RestroomTypeDAOTest {
     @Test
     public void add() {
         RestroomType restroomType = new RestroomType();
-        restroomType.setName("Two+One");
-        restroomType.setBathtoomsCount(1);
+        restroomType.setName("Two+Two");
+        restroomType.setBathtoomsCount(2);
         restroomType.setToiletsCount(2);
-        restroomType.setToiletType(ToiletType.Combined);
+        restroomType.setToiletType(ToiletType.Not_Combined);
         restroomTypeDAO.add(restroomType);
     }
 
@@ -48,7 +48,7 @@ public class RestroomTypeDAOTest {
 
     @Test
     public void getById() {
-        RestroomType restroomType = restroomTypeDAO.get(1);
+        RestroomType restroomType = restroomTypeDAO.get(15);
         System.out.println("\n\nTest result:\nRestroom_Type_ID: " + restroomType.getRestroomTypeId() +
                 "\nRestroom_Type_Name: " + restroomType.getName() +
                 "\nRestroom_Toilet_Type: " + restroomType.getToiletType() +
@@ -58,11 +58,11 @@ public class RestroomTypeDAOTest {
 
     @Test
     public void update() {
-        RestroomType restroomType = restroomTypeDAO.get(14);
-        restroomType.setName("A");
-        restroomType.setBathtoomsCount(100500);
-        restroomType.setToiletsCount(100501);
-       // restroomType.setToiletType(ToiletType.Not_combined);
+        RestroomType restroomType = restroomTypeDAO.get(16);
+        restroomType.setName("Five+Five");
+        restroomType.setBathtoomsCount(5);
+        restroomType.setToiletsCount(5);
+        restroomType.setToiletType(ToiletType.Not_Combined);
         restroomTypeDAO.update(restroomType);
     }
 

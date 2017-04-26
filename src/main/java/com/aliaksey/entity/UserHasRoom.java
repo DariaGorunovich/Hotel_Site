@@ -10,8 +10,8 @@ import java.util.Date;
  * Created by Aliaksey on 19.03.2017.
  */
 @Entity
-@Table(name = "user_has_Room")
-public class UserRoom implements Serializable{
+@Table(name = "user_has_room")
+public class UserHasRoom implements Serializable{
 
     private Integer userRoomNumberId;
     private User user;

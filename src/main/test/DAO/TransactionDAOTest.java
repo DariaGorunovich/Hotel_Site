@@ -42,7 +42,7 @@ public class TransactionDAOTest {
 
     @Test
     public void getById() {
-        Transaction transaction = transactionDAO.get(1);
+        Transaction transaction = transactionDAO.get(30);
         System.out.println("\n\nTest result:\nTransaction_ID: " + transaction.getTransactionId() +
                 "\nDate: " + transaction.getDate() +
                 "\nPayment_Data: " + transaction.getPaymentData());
@@ -50,9 +50,10 @@ public class TransactionDAOTest {
 
     @Test
     public void updates() {
-        Transaction transaction = transactionDAO.get(2);
+        Transaction transaction = transactionDAO.get(33);
         transaction.setDate(new Date());
         transaction.setPaymentData("New Payment Info...");
+        transactionDAO.update(transaction);
     }
 
     @Test

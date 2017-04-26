@@ -1,6 +1,9 @@
 package DAO;
 
 import com.aliaksey.DAO.ReservationDAO;
+import com.aliaksey.DAO.RoomDAO;
+import com.aliaksey.DAO.TransactionDAO;
+import com.aliaksey.DAO.UserDAO;
 import com.aliaksey.entity.Reservation;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,9 +25,21 @@ public class ReservationDAOTest {
     @Autowired(required = true)
     public ReservationDAO reservationDAO;
 
+    @Autowired(required = true)
+    public TransactionDAO transactionDAO;
+
+    @Autowired(required = true)
+    public RoomDAO roomDAO;
+
+    @Autowired(required = true)
+    public UserDAO userDAO;
+
     @Test
     public void add() {
         Reservation reservation = new Reservation();
+        reservation.setTransaction(transactionDAO.get(30));
+        reservation.setRoom(roomDAO.get(26));
+        reservation.setUser(userDAO.get(1));
         reservation.setDateIn(new Date());
         reservation.setDateOut(new Date());
         reservationDAO.add(reservation);

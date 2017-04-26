@@ -38,7 +38,8 @@ public class ReservationDAOImpl implements ReservationDAO {
     }
 
     public Reservation update(Reservation item) {
-        return null;
+        sessionFactory.getCurrentSession().update(item);
+        return item;
     }
 
     public Reservation get(Integer id) {

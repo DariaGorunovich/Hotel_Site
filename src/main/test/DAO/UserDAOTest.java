@@ -60,16 +60,17 @@ public class UserDAOTest {
 
     @Test
     public void update() {
-        User user = userDAO.get(2);
+        User user = userDAO.get(4);
         user.setFirstName("Alex");
         user.setPatronimyc("Aleksandrovich");
         user.setSurname("Alex");
         user.setMobilePhone("1472589");
         user.setUserSex(UserSex.Male);
+        userDAO.update(user);
     }
 
     @Test
     public void delete() {
-        userDAO.delete(3);
+        userDAO.delete(10);
     }
 }

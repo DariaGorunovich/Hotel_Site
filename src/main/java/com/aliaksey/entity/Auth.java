@@ -48,7 +48,7 @@ public class Auth implements Serializable{
     }
 
     @Column(name = "password_hash", nullable = false, length = 45)
-    public String getPasswordHash(String s) {
+    public String getPasswordHash() {
         return this.passwordHash;
     }
 

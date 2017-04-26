@@ -1,6 +1,7 @@
 package DAO;
 
 import com.aliaksey.DAO.RoomDAO;
+import com.aliaksey.DAO.RoomTypeDAO;
 import com.aliaksey.entity.Room;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,11 +22,15 @@ public class RoomDAOTest {
     @Autowired(required = true)
     public RoomDAO roomDAO;
 
+    @Autowired(required = true)
+    public RoomTypeDAO roomTypeDAO;
+
     @Test
     public void add() {
         Room room = new Room();
-        room.setFloor(1);
-        room.setPhone("2341457");
+        room.setRoomType(roomTypeDAO.get(23));
+        room.setFloor(3);
+        room.setPhone("1597532");
         roomDAO.add(room);
     }
 
@@ -43,7 +48,7 @@ public class RoomDAOTest {
 
     @Test()
     public void getByID() {
-        Room room = roomDAO.get(1);
+        Room room = roomDAO.get(26);
         System.out.println("\n\nTest result:\nRoom_Number: " + room.getRoomNumberId() +
                 "\nRoom_Type_ID: " + room.getRoomType() +
                 "\nFloor: " + room.getFloor() +
@@ -52,9 +57,9 @@ public class RoomDAOTest {
 
     @Test()
     public void update() {
-        Room room = roomDAO.get(2);
-        room.setFloor(3);
-        room.setPhone("1469857");
+        Room room = roomDAO.get(27);
+        room.setFloor(4);
+        room.setPhone("1111111");
         roomDAO.update(room);
     }
 

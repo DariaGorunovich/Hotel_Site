@@ -38,7 +38,8 @@ public class TransactionDAOImpl implements TransactionDAO {
     }
 
     public Transaction update(Transaction item) {
-        return null;
+        sessionFactory.getCurrentSession().update(item);
+        return item;
     }
 
     public Transaction get(Integer id) {

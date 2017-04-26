@@ -25,7 +25,7 @@ public class RoleDAOTest {
     @Test
     public void add() {
         Role role = new Role();
-        role.setRoleName("Admin");
+        role.setRoleName("Director");
         roleDAO.add(role);
     }
 
@@ -40,14 +40,14 @@ public class RoleDAOTest {
 
     @Test
     public void getById() {
-        Role role = roleDAO.get(1);
+        Role role = roleDAO.get(20);
         System.out.println("\n\nTest result:\nRole_ID: " + role.getId() +
                 "\nRole_Name: " + role.getRoleName());
     }
 
     @Test
     public  void update() {
-        Role role = roleDAO.get(2);
+        Role role = roleDAO.get(21);
         role.setRoleName("User");
         roleDAO.update(role);
     }

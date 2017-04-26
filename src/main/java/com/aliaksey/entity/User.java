@@ -35,7 +35,7 @@ public class User implements Serializable {
 
     private Set<Reservation> reservations = new HashSet<Reservation>(0);
 
-    private Set<UserRoom> userRooms = new HashSet<UserRoom>(0);
+    private Set<UserHasRoom> userRooms = new HashSet<UserHasRoom>(0);
 
 
     @Id
@@ -133,11 +133,11 @@ public class User implements Serializable {
     }
 
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "user")
-    public Set<UserRoom> getUserRooms() {
+    public Set<UserHasRoom> getUserRooms() {
         return  this.userRooms;
     }
 
-    public void setUserRooms(Set<UserRoom> userRooms) {
+    public void setUserRooms(Set<UserHasRoom> userRooms) {
         this.userRooms = userRooms;
     }
 
