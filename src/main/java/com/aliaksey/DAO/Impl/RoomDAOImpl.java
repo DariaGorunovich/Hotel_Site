@@ -21,7 +21,7 @@ public class RoomDAOImpl implements RoomDAO {
     private SessionFactory sessionFactory;
 
     public void add(Room item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<Room> getAll() {

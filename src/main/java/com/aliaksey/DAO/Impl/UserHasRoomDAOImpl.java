@@ -23,7 +23,7 @@ public class UserHasRoomDAOImpl implements UserHasRoomDAO {
     private SessionFactory sessionFactory;
 
     public void add(UserHasRoom item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<UserHasRoom> getAll() {

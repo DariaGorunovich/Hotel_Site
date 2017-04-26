@@ -21,7 +21,7 @@ public class UserDAOImpl implements UserDAO {
     private SessionFactory sessionFactory;
 
     public void add(User item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<User> getAll() {

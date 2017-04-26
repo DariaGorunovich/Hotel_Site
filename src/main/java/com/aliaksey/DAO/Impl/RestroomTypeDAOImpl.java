@@ -24,7 +24,7 @@ public class RestroomTypeDAOImpl implements RestroomTypeDAO {
     private SessionFactory sessionFactory;
 
     public void add(RestroomType item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<RestroomType> getAll() {

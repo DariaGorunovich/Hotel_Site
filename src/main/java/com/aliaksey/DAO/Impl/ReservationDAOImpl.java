@@ -21,7 +21,7 @@ public class ReservationDAOImpl implements ReservationDAO {
     private SessionFactory sessionFactory;
 
     public void add(Reservation item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<Reservation> getAll() {

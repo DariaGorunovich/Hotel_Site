@@ -21,7 +21,7 @@ public class RoomTypeDAOImpl implements RoomTypeDAO {
     private SessionFactory sessionFactory;
 
     public void add(RoomType item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<RoomType> getAll() {

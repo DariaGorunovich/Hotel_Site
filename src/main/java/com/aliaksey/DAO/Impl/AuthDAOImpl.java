@@ -21,7 +21,7 @@ public class AuthDAOImpl implements AuthDAO {
     private SessionFactory sessionFactory;
 
     public void add(Auth item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<Auth> getAll() {

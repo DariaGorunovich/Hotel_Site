@@ -31,7 +31,7 @@ public class RoomTypeDAOTest {
     @Test
     public void add() {
         RoomType roomType = new RoomType();
-        roomType.setRestroomType(restroomTypeDAO.get(25));
+       // roomType.setRestroomType(restroomTypeDAO.get(25));
         roomType.setRoomName("SuperRoom1");
         roomType.setBlocksCount(3);
         roomType.setBedsCount(3);
@@ -45,7 +45,7 @@ public class RoomTypeDAOTest {
         List<RoomType> roomTypeList = roomTypeDAO.getAll();
         for (RoomType roomType: roomTypeList) {
             System.out.println("\n\nTest result:\nRoom_Type_ID: " + roomType.getRoomTypeId() +
-                    "\nRestroom_Type_ID " + roomType.getRestroomType() +
+                    //"\nRestroom_Type_ID " + roomType.getRestroomType() +
                     "\nRoom_Name: " + roomType.getRoomName() +
                     "\nBlocks_Count: " + roomType.getBlocksCount() +
                     "\nBeds_Count: " + roomType.getBedsCount() +
@@ -58,7 +58,7 @@ public class RoomTypeDAOTest {
     public void getById() {
         RoomType roomType = roomTypeDAO.get(25);
         System.out.println("\n\nTest result:\nRoom_Type_ID: " + roomType.getRoomTypeId() +
-                "\nRestroom_Type_ID " + roomType.getRestroomType() +
+                //"\nRestroom_Type_ID " + roomType.getRestroomType() +
                 "\nRoom_Name: " + roomType.getRoomName() +
                 "\nBlocks_Count: " + roomType.getBlocksCount() +
                 "\nBeds_Count: " + roomType.getBedsCount() +
@@ -92,14 +92,14 @@ public class RoomTypeDAOTest {
     @Test(expected = IllegalArgumentException.class)
     public void setNullData() throws Exception {
         RoomType roomType = new RoomType();
-        roomType.setRestroomType(null);
+       // roomType.setRestroomType(null);
     }
 
     @Test(expected = NullPointerException.class)
     public void getByIdError() throws Exception {
         RoomType roomType = roomTypeDAO.get(10000000);
         System.out.println("\n\nTest result:\nRoom_Type_ID: " + roomType.getRoomTypeId() +
-                "\nRestroom_Type_ID " + roomType.getRestroomType() +
+                //"\nRestroom_Type_ID " + roomType.getRestroomType() +
                 "\nRoom_Name: " + roomType.getRoomName() +
                 "\nBlocks_Count: " + roomType.getBlocksCount() +
                 "\nBeds_Count: " + roomType.getBedsCount() +

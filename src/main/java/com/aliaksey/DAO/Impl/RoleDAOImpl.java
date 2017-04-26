@@ -21,7 +21,7 @@ public class RoleDAOImpl implements RoleDAO {
     private SessionFactory sessionFactory;
 
     public void add(Role item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<Role> getAll() {

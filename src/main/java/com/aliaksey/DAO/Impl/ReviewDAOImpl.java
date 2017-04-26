@@ -21,7 +21,7 @@ public class ReviewDAOImpl implements ReviewDAO {
     private SessionFactory sessionFactory;
 
     public void add(Review item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<Review> getAll() {
