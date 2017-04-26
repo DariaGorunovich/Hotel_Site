@@ -16,7 +16,7 @@ public class Role implements Serializable{
     private Set<User> users = new HashSet<User>(0);
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "role_id", unique = true, nullable = false)
     public Integer getId() {
         return
@@ -35,7 +35,7 @@ public class Role implements Serializable{
         this.users = users;
     }
 
-    @Column(name = "role_name", nullable = false, length = 45)
+    @Column(name = "name", unique = true, nullable = false, length = 45)
     public String getRoleName() {
         return this.roleName;
     }

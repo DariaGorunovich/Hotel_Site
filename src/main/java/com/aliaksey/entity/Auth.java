@@ -18,7 +18,7 @@ public class Auth implements Serializable{
     private String passwordHash;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "auth_id",unique = true, nullable = false)
     public Integer getAuthId() {
         return this.authId;
@@ -29,7 +29,7 @@ public class Auth implements Serializable{
     }
 
     @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", unique = true, nullable = false)
     public User getUser() {
         return this.user;
     }
@@ -38,7 +38,7 @@ public class Auth implements Serializable{
         this.user = user;
     }
 
-    @Column(name = "email", nullable = false, length = 45)
+    @Column(name = "email", unique = true, nullable = false, length = 45)
     public String getEmail() {
         return this.email;
     }

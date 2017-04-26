@@ -30,7 +30,6 @@ public class User implements Serializable {
 
     private Set<Role> roles = new HashSet<Role>(0);
 
-
     private Set<Review> reviews = new HashSet<Review>(0);
 
     private Set<Reservation> reservations = new HashSet<Reservation>(0);
@@ -39,7 +38,7 @@ public class User implements Serializable {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id", unique = true, nullable = false)
     public Integer getUserId() {
         return this.userId;
@@ -105,7 +104,7 @@ public class User implements Serializable {
     }
 
     @ManyToMany
-    @JoinTable(name = "user_has_role", joinColumns = @JoinColumn(name = "user_user_id"), inverseJoinColumns = @JoinColumn(name = "role_role_id"))
+    @JoinTable(name = "user_has_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     public Set<Role> getRoles() {
         return this.roles;
     }

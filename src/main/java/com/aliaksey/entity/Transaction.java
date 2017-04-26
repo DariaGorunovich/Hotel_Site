@@ -17,7 +17,7 @@ public class Transaction implements Serializable {
     private String paymentData;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "transaction_id", unique = true, nullable = false)
     public Integer getTransactionId() {
         return this.transactionId;

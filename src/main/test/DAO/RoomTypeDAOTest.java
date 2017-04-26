@@ -31,8 +31,8 @@ public class RoomTypeDAOTest {
     @Test
     public void add() {
         RoomType roomType = new RoomType();
-        roomType.setRestroomType(restroomTypeDAO.get(16));
-        roomType.setRoomName("SuperRoom");
+        roomType.setRestroomType(restroomTypeDAO.get(25));
+        roomType.setRoomName("SuperRoom1");
         roomType.setBlocksCount(3);
         roomType.setBedsCount(3);
         roomType.setCostPerDay(100);

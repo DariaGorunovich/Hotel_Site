@@ -22,7 +22,7 @@ public class Review implements Serializable{
     private ReviewMark reviewMark;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "review_id",unique = true, nullable = false)
     public Integer getReviewId() {
         return this.reviewId;

@@ -20,10 +20,10 @@ public class RestroomType implements Serializable{
     private Integer toiletsCount;
     private Integer bathroomsCount;
     private String name;
-    private Set<RoomType> roomTypes = new HashSet<RoomType>(0);
+    private Set<Room> rooms = new HashSet<Room>(0);
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "restroom_type_id", unique = true, nullable = false)
     public Integer getRestroomTypeId() {
         return this.restroomTypeId;
@@ -33,7 +33,7 @@ public class RestroomType implements Serializable{
         this.restroomTypeId = restroomTypeId;
     }
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", unique = true, nullable = false)
     public String getName() {
         return this.name;
     }
@@ -71,12 +71,12 @@ public class RestroomType implements Serializable{
     }
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "restroomType")
-    public Set<RoomType> getRoomTypes() {
-        return  this.roomTypes;
+    public Set<Room> getRooms() {
+        return  this.rooms;
     }
 
-    public void setRoomTypes(Set<RoomType> roomTypes) {
-        this.roomTypes = roomTypes;
+    public void setRooms(Set<Room> rooms) {
+        this.rooms = rooms;
     }
 
 

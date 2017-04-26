@@ -18,11 +18,10 @@ public class RoomType implements Serializable {
     private Integer bedsCount;
     private Integer costPerDay;
     private String additionalInformation;
-    private RestroomType restroomType;
     private Set<Room> rooms = new HashSet<Room>(0);
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "room_type_id", unique = true, nullable = false)
     public Integer getRoomTypeId() {
         return this.roomTypeId;
@@ -32,17 +31,7 @@ public class RoomType implements Serializable {
         this.roomTypeId = roomTypeId;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "restroom_type_id", nullable = false)
-    public RestroomType getRestroomType() {
-        return this.restroomType;
-    }
-
-    public void setRestroomType(RestroomType restroomType) {
-        this.restroomType = restroomType;
-    }
-
-    @Column(name = "room_name", unique = true, nullable = false, length = 45)
+    @Column(name = "room_type_name", unique = true, nullable = false, length = 45)
     public String getRoomName() {
         return this.roomName;
     }

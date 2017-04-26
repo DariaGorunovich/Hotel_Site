@@ -5,5 +5,5 @@ package com.aliaksey.entity;
  */
 public enum ToiletType {
     Combined,
-    Not_Combined
+    Not_combined
 }

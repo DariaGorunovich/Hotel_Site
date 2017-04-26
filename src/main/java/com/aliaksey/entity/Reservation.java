@@ -21,7 +21,7 @@ public class Reservation implements Serializable {
     private Date dateOut;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reservation_id",unique = true, nullable = false)
     public Integer getReservationId() {
         return this.reservationId;
@@ -32,7 +32,7 @@ public class Reservation implements Serializable {
     }
 
     @OneToOne
-    @JoinColumn(name = "transaction_id", nullable = false)
+    @JoinColumn(name = "transaction_id", unique = true, nullable = false)
     public Transaction getTransaction() {
         return this.transaction;
     }
@@ -62,7 +62,7 @@ public class Reservation implements Serializable {
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "date-in", nullable = false)
+    @Column(name = "date_in", nullable = false)
     public Date getDateIn() {
         return this.dateIn;
     }
@@ -72,7 +72,7 @@ public class Reservation implements Serializable {
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "date-out", nullable = false)
+    @Column(name = "date_out", nullable = false)
     public Date getDateOut() {
         return this.dateOut;
     }

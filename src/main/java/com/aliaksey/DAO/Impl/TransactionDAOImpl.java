@@ -17,17 +17,25 @@ import java.util.List;
 @Repository
 @Transactional
 public class TransactionDAOImpl implements TransactionDAO {
+
     @Autowired
     private SessionFactory sessionFactory;
 
     public void add(Transaction item) {
-        sessionFactory.getCurrentSession().persist(item);
+        sessionFactory.getCurrentSession().save(item);
     }
 
     public List<Transaction> getAll() {
-        Session session = sessionFactory.getCurrentSession();
-        List<Transaction> transactions = session.createQuery("from Transaction").list();
-        return transactions;
+        try {
+            Session session = sessionFactory.getCurrentSession();
+            List<Transaction> transactions = session.createQuery("from Transaction").list();
+            return transactions;
+        }
+        catch (Exception e) {
+            System.out.print(e.getStackTrace());
+        }
+        return null;
+
     }
 
     public void delete(Integer id) {

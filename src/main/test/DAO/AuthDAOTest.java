@@ -32,7 +32,7 @@ public class AuthDAOTest {
       Auth auth = new Auth();
       auth.setEmail("auth4@gmail.com");
       auth.setPasswordHash("123456");
-      auth.setUser(userDAO.get(4));
+      auth.setUser(userDAO.get(15));
       authDAO.add(auth);
     }
 

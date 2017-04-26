@@ -16,11 +16,12 @@ public class Room implements Serializable {
     private Integer floor;
     private String phone;
     private RoomType roomType;
+    private RestroomType restroomType;
     private Set<Reservation> reservations = new HashSet<Reservation>(0);
     private Set<UserHasRoom> userRooms = new HashSet<UserHasRoom>(0);
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "room_number", unique = true, nullable = false)
     public Integer getRoomNumberId() {
         return this.roomNumberId;
@@ -74,5 +75,15 @@ public class Room implements Serializable {
 
     public void setUserRooms(Set<UserHasRoom> userRooms) {
         this.userRooms = userRooms;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "restroom_type_id", nullable = false)
+    public RestroomType getRestroomType() {
+        return this.restroomType;
+    }
+
+    public void setRestroomType(RestroomType restroomType) {
+        this.restroomType = restroomType;
     }
 }

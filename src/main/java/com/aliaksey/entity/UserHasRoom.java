@@ -20,7 +20,7 @@ public class UserHasRoom implements Serializable{
     private Date dateOut;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_room_number_id", unique = true, nullable = false)
     public Integer getUserRoomNumberId() {
         return this.userRoomNumberId;
@@ -51,7 +51,7 @@ public class UserHasRoom implements Serializable{
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "date-in", nullable = false)
+    @Column(name = "date_in", nullable = false)
     public Date getDateIn() {
         return this.dateIn;
     }
@@ -61,7 +61,7 @@ public class UserHasRoom implements Serializable{
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "date-out", nullable = false)
+    @Column(name = "date_out", nullable = false)
     public Date getDateOut() {
         return this.dateOut;
     }
