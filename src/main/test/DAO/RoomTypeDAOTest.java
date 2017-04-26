@@ -2,11 +2,13 @@ package DAO;
 
 import com.aliaksey.DAO.RestroomTypeDAO;
 import com.aliaksey.DAO.RoomTypeDAO;
+import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Room;
 import com.aliaksey.entity.RoomType;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -77,6 +79,47 @@ public class RoomTypeDAOTest {
 
     @Test
     public  void delete() {
+
         roomTypeDAO.delete(3);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNegativeId() throws Exception {
+        RoomType roomType = new RoomType();
+        roomType.setRoomTypeId(-100);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNullData() throws Exception {
+        RoomType roomType = new RoomType();
+        roomType.setRestroomType(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getByIdError() throws Exception {
+        RoomType roomType = roomTypeDAO.get(10000000);
+        System.out.println("\n\nTest result:\nRoom_Type_ID: " + roomType.getRoomTypeId() +
+                "\nRestroom_Type_ID " + roomType.getRestroomType() +
+                "\nRoom_Name: " + roomType.getRoomName() +
+                "\nBlocks_Count: " + roomType.getBlocksCount() +
+                "\nBeds_Count: " + roomType.getBedsCount() +
+                "\nCost_Per_Day: " + roomType.getCostPerDay() +
+                "\nAdditional_Inf: " + roomType.getAdditionalInformation());
+    }
+
+    @Test(expected = DataIntegrityViolationException.class)
+    public void updateError() throws Exception {
+        RoomType roomType = roomTypeDAO.get(null);
+        roomType.setRoomName(null);
+        roomType.setBlocksCount(null);
+        roomType.setBedsCount(null);
+        roomType.setCostPerDay(null);
+        roomType.setAdditionalInformation(null);
+        roomTypeDAO.update(roomType);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deleteError() throws Exception {
+        roomTypeDAO.delete(null);
     }
 }

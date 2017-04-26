@@ -6,6 +6,7 @@ import com.aliaksey.entity.Auth;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -66,6 +67,41 @@ public class AuthDAOTest {
 
     @Test
     public void delete() {
+
         authDAO.delete(3);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNegativeId() throws Exception {
+        Auth auth = new Auth();
+        auth.setAuthId(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNullData() throws Exception {
+        Auth auth = new Auth();
+        auth.setEmail(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getByIdError() throws Exception {
+        Auth auth = authDAO.get(10000);
+        System.out.println("\n\nTest result:\nAuth_ID: " + auth.getAuthId() +
+                "\nUser_ID: " + auth.getUser() +
+                "\nE-mail: " + auth.getEmail() +
+                "\nPassword_Hash " + auth.getPasswordHash());
+    }
+
+    @Test(expected = DataIntegrityViolationException.class)
+    public void updateError() throws Exception {
+        Auth auth = authDAO.get(14);
+        auth.setEmail(null);
+        auth.setPasswordHash(null);
+        authDAO.update(auth);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deleteError() throws Exception {
+        authDAO.delete(null);
     }
 }

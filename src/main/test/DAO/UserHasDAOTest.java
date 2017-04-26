@@ -8,6 +8,7 @@ import com.aliaksey.entity.UserHasRoom;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -70,11 +71,45 @@ public class UserHasDAOTest {
         userHasRoom.setDateIn(new Date());
         userHasRoom.setDateOut(new Date());
         userHasRoomDAO.update(userHasRoom);
-
     }
 
     @Test
     public void delete() {
         userHasRoomDAO.delete(5);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNegativeId() throws Exception {
+        UserHasRoom userHasRoom = new UserHasRoom();
+        userHasRoom.setUserRoomNumberId(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNullData() throws Exception {
+        UserHasRoom userHasRoom = new UserHasRoom();
+        userHasRoom.setUser(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getByIdError() throws Exception {
+        UserHasRoom userHasRoom = userHasRoomDAO.get(1456874);
+        System.out.println("\n\nTest result:\nUser_Room_Number_ID: " + userHasRoom.getUserRoomNumberId() +
+                "\nUser_ID: " + userHasRoom.getUser() +
+                "\nRoom_Number: " + userHasRoom.getRoom() +
+                "\nDate_In: " + userHasRoom.getDateIn() +
+                "\nDate_Out: " + userHasRoom.getDateOut());
+    }
+
+    @Test(expected = DataIntegrityViolationException.class)
+    public void updateError() throws Exception {
+        UserHasRoom userHasRoom = userHasRoomDAO.get(-3456);
+        userHasRoom.setDateIn(new Date(-1));
+        userHasRoom.setDateOut(new Date(-1));
+        userHasRoomDAO.update(userHasRoom);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deleteError() throws Exception {
+        userHasRoomDAO.update(null);
     }
 }

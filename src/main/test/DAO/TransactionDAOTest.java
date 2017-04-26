@@ -1,10 +1,12 @@
 package DAO;
 
 import com.aliaksey.DAO.TransactionDAO;
+import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Transaction;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -58,6 +60,40 @@ public class TransactionDAOTest {
 
     @Test
     public void delete() {
+
         transactionDAO.delete(3);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNegativeId() throws Exception {
+        Transaction transaction = new Transaction();
+        transaction.setTransactionId(-9);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNullData() throws Exception {
+        Transaction transaction = new Transaction();
+        transaction.setDate(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getByIdError() throws Exception {
+        Transaction transaction = transactionDAO.get(10000);
+        System.out.println("\n\nTest result:\nTransaction_ID: " + transaction.getTransactionId() +
+                "\nDate: " + transaction.getDate() +
+                "\nPayment_Data: " + transaction.getPaymentData());
+    }
+
+    @Test(expected = DataIntegrityViolationException.class)
+    public void updateError() throws Exception {
+        Transaction transaction = transactionDAO.get(0);
+        transaction.setDate(new Date(-1));
+        transaction.setPaymentData(null);
+        transactionDAO.update(transaction);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deleteError() throws Exception {
+        transactionDAO.delete(null);
     }
 }

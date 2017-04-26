@@ -4,10 +4,12 @@ import com.aliaksey.DAO.ReservationDAO;
 import com.aliaksey.DAO.RoomDAO;
 import com.aliaksey.DAO.TransactionDAO;
 import com.aliaksey.DAO.UserDAO;
+import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Reservation;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -79,6 +81,43 @@ public class ReservationDAOTest {
 
     @Test
     public void delete() {
+
         reservationDAO.delete(3);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNegativeId() throws Exception {
+        Reservation reservation = new Reservation();
+        reservation.setReservationId(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNullData() throws Exception {
+        Reservation reservation = new Reservation();
+        reservation.setDateOut(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getByIdError() throws Exception {
+        Reservation reservation = reservationDAO.get(10000);
+        System.out.println("\n\nTest result:\nReservation_ID: " + reservation.getReservationId() +
+                "\nTransaction_ID: " + reservation.getTransaction() +
+                "\nRoom_Number: " + reservation.getRoom() +
+                "\nUser_ID: " + reservation.getUser() +
+                "\nData_In: " + reservation.getDateIn() +
+                "\nData_Out: " + reservation.getDateOut());
+    }
+
+    @Test(expected = DataIntegrityViolationException.class)
+    public void updateError() throws Exception {
+        Reservation reservation = reservationDAO.get(2);
+        reservation.setDateIn(new Date(null));
+        reservation.setDateOut(new Date(-1));
+        reservationDAO.update(reservation);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deleteError() throws Exception {
+        reservationDAO.delete(null);
     }
 }

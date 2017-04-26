@@ -1,11 +1,13 @@
 package DAO;
 
 import com.aliaksey.DAO.UserDAO;
+import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.User;
 import com.aliaksey.entity.UserSex;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -72,5 +74,42 @@ public class UserDAOTest {
     @Test
     public void delete() {
         userDAO.delete(10);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNegativeId() throws Exception {
+        User user = new User();
+        user.setUserId(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNullData() throws Exception {
+        User user = new User();
+        user.setSurname(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getByIdError() throws Exception {
+        User user = userDAO.get(100000);
+        System.out.println("\n\nTest result:\nUser_ID: " + user.getUserId() +
+                "\nFirst_Name: " + user.getFirstName() +
+                "\nPatronym: " + user.getPatronimyc() +
+                "\nSurname: " + user.getSurname() +
+                "\nMobile_Phone: " + user.getMobilePhone() +
+                "\nUser_Sex: " + user.getUserSex());
+    }
+
+    @Test(expected = DataIntegrityViolationException.class)
+    public void updateError() throws Exception {
+        User user = userDAO.get(46546546);
+        user.setFirstName(null);
+        user.setPatronimyc(null);
+        user.setSurname(null);
+        userDAO.update(user);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deleteError() throws Exception {
+        userDAO.delete(null);
     }
 }

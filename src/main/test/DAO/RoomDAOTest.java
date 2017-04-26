@@ -2,10 +2,12 @@ package DAO;
 
 import com.aliaksey.DAO.RoomDAO;
 import com.aliaksey.DAO.RoomTypeDAO;
+import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Room;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -65,6 +67,41 @@ public class RoomDAOTest {
 
     @Test
     public void delete() {
+
         roomDAO.delete(3);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNegativeId() throws Exception {
+        Room room = new Room();
+        room.setRoomNumberId(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNullData() throws Exception {
+        Room room = new Room();
+        room.setPhone(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getByIdError() throws Exception {
+        Room room = roomDAO.get(1000000);
+        System.out.println("\n\nTest result:\nRoom_Number: " + room.getRoomNumberId() +
+                "\nRoom_Type_ID: " + room.getRoomType() +
+                "\nFloor: " + room.getFloor() +
+                "\nPhone: " + room.getPhone());
+    }
+
+    @Test(expected = DataIntegrityViolationException.class)
+    public void updateError() throws Exception {
+        Room room = roomDAO.get(27);
+        room.setFloor(null);
+        room.setPhone("-4567");
+        roomDAO.update(room);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deleteError() throws Exception {
+        roomDAO.delete(null);
     }
 }

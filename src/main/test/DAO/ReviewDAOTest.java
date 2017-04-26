@@ -2,12 +2,14 @@ package DAO;
 
 import com.aliaksey.DAO.ReviewDAO;
 import com.aliaksey.DAO.UserDAO;
+import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Review;
 import com.aliaksey.entity.ReviewMark;
 import com.aliaksey.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -70,6 +72,43 @@ public class ReviewDAOTest {
 
     @Test
     public void delete() {
+
         reviewDAO.delete(3);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNegativeId() throws Exception {
+        Review review = new Review();
+        review.setReviewId(-1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void setNullData() throws Exception {
+        Review review = new Review();
+       review.setReviewMark(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void getByIdError() throws Exception {
+        Review review = reviewDAO.get(10000);
+        System.out.println("\n\nTest result:\nReview_ID: " + review.getReviewId() +
+                "\nUser_ID: " + review.getUser() +
+                "\nText: " + review.getText() +
+                "\nData: " + review.getDate() +
+                "\nMark: " + review.getReviewMark());
+    }
+
+    @Test(expected = DataIntegrityViolationException.class)
+    public void updateError() throws Exception {
+        Review review = reviewDAO.get(18);
+        review.setText(null);
+        review.setDate(new Date(-1));
+        review.setReviewMark(null);
+        reviewDAO.update(review);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void deleteError() throws Exception {
+        reviewDAO.delete(null);
     }
 }
