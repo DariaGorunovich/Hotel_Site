@@ -26,7 +26,8 @@ public class User implements Serializable {
     private String surname;
     private String mobilePhone;
     private UserSex userSex;
-    private Auth auth;
+    private String email;
+    private String passwordHash;
 
     private Set<Role> roles = new HashSet<Role>(0);
 
@@ -94,6 +95,24 @@ public class User implements Serializable {
         this.userSex = userSex;
     }
 
+    @Column(name = "email", unique = true, nullable = false)
+    public String getEmail() {
+        return this.email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Column(name = "password_hash", nullable = false)
+    public String getPasswordHash() {
+        return this.passwordHash;
+    }
+
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
     public Set<Reservation> getReservations() {
         return this.reservations;
@@ -111,15 +130,6 @@ public class User implements Serializable {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
-    }
-
-    @OneToOne(fetch = FetchType.LAZY,mappedBy = "user")
-    public Auth getAuth() {
-        return this.auth;
-    }
-
-    public void setAuth(Auth auth) {
-        this.auth = auth;
     }
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")

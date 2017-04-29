@@ -1,7 +1,6 @@
 package DAO;
 
 import com.aliaksey.DAO.RoleDAO;
-import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Role;
 import org.hibernate.PropertyValueException;
 import org.junit.Test;
@@ -11,7 +10,6 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.security.PublicKey;
 import java.util.List;
 
 /**

@@ -1,7 +1,8 @@
 package DAO;
 
+import com.aliaksey.DAO.RoleDAO;
 import com.aliaksey.DAO.UserDAO;
-import com.aliaksey.entity.Auth;
+import com.aliaksey.entity.Role;
 import com.aliaksey.entity.User;
 import com.aliaksey.entity.UserSex;
 import org.hibernate.PropertyValueException;
@@ -9,16 +10,19 @@ import org.hibernate.TransientObjectException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 
 /**
  * Created by Kirik on 25.04.2017.
  */
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "file:web/WEB-INF/dispatcher-servlet.xml" })
@@ -27,14 +31,18 @@ public class UserDAOTest {
     @Autowired(required = true)
     public UserDAO userDAO;
 
+    @Autowired(required = true)
+    public RoleDAO roleDAO;
+
     @Test
     public  void add() {
         User user = new User();
-        user.setFirstName("Kirill");
+        user.setFirstName("AAAAA");
         user.setPatronimyc("Aleksandrovich");
         user.setSurname("Sokolov");
         user.setMobilePhone("1587458");
         user.setUserSex(UserSex.Male);
+        user.setRoles(new HashSet<Role>(Arrays.asList(roleDAO.get(4),roleDAO.get(10))));
         userDAO.add(user);
     }
 
@@ -52,14 +60,18 @@ public class UserDAOTest {
     }
 
     @Test
+    @Transactional
     public void getById() {
-        User user = userDAO.get(1);
-        System.out.println("\n\nTest result:\nUser_ID: " + user.getUserId() +
-                "\nFirst_Name: " + user.getFirstName() +
-                "\nPatronym: " + user.getPatronimyc() +
-                "\nSurname: " + user.getSurname() +
-                "\nMobile_Phone: " + user.getMobilePhone() +
-                "\nUser_Sex: " + user.getUserSex());
+        User user = userDAO.get(10);
+//        for (Role role : user.getRoles()) {
+////            System.out.println("\n\nTest result:\nRole_ID: " + role.getId() );
+//        }
+
+//                "\nFirst_Name: " + user.getFirstName() +
+//                "\nPatronym: " + user.getPatronimyc() +
+//                "\nSurname: " + user.getSurname() +
+//                "\nMobile_Phone: " + user.getMobilePhone() +
+//                "\nUser_Sex: " + user.getUserSex());
     }
 
     @Test

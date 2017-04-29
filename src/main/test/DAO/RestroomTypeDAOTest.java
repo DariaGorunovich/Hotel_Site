@@ -1,8 +1,6 @@
 package DAO;
 
-import com.aliaksey.DAO.Impl.RestroomTypeDAOImpl;
 import com.aliaksey.DAO.RestroomTypeDAO;
-import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.RestroomType;
 import com.aliaksey.entity.ToiletType;
 import org.hibernate.PropertyValueException;

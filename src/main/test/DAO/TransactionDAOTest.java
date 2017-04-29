@@ -1,7 +1,6 @@
 package DAO;
 
 import com.aliaksey.DAO.TransactionDAO;
-import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Transaction;
 import org.hibernate.PropertyValueException;
 import org.junit.Test;

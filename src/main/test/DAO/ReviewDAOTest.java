@@ -2,10 +2,8 @@ package DAO;
 
 import com.aliaksey.DAO.ReviewDAO;
 import com.aliaksey.DAO.UserDAO;
-import com.aliaksey.entity.Auth;
 import com.aliaksey.entity.Review;
 import com.aliaksey.entity.ReviewMark;
-import com.aliaksey.entity.User;
 import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;

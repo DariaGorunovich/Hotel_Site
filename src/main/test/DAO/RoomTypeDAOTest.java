@@ -1,15 +1,11 @@
 package DAO;
 
-import com.aliaksey.DAO.RestroomTypeDAO;
 import com.aliaksey.DAO.RoomTypeDAO;
-import com.aliaksey.entity.Auth;
-import com.aliaksey.entity.Room;
 import com.aliaksey.entity.RoomType;
 import org.hibernate.PropertyValueException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 

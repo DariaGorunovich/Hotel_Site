@@ -3,8 +3,6 @@ package DAO;
 import com.aliaksey.DAO.RestroomTypeDAO;
 import com.aliaksey.DAO.RoomDAO;
 import com.aliaksey.DAO.RoomTypeDAO;
-import com.aliaksey.entity.Auth;
-import com.aliaksey.entity.RestroomType;
 import com.aliaksey.entity.Room;
 import org.hibernate.PropertyValueException;
 import org.junit.Test;
@@ -14,7 +12,6 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.IllegalFormatException;
 import java.util.List;
 
 /**
