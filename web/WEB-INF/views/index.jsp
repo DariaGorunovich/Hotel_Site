@@ -21,7 +21,7 @@
 
     <c:forEach var="user" items="${users}">
         <tr>
-
+            <td>${user.userId}</td>
             <td>${user.firstName}</td>
             <td>${user.surname}</td>
             <td>${user.patronimyc}</td>

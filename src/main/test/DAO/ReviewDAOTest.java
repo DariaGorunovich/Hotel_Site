@@ -40,14 +40,14 @@ public class ReviewDAOTest {
 
     @Test
     public void getAll() {
-        List<Review> reviewList = reviewDAO.getAll();
-        for (Review review: reviewList) {
-            System.out.println("\n\nTest result:\nReview_ID: " + review.getReviewId() +
-                    "\nUser_ID: " + review.getUser() +
-                    "\nText: " + review.getText() +
-                    "\nData: " + review.getDate() +
-                    "\nMark: " + review.getReviewMark());
-        }
+        List<Review> reviewList = reviewDAO.getAllReviews();
+//        for (Review review: reviewList) {
+//            System.out.println("\n\nTest result:\nReview_ID: " + review.getReviewId() +
+//                    "\nUser_ID: " + review.getUser() +
+//                    "\nText: " + review.getText() +
+//                    "\nData: " + review.getDate() +
+//                    "\nMark: " + review.getReviewMark());
+//        }
     }
 
     @Test

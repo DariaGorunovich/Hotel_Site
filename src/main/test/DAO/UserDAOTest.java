@@ -35,6 +35,12 @@ public class UserDAOTest {
     public RoleDAO roleDAO;
 
     @Test
+    public void findByEmail() {
+        User user = userDAO.findByEmail("a@gmail.c");
+        System.out.println("\n\nTest result:\nUser_ID: " + user.getUserId());
+    }
+
+    @Test
     public  void add() {
         User user = new User();
         user.setFirstName("AAAAA");
@@ -42,7 +48,6 @@ public class UserDAOTest {
         user.setSurname("Sokolov");
         user.setMobilePhone("1587458");
         user.setUserSex(UserSex.Male);
-        user.setRoles(new HashSet<Role>(Arrays.asList(roleDAO.get(4),roleDAO.get(10))));
         userDAO.add(user);
     }
 
@@ -77,11 +82,7 @@ public class UserDAOTest {
     @Test
     public void update() {
         User user = userDAO.get(1);
-        user.setFirstName("Alex");
-        user.setPatronimyc("Aleksandrovich");
-        user.setSurname("Alex");
-        user.setMobilePhone("1472589");
-        user.setUserSex(UserSex.Male);
+        user.setRoles(new HashSet<Role>(Arrays.asList(roleDAO.get(1),roleDAO.get(2))));
         userDAO.update(user);
     }
 

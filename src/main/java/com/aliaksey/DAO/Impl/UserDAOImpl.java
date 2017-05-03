@@ -4,6 +4,7 @@ import com.aliaksey.DAO.UserDAO;
 import com.aliaksey.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -44,5 +45,17 @@ public class UserDAOImpl implements UserDAO {
 
     public User get(Integer id) {
         return sessionFactory.getCurrentSession().get(User.class, id);
+    }
+
+    public User findByEmail(String email) {
+        try {
+            Session session = sessionFactory.getCurrentSession();
+            User user = session.createQuery("from User where email = :email",User.class).setParameter("email",email).uniqueResult();
+            return user;
+        }
+        catch (NullPointerException e) {
+            return null;
+        }
+
     }
 }

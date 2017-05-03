@@ -6,6 +6,7 @@
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/web/WEB-INF/applicationContext.xml</file>
           <file>file://$MODULE_DIR$/web/WEB-INF/dispatcher-servlet.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/appconfig-security.xml</file>
         </fileset>
       </configuration>
     </facet>

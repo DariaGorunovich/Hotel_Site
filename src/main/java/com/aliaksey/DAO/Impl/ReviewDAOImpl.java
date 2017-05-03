@@ -45,4 +45,10 @@ public class ReviewDAOImpl implements ReviewDAO {
     public Review get(Integer id) {
         return sessionFactory.getCurrentSession().get(Review.class, id);
     }
+
+    public List<Review> getAllReviews() {
+        Session session = sessionFactory.getCurrentSession();
+        List<Review> reviews = session.createQuery("SELECT user.userId, text,date,reviewMark from Review").list();
+        return reviews;
+    }
 }

@@ -30,7 +30,7 @@ public class RestroomTypeDAOTest {
         restroomType.setName("Two+Two");
         restroomType.setBathtoomsCount(2);
         restroomType.setToiletsCount(2);
-        restroomType.setToiletType(ToiletType.Not_combined);
+        restroomType.setToiletType(ToiletType.Allowed);
         restroomTypeDAO.add(restroomType);
     }
 

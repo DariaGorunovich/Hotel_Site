@@ -45,4 +45,9 @@ public class RoleDAOImpl implements RoleDAO {
     public Role get(Integer id) {
         return sessionFactory.getCurrentSession().get(Role.class, id);
     }
+
+    public Role getByName(String roleName) {
+        Session session = sessionFactory.getCurrentSession();
+        return session.createQuery("from Role where name = roleName", Role.class).uniqueResult();
+    }
 }
