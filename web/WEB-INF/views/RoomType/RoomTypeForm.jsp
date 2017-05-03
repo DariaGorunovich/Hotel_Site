@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Aliaksey
@@ -13,17 +14,18 @@
 </head>
 <body>
 <h2>Add/Edit RoomType</h2>
-<form:form method="POST" action="/manage/roomTypes/add" modelAttribute="roomType" >
+<form:form method="POST" action="/manage/roomtypes/add" modelAttribute="roomType" >
     <table>
-        <%--<form:input type="text" path="roomTypeId" value="${roomType.roomTypeId}"/>--%>
-        <%--${roomType.roomTypeId}--%>
-        <%--<tr>--%>
-            <td><label oncontextmenu="return false">Id</label></td>
-            <td><label>${roomType.roomTypeId}</label></td>
-        </tr>
+
+        <c:if test="${! empty roomType.roomName}">
+            <tr>
+                <td><label>${roomType.roomTypeId}</label></td>
+            </tr>
+        </c:if>
         <tr>
             <td><label>RoomType name</label></td>
             <td><form:input type="text" path="roomName"/></td>
+            <td if="${fields.hasErrors('name')}" errors="*{name}">Name Error</td>
         </tr>
         <tr>
             <td><label>Blocks count</label></td>

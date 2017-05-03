@@ -23,6 +23,7 @@ public class Reservation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reservation_id",unique = true, nullable = false)
+
     public Integer getReservationId() {
         return this.reservationId;
     }

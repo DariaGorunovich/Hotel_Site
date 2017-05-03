@@ -31,10 +31,12 @@
             <td>${roomType.bedsCount}</td>
             <td>${roomType.costPerDay}</td>
             <td>${roomType.additionalInformation}</td>
-            <td><a href="/manage/roomTypes/edit/${roomType.roomTypeId}">Edit</a></td>
-            <td><a href="/manage/roomTypes/delete/${roomType.roomTypeId}">Delete</a></td>
+            <td><a href="/manage/roomtypes/edit/${roomType.roomTypeId}">Edit</a></td>
+            <td><a href="/manage/roomtypes/delete/${roomType.roomTypeId}">Delete</a></td>
         </tr>
     </c:forEach>
+
+    <td><a href="/manage/roomtypes/new">Add</a></td>
 </table>
 </body>
 </html>

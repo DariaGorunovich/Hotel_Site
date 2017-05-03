@@ -1,6 +1,13 @@
 package com.aliaksey.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.format.annotation.NumberFormat;
+
+import javax.validation.constraints.Min;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,11 +20,23 @@ import java.util.Set;
 public class RoomType implements Serializable {
 
     private Integer roomTypeId;
+
+    @NotEmpty
+    @Size(min=5, max=45)
     private String roomName;
+
+    @NotNull
     private Integer blocksCount;
+
     private Integer bedsCount;
+
+    @NotNull
     private Integer costPerDay;
+
+    @NotEmpty
+    @Size(min=5, max=45)
     private String additionalInformation;
+
     private Set<Room> rooms = new HashSet<Room>(0);
 
     @Id
@@ -30,6 +49,7 @@ public class RoomType implements Serializable {
     public void setRoomTypeId(Integer roomTypeId) {
         this.roomTypeId = roomTypeId;
     }
+
 
     @Column(name = "room_type_name", unique = true, nullable = false, length = 45)
     public String getRoomName() {
