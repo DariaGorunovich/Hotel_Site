@@ -59,7 +59,7 @@ public class RoomTypeController {
     @RequestMapping(value = "/roomtypes/edit/{id}",method = RequestMethod.GET)
         public ModelAndView editRoomTypeGet(@PathVariable("id") int id, ModelAndView model,HttpServletResponse response) {
         RoomType roomType = roomTypeDAO.get(id);
-        if (roomType != null) {
+        if (roomType == null) {
             response.setStatus(HttpStatus.NOT_FOUND.value());
         }
         else {
