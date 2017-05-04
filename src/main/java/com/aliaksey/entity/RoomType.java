@@ -1,9 +1,14 @@
 package com.aliaksey.entity;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.sun.deploy.security.ValidationState;
+import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.NumberFormat;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Min;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -21,20 +26,22 @@ public class RoomType implements Serializable {
 
     private Integer roomTypeId;
 
-    @NotEmpty
-    @Size(min=5, max=45)
+    @Size(min=3, max=45)
     private String roomName;
 
     @NotNull
+    @Range(min = 1, max = 5)
     private Integer blocksCount;
 
+    @NotNull
+    @Range(min = 1, max = 5)
     private Integer bedsCount;
 
     @NotNull
+    @Range(min = 1, max = 5000)
     private Integer costPerDay;
 
-    @NotEmpty
-    @Size(min=5, max=45)
+    @Size(min=3, max=45)
     private String additionalInformation;
 
     private Set<Room> rooms = new HashSet<Room>(0);

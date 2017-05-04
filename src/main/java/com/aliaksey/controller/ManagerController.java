@@ -3,6 +3,7 @@ package com.aliaksey.controller;
 import com.aliaksey.DAO.RoomTypeDAO;
 import com.aliaksey.entity.RoomType;
 import javassist.NotFoundException;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.multiaction.NoSuchRequestHandlingMethodException;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -55,20 +57,25 @@ public class ManagerController {
     }
 
     @RequestMapping(value = "/roomtypes/edit/{id}",method = RequestMethod.GET)
-    public ModelAndView editRoomTypeGet(@PathVariable("id") int id, ModelAndView model) {
+        public ModelAndView editRoomTypeGet(@PathVariable("id") int id, ModelAndView model,HttpServletResponse response) {
         RoomType roomType = roomTypeDAO.get(id);
-        model.addObject("roomType", roomType);
-        model.setViewName("RoomType/RoomTypeForm");
+        if (roomType != null) {
+            response.setStatus(HttpStatus.NOT_FOUND.value());
+        }
+        else {
+            model.addObject("roomType", roomType);
+            model.setViewName("RoomType/RoomTypeForm");
+        }
         return model;
     }
 
 
-    @RequestMapping(value = "/roomtypes/add",method = RequestMethod.POST)
+    @RequestMapping(value = "/roomtypes/edit/{id}",method = RequestMethod.POST)
     public ModelAndView editRoomTypePost(@Valid @ModelAttribute("roomType") RoomType roomType,
                                          BindingResult result,
                                          SessionStatus sessionStatus) {
         if (result.hasErrors()) {
-            int a = 5;
+            return new ModelAndView("RoomType/RoomTypeForm");
         }
         if (roomType.getRoomTypeId() == 0) {
             roomTypeDAO.add(roomType);

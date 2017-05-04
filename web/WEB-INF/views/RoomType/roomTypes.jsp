@@ -35,8 +35,8 @@
             <td><a href="/manage/roomtypes/delete/${roomType.roomTypeId}">Delete</a></td>
         </tr>
     </c:forEach>
-
-    <td><a href="/manage/roomtypes/new">Add</a></td>
 </table>
+<br>
+<a href="/manage/roomtypes/new">Add</a>
 </body>
 </html>
