@@ -1,8 +1,10 @@
 package com.aliaksey.entity;
 
+import com.sun.istack.internal.NotNull;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -16,10 +18,19 @@ import java.util.Set;
 public class RestroomType implements Serializable{
 
     private Integer restroomTypeId;
+
+    @NotNull
     private ToiletType toiletType;
+
+    @NotNull
     private Integer toiletsCount;
+
+    @NotNull
     private Integer bathroomsCount;
+
+    @NotNull @Size(min = 5, max = 45)
     private String name;
+
     private Set<Room> rooms = new HashSet<Room>(0);
 
     @Id

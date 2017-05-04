@@ -1,8 +1,10 @@
 package com.aliaksey.controller;
 
+import com.aliaksey.DAO.UserDAO;
 import com.aliaksey.entity.User;
 import com.aliaksey.service.SecurityService;
 import com.aliaksey.service.UserService;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,10 +15,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.validation.Valid;
+import java.util.List;
 
 
 /**
@@ -24,8 +28,8 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @RequestMapping(value = "/home")
 @Controller
+@SessionAttributes("user")
 public class UserController {
-
 
     private AuthenticationManager authenticationManager;
 
@@ -86,4 +90,6 @@ public class UserController {
     public String welcome(Model model) {
         return "welcome";
     }
+
 }
+
