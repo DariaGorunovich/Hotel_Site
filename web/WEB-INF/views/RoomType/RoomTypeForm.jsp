@@ -59,5 +59,7 @@
     </table>
 
 </form:form>
+
+<a href="/manage/roomtypes">Back</a>
 </body>
 </html>

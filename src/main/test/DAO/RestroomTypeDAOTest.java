@@ -28,9 +28,9 @@ public class RestroomTypeDAOTest {
     public void add() {
         RestroomType restroomType = new RestroomType();
         restroomType.setName("Two+Two");
-        restroomType.setBathtoomsCount(2);
+        restroomType.setBathroomsCount(2);
         restroomType.setToiletsCount(2);
-        restroomType.setToiletType(ToiletType.Allowed);
+        restroomType.setToiletType(ToiletType.Combined);
         restroomTypeDAO.add(restroomType);
     }
 
@@ -43,7 +43,7 @@ public class RestroomTypeDAOTest {
                     "\nRestroom_Type_Name: " + restroomType.getName() +
                     "\nRestroom_Toilet_Type: " + restroomType.getToiletType() +
                     "\nRestroom_Toilets_Count: " + restroomType.getToiletsCount() +
-                    "\nRestroom_Bathrooms: " + restroomType.getBathtoomsCount());
+                    "\nRestroom_Bathrooms: " + restroomType.getBathroomsCount());
         }
     }
 
@@ -54,14 +54,14 @@ public class RestroomTypeDAOTest {
                 "\nRestroom_Type_Name: " + restroomType.getName() +
                 "\nRestroom_Toilet_Type: " + restroomType.getToiletType() +
                 "\nRestroom_Toilets_Count: " + restroomType.getToiletsCount() +
-                "\nRestroom_Bathrooms: " + restroomType.getBathtoomsCount());
+                "\nRestroom_Bathrooms: " + restroomType.getBathroomsCount());
     }
 
     @Test
     public void update() {
         RestroomType restroomType = restroomTypeDAO.get(1);
         restroomType.setName("Five+Five");
-        restroomType.setBathtoomsCount(5);
+        restroomType.setBathroomsCount(5);
         restroomType.setToiletsCount(5);
         restroomType.setToiletType(ToiletType.Not_combined);
         restroomTypeDAO.update(restroomType);
@@ -93,14 +93,14 @@ public class RestroomTypeDAOTest {
                 "\nRestroom_Type_Name: " + restroomType.getName() +
                 "\nRestroom_Toilet_Type: " + restroomType.getToiletType() +
                 "\nRestroom_Toilets_Count: " + restroomType.getToiletsCount() +
-                "\nRestroom_Bathrooms: " + restroomType.getBathtoomsCount());
+                "\nRestroom_Bathrooms: " + restroomType.getBathroomsCount());
     }
 
     @Test(expected = DataIntegrityViolationException.class)
     public void updateError() throws Exception {
         RestroomType restroomType = restroomTypeDAO.get(1);
         restroomType.setName(null);
-        restroomType.setBathtoomsCount(-1000000);
+        restroomType.setBathroomsCount(-1000000);
         restroomType.setToiletsCount(10000000);
         restroomType.setToiletType(null);
         restroomTypeDAO.update(restroomType);

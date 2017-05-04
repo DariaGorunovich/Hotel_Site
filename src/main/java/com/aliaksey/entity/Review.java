@@ -3,9 +3,11 @@ package com.aliaksey.entity;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.sun.istack.internal.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -18,9 +20,15 @@ public class Review implements Serializable{
 
     private Integer reviewId;
     private User user;
+
+    @NotNull
+    @Size(min=3, max=255)
     private String text;
 
+    @NotNull
     private Date date;
+
+    @NotNull
     private ReviewMark reviewMark;
 
     @Id
@@ -53,8 +61,8 @@ public class Review implements Serializable{
         this.text = text;
     }
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "date", nullable = false)
     public Date getDate() {
         return this.date;

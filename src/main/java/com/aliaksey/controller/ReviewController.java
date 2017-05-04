@@ -36,7 +36,7 @@ public class ReviewController {
     @InitBinder
     public void initBinder(WebDataBinder binder){
         binder.registerCustomEditor(       Date.class,
-                new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true, 10));
+                new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm"), false, 16));
     }
 
 
@@ -58,7 +58,7 @@ public class ReviewController {
     @RequestMapping(value = "/new",method = RequestMethod.GET)
     public ModelAndView newReview(ModelAndView model) {
         Review review = new Review();
-       // roomType.setRoomTypeId(0);
+        review.setReviewId(0);
         model.addObject("review", review);
         model.setViewName("Review/ReviewsForm");
         return model;
@@ -85,6 +85,8 @@ public class ReviewController {
         if (result.hasErrors()) {
             return new ModelAndView("Review/ReviewsForm");
         }
+        Date date = new Date();
+        review.setDate(date);
         if (review.getReviewId() == 0) {
             reviewDAO.add(review);
         }

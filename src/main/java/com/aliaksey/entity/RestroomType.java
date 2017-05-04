@@ -1,9 +1,10 @@
 package com.aliaksey.entity;
 
-import com.sun.istack.internal.NotNull;
+import org.hibernate.validator.constraints.Range;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -14,7 +15,6 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "restroom_type")
-@Transactional
 public class RestroomType implements Serializable{
 
     private Integer restroomTypeId;
@@ -23,12 +23,15 @@ public class RestroomType implements Serializable{
     private ToiletType toiletType;
 
     @NotNull
+    @Range(min = 1, max = 5)
     private Integer toiletsCount;
 
     @NotNull
+    @Range(min = 1, max = 5)
     private Integer bathroomsCount;
 
-    @NotNull @Size(min = 5, max = 45)
+    @NotNull
+    @Size(min = 5, max = 45)
     private String name;
 
     private Set<Room> rooms = new HashSet<Room>(0);
@@ -72,13 +75,13 @@ public class RestroomType implements Serializable{
         this.toiletsCount = toiletsCount;
     }
 
-    @Column(name = "bathromms_count", nullable = false)
-    public Integer getBathtoomsCount() {
+    @Column(name = "bathrooms_count", nullable = false)
+    public Integer getBathroomsCount() {
         return this.bathroomsCount;
     }
 
-    public void setBathtoomsCount(Integer bathtoomsCount) {
-        this.bathroomsCount = bathtoomsCount;
+    public void setBathroomsCount(Integer bathroomsCount) {
+        this.bathroomsCount = bathroomsCount;
     }
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "restroomType")

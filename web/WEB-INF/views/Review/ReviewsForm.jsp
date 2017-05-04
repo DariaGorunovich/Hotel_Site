@@ -10,7 +10,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<c:set var="enumValues" value="<%=ReviewMark.values()%>"/>
+<c:set var="reviewMarkValues" value="<%=ReviewMark.values()%>"/>
 <html>
 <head>
     <title>Title</title>
@@ -22,7 +22,7 @@
 </head>
 <body>
 <h2>Add/Edit RoomType</h2>
-<form:form method="POST" action="/review//edit/${review.reviewId}" modelAttribute="review" >
+<form:form method="POST" action="/review/edit/${review.reviewId}" modelAttribute="review" >
     <table>
 
         <c:if test="${! empty review.text}">
@@ -41,16 +41,16 @@
         </tr>
         <tr>
             <td><label>Date</label></td>
-            <td><fmt:formatDate value="${review.date}" pattern="yyyy-MM-dd" /></td>
-            <td><form:input type="date" path="date"/></td>
+            <td><fmt:formatDate value="${review.date}" pattern="yyyy-MM-dd HH:mm" /></td>
+            <%--<td><form:input type="datetime-local" path="date"/></td>--%>
             <td><form:errors path="date" /></td>
         </tr>
         <tr>
             <td><label>Mark</label></td>
            <td>
                <form:select name="reviewMark" path="reviewMark">
-                   <c:forEach items="${enumValues}" var="enumValue">
-                       <option value="${enumValue}" ${review.reviewMark == enumValue ? 'selected' : ''}>${enumValue.name()}</option>
+                   <c:forEach items="${reviewMarkValues}" var="reviewMarkValues">
+                       <option value="${reviewMarkValues}" ${review.reviewMark == reviewMarkValues ? 'selected' : ''}>${reviewMarkValues.name()}</option>
                    </c:forEach>
                 </form:select>
            </td>
@@ -64,5 +64,7 @@
     </table>
 
 </form:form>
+
+<a href="/review/list">Back</a>
 </body>
 </html>

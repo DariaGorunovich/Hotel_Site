@@ -28,7 +28,7 @@
             <td>${restroomType.name}</td>
             <td>${restroomType.toiletType}</td>
             <td>${restroomType.toiletsCount}</td>
-            <td>${restroomType.bathtoomsCount}</td>
+            <td>${restroomType.bathroomsCount}</td>
             <td><a href="/manage/restroomtypes/edit/${restroomType.restroomTypeId}">Edit</a></td>
             <td><a href="/manage/restroomtypes/delete/${restroomType.restroomTypeId}">Delete</a></td>
         </tr>

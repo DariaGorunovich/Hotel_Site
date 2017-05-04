@@ -55,9 +55,11 @@ public class RestroomTypeController {
     }
 
     @RequestMapping(value = "/restroomtypes/add", method = RequestMethod.POST)
-    public ModelAndView editRestroomTypePost(@Valid @ModelAttribute("restroomType") RestroomType restroomType, BindingResult result, SessionStatus sessionStatus) {
+    public ModelAndView editRestroomTypePost(@Valid @ModelAttribute("restroomType") RestroomType restroomType,
+                                             BindingResult result,
+                                             SessionStatus sessionStatus) {
         if (result.hasErrors()) {
-            int a = 5;
+            return new ModelAndView("RestroomType/RestroomTypeForm");
         }
         if (restroomType.getRestroomTypeId() == 0) {
             restroomTypeDAO.add(restroomType);
