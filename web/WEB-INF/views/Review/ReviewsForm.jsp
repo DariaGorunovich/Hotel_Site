@@ -1,5 +1,7 @@
+<%@ page import="com.aliaksey.entity.ReviewMark" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: Aliaksey
@@ -8,6 +10,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:set var="enumValues" value="<%=ReviewMark.values()%>"/>
 <html>
 <head>
     <title>Title</title>
@@ -38,12 +41,20 @@
         </tr>
         <tr>
             <td><label>Date</label></td>
-            <td><form:input type="text" path="date"/></td>
+            <td><fmt:formatDate value="${review.date}" pattern="yyyy-MM-dd" /></td>
+            <td><form:input type="date" path="date"/></td>
             <td><form:errors path="date" /></td>
         </tr>
         <tr>
             <td><label>Mark</label></td>
-            <td><form:input type="text" path="reviewMark"/></td>
+           <td>
+               <form:select name="reviewMark" path="reviewMark">
+                   <c:forEach items="${enumValues}" var="enumValue">
+                       <option value="${enumValue}" ${review.reviewMark == enumValue ? 'selected' : ''}>${enumValue.name()}</option>
+                   </c:forEach>
+                </form:select>
+           </td>
+            <%--<td><form:input type="text" path="reviewMark"/></td>--%>
             <td><form:errors path="reviewMark" /></td>
         </tr>
 

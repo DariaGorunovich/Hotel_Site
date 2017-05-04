@@ -3,6 +3,7 @@ package com.aliaksey.entity;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -18,6 +19,7 @@ public class Review implements Serializable{
     private Integer reviewId;
     private User user;
     private String text;
+
     private Date date;
     private ReviewMark reviewMark;
 
@@ -51,6 +53,7 @@ public class Review implements Serializable{
         this.text = text;
     }
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Temporal(TemporalType.DATE)
     @Column(name = "date", nullable = false)
     public Date getDate() {

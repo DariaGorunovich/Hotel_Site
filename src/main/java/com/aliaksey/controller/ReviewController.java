@@ -7,15 +7,19 @@ import com.aliaksey.entity.Review;
 import com.aliaksey.entity.RoomType;
 import com.aliaksey.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -23,11 +27,17 @@ import java.util.List;
  */
 @Controller
 @RequestMapping(value = "/review")
-@SessionAttributes("Review")
+@SessionAttributes("review")
 public class ReviewController {
 
     @Autowired
     ReviewDAO reviewDAO;
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder){
+        binder.registerCustomEditor(       Date.class,
+                new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true, 10));
+    }
 
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
@@ -69,7 +79,7 @@ public class ReviewController {
 
 
     @RequestMapping(value = "/edit/{id}",method = RequestMethod.POST)
-    public ModelAndView editReviewPost(@Valid @ModelAttribute("roomType") Review review,
+    public ModelAndView editReviewPost(@Valid @ModelAttribute("review") Review review,
                                          BindingResult result,
                                          SessionStatus sessionStatus) {
         if (result.hasErrors()) {
