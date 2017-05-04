@@ -24,7 +24,7 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/manage")
 @SessionAttributes("roomType")
-public class ManagerController {
+public class RoomTypeController {
 
     @Autowired
     RoomTypeDAO roomTypeDAO;

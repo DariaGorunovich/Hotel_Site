@@ -6,8 +6,10 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,12 +23,26 @@ public class User implements Serializable {
 
 
     private Integer userId;
+
+    @NotNull @Size(min = 2, max = 45)
     private String firstName;
+
+    @NotNull @Size(min = 2, max = 45)
     private String patronimyc;
+
+    @NotNull @Size(min = 2, max = 45)
     private String surname;
+
+    @NotNull @Size (min = 11, max = 13)
     private String mobilePhone;
+
+    @NotNull
     private UserSex userSex;
+
+    @NotNull @Size(min = 2, max = 45)
     private String email;
+
+    @NotNull
     private String passwordHash;
 
     private Set<Role> roles = new HashSet<Role>(0);
