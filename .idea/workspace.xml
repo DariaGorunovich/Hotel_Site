@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Hotel:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e85a889-a81c-427e-a541-9fd94d937ddc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/ac1dbffd-fdae-4ca2-8514-473eaf1aaacf.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/ac1dbffd-fdae-4ca2-8514-473eaf1aaacf.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Transaction.java" afterPath="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Transaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/AuthDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/AuthDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/ReservationDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/ReservationDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/RestroomTypeDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/RestroomTypeDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/ReviewDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/ReviewDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/RoleDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/RoleDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/RoomDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/RoomDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/RoomTypeDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/RoomTypeDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/TransactionDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/TransactionDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/UserDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/UserDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/DAO/UserHasDAOTest.java" afterPath="$PROJECT_DIR$/src/main/test/DAO/UserHasDAOTest.java" />
+    <list default="true" id="da0b8782-3b56-4728-af40-eecf4e77eabb" name="Default" comment="Dot">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,141 +18,129 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Hotel_Site$RestroomTypeDAOTest_getById.coverage" NAME="RestroomTypeDAOTest.getById Coverage Results" MODIFIED="1493081151782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>DAO.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Hotel_Site$UserDAOTest_add.coverage" NAME="UserDAOTest.add Coverage Results" MODIFIED="1493158717310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>DAO.*</FILTER>
-    </SUITE>
+    <SUITE FILE_PATH="coverage/Hotel$ReservationTest_rightReservationDataTest.coverage" NAME="ReservationTest.rightReservationDataTest Coverage Results" MODIFIED="1492675663779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\Users\1\Desktop\Igor\Hotel" />
   </component>
   <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="spp_hotels_complete@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="Hotel_Site" />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="db_hotel@localhost" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="db_hotel@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_hotel" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RoomTypeDAOTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/DAO/RoomTypeDAOTest.java">
+      <file leaf-file-name="DocumentBuilderMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/factory/impl/DocumentBuilderMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="110" column="24" lean-forward="false" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransactionDAOTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/DAO/TransactionDAOTest.java">
+      <file leaf-file-name="ReservationConfirmDocumentBuilderService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/ReservationConfirmDocumentBuilderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="32" column="40" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="32" selection-end-column="40" />
+            <state relative-caret-position="153">
+              <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAOTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/DAO/UserDAOTest.java">
+      <file leaf-file-name="CsvDocumentBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/CsvDocumentBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="68">
+              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserHasDAOTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/test/DAO/UserHasDAOTest.java">
+      <file leaf-file-name="PdfDocumentBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/PdfDocumentBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-              <folding>
-                <element signature="e#2560#2561#0" expanded="true" />
-                <element signature="e#2600#2601#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthDAOTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/DAO/AuthDAOTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="90" column="52" lean-forward="false" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="52" />
+            <state relative-caret-position="68">
+              <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestroomTypeDAOTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/DAO/RestroomTypeDAOTest.java">
+      <file leaf-file-name="FinancialReportByQuarterBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/impl/FinancialReportByQuarterBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="84" column="48" lean-forward="false" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
-              <folding>
-                <element signature="e#2719#2720#0" expanded="true" />
-                <element signature="e#2763#2764#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReviewDAOTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/DAO/ReviewDAOTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoleDAOTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/DAO/RoleDAOTest.java">
+      <file leaf-file-name="EntityReportCsvBuilderService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/EntityReportCsvBuilderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="70" column="35" lean-forward="false" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+            <state relative-caret-position="102">
+              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReviewDAOImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/ReviewDAOImpl.java">
+      <file leaf-file-name="CreateDocument.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/CreateDocument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="23" column="46" lean-forward="true" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+            <state relative-caret-position="204">
+              <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Review.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Review.java">
+      <file leaf-file-name="Authorization.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/Authorization.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            <state relative-caret-position="221">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b951d779-93a3-447f-bb6a-7e69f6e93cf2/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -170,22 +151,65 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="Jsp File" />
-        <option value="AnnotationType" />
-        <option value="XML Properties File" />
         <option value="Interface" />
+        <option value="Tag Library Descriptor" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>homecontroller</find>
-      <find>em</find>
+      <find>setEventListener</find>
+      <find>sex</find>
+      <find>passport_number</find>
+      <find>beds_count</find>
+      <find>rooms_count</find>
+      <find>id_room_type</find>
+      <find>reservation_parking_space</find>
+      <find>parking_space</find>
+      <find>id_reservation</find>
+      <find>id_parking_space</find>
+      <find>mobile_phone</find>
+      <find>additional_info</find>
+      <find>cost_per_day</find>
+      <find>room_type</find>
+      <find>cost_additional_services</find>
+      <find>FROM</find>
+      <find>`db_hotel`</find>
+      <find>id_room</find>
+      <find>discount_id</find>
+      <find>date-out</find>
+      <find>id_user</find>
+      <find>discount_name</find>
+      <find>discountName</find>
+      <find>date-in</find>
+      <find>styleS</find>
+      <find>ale</find>
+      <find>role</find>
+      <find>update</find>
+      <find>cost</find>
+      <find>idAdminRef</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Igor23k &lt;www.bk.ru@mail.ru&gt;" />
+        <option value="www.bk.ru@mail.ru &lt;igorekugolek1i&gt;" />
+        <option value="Igor" />
+      </list>
+    </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <push-targets>
+      <push-target-info target-remote="origin" target-branch="Igor" repo="$PROJECT_DIR$" source="master" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -195,57 +219,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/DAO/ContextConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/tests/DAO/RestroomTypeDAOTest.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/AbstractDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/bean/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/bean/RoomType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/bean/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/GetTableNames.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/AuthDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/ReviewDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/RoleDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/RoomDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/RoomTypeDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/TransactionDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/ReservationDAO.java" />
-        <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/UserRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/UserHasRoomDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/ToiletType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/TransactionDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/RoomType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/RestroomType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Auth.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Reservation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Review.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/UserHasRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/AuthDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/ReservationDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/RestroomTypeDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/ReviewDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/RoleDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/RoomDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/RoomTypeDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/UserHasRoomDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/RestroomTypeDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/RoomTypeDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/RoomDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/UserDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Transaction.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/TransactionDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/ReservationDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/AuthDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/ReviewDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/RoleDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/test/DAO/UserHasDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/servlet/MainServlet.java" />
+        <option value="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/services/services.js" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/service/CrudServiceMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/CreateDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/GetAllEntities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/RemoveEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/AddEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/factory/impl/CommandFactoryMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/Registration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/GetTableNames.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/UpdateEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/GetEntityHeaders.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/impl/Authorization.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/GetAllEntities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/AddEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/adminJS.js" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/GetEntityHeaders.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/Registration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/RemoveEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/UpdateEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/Authorization.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/booking/booking.js" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorReservation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/dao/constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/GetTableNames.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/CreateDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/command/controller/Documents.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/formScript.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/main/main.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/documents.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/templates/pages/documents/documents.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/templates/admin/rooms.html" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/filter/MainFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/controller/CreateDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
       </list>
     </option>
   </component>
@@ -271,45 +295,20 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="web_hotels" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="by.hotel.servlet" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Maven</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>MavenModelInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -320,235 +319,69 @@
       <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
-      <autoscrollFromSource ProjectPane="true" />
+      <autoscrollFromSource />
       <sortByType />
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliaksey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliaksey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliaksey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Hotel_Site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aliaksey" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="Hotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hotel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,35 +389,56 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.14965986" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.37356323" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="53b0e027-3598-4b72-b23b-5f69cdabdd3a" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.aliaksey.model" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\1\Desktop\Igor\Hotel\src" />
+      <recent name="C:\Users\1\Desktop\Igor\Hotel\src\main\webapp\js" />
+      <recent name="C:\Users\1\Desktop\Igor\Hotel\src\main\webapp" />
+      <recent name="C:\Users\1\Desktop\Hotel\src\main\webapp" />
+      <recent name="C:\Users\1\Desktop\Hotel\src\main\webapp\css" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.aliaksey.model" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="DAO" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="by.hotel.command.controller" />
+      <recent name="by.hotel.bean" />
+      <recent name="by.hotel.service.exception" />
+      <recent name="database" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\1\Desktop\Igor\Hotel\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\1\Desktop\Igor\Hotel\src\main\java\by\hotel\command\controller" />
+      <recent name="C:\Users\1\Desktop\Igor\Hotel\src\main\java\by\hotel\command" />
+      <recent name="C:\Users\1\Desktop\Igor\Hotel\src\main" />
+      <recent name="C:\Users\1\Desktop\Igor\Hotel" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in web_hotels">
-    <configuration default="false" name="All in web_hotels" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration name="All in Hotel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="web_hotels" />
+      <module name="Hotel" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
@@ -601,20 +455,33 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="RoleDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="DAO.*" />
+          <option name="PATTERN" value="resources.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="web_hotels" />
+      <option name="MAIN_CLASS_NAME" value="resources.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="DAO" />
-      <option name="MAIN_CLASS_NAME" value="DAO.RoleDAOTest" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Hotel" />
+      <envs />
+    </configuration>
+    <configuration name="ReservationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Hotel" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ReservationTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -627,21 +494,15 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="UserHasDAOTest.updateError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="DAO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="web_hotels" />
+    <configuration name="ReservationTest.wrongAnotherDateOutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Hotel" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="DAO" />
-      <option name="MAIN_CLASS_NAME" value="DAO.UserHasDAOTest" />
-      <option name="METHOD_NAME" value="updateError" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ReservationTest" />
+      <option name="METHOD_NAME" value="wrongAnotherDateOutTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -653,20 +514,14 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="UserHasDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="DAO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="web_hotels" />
+    <configuration name="RoleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Hotel" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="DAO" />
-      <option name="MAIN_CLASS_NAME" value="DAO.UserHasDAOTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RoleTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -679,21 +534,15 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="false" name="UserHasDAOTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="DAO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="web_hotels" />
+    <configuration name="RoomTypeTest.timeoutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Hotel" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="DAO" />
-      <option name="MAIN_CLASS_NAME" value="DAO.UserHasDAOTest" />
-      <option name="METHOD_NAME" value="add" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RoomTypeTest" />
+      <option name="METHOD_NAME" value="timeoutTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -705,25 +554,244 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.11" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/main.jsp#contentMain" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Hotel:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Hotel" />
+      </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
       <predefined_log_file id="Tomcat Manager" enabled="false" />
       <predefined_log_file id="Tomcat Host Manager" enabled="false" />
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1382" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.11" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Hotel:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Hotel" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="1382" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Hotel:war exploded" />
+        </option>
+      </method>
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -778,29 +846,6 @@
         <option name="SUPPORT_LIB_ENABLED" value="true" />
         <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -949,36 +994,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <envs />
@@ -1018,7 +1033,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="web_hotels" />
+      <module name="Hotel" />
       <envs />
       <method />
     </configuration>
@@ -1034,54 +1049,31 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
       <envs />
       <method />
     </configuration>
@@ -1098,383 +1090,1265 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.11" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="web_hotels:Web exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Hotel_Site_2" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="53336" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="web_hotels:Web exploded" />
-        </option>
-      </method>
-    </configuration>
-    <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat8" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in web_hotels" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RoleDAOTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserHasDAOTest.updateError" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserHasDAOTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.UserHasDAOTest.add" />
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.All in Hotel" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RoomTypeTest.timeoutTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ReservationTest.wrongAnotherDateOutTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ReservationTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.RoleTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in web_hotels" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserHasDAOTest.updateError" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserHasDAOTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UserHasDAOTest.add" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RoleDAOTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Hotel" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RoleTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ReservationTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ReservationTest.wrongAnotherDateOutTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RoomTypeTest.timeoutTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5e85a889-a81c-427e-a541-9fd94d937ddc" name="Default" comment="" />
-      <created>1490192185291</created>
+      <changelist id="da0b8782-3b56-4728-af40-eecf4e77eabb" name="Default" comment="" />
+      <created>1488291647455</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1490192185291</updated>
-      <workItem from="1490192186561" duration="3702000" />
-      <workItem from="1490211963390" duration="8000" />
-      <workItem from="1491930742661" duration="3000" />
-      <workItem from="1492300472509" duration="31000" />
-      <workItem from="1492460448398" duration="28000" />
-      <workItem from="1492464672743" duration="4566000" />
-      <workItem from="1492499643633" duration="610000" />
-      <workItem from="1492601714638" duration="4494000" />
-      <workItem from="1492632180121" duration="20202000" />
-      <workItem from="1492715254969" duration="1009000" />
-      <workItem from="1492717035190" duration="15310000" />
-      <workItem from="1492862834157" duration="773000" />
-      <workItem from="1493019770215" duration="5822000" />
-      <workItem from="1493072350776" duration="20695000" />
-      <workItem from="1493122309830" duration="642000" />
-      <workItem from="1493123298353" duration="26788000" />
-      <workItem from="1493161099043" duration="15148000" />
-      <workItem from="1493209800846" duration="2656000" />
-      <workItem from="1493212788675" duration="11351000" />
+      <updated>1488291647455</updated>
+      <workItem from="1488291649008" duration="104000" />
+      <workItem from="1488291767041" duration="1942000" />
+      <workItem from="1488443394985" duration="1603000" />
+      <workItem from="1488477796796" duration="1696000" />
+      <workItem from="1488816254550" duration="4798000" />
+      <workItem from="1489430379157" duration="5145000" />
+      <workItem from="1489474783150" duration="4653000" />
+      <workItem from="1489518119993" duration="3254000" />
+      <workItem from="1489561243274" duration="247000" />
+      <workItem from="1490030494309" duration="114000" />
+      <workItem from="1490630438940" duration="855000" />
+      <workItem from="1490645245741" duration="1835000" />
+      <workItem from="1490710496421" duration="4970000" />
+      <workItem from="1490725292683" duration="591000" />
+      <workItem from="1490811108792" duration="2582000" />
+      <workItem from="1490820171002" duration="1512000" />
+      <workItem from="1490985808691" duration="1222000" />
+      <workItem from="1491133506649" duration="643000" />
+      <workItem from="1491135846749" duration="323000" />
+      <workItem from="1491235562536" duration="130000" />
+      <workItem from="1491244909391" duration="3708000" />
+      <workItem from="1491293192658" duration="3096000" />
+      <workItem from="1491298597630" duration="8782000" />
+      <workItem from="1491308215350" duration="20921000" />
+      <workItem from="1491411903265" duration="6334000" />
+      <workItem from="1491461849350" duration="15702000" />
+      <workItem from="1491501003157" duration="648000" />
+      <workItem from="1491590680792" duration="5896000" />
+      <workItem from="1491670446739" duration="1197000" />
+      <workItem from="1491739751467" duration="3641000" />
+      <workItem from="1491768819255" duration="685000" />
+      <workItem from="1491852152315" duration="687000" />
+      <workItem from="1491885263575" duration="3016000" />
+      <workItem from="1491918973648" duration="5913000" />
+      <workItem from="1492013283811" duration="3396000" />
+      <workItem from="1492195302895" duration="4791000" />
+      <workItem from="1492279450602" duration="2121000" />
+      <workItem from="1492350073833" duration="2902000" />
+      <workItem from="1492438517845" duration="268000" />
+      <workItem from="1492439177572" duration="18604000" />
+      <workItem from="1492492157625" duration="6245000" />
+      <workItem from="1492514064314" duration="6686000" />
+      <workItem from="1492544538313" duration="5371000" />
+      <workItem from="1492581155268" duration="2886000" />
+      <workItem from="1492612610153" duration="12401000" />
+      <workItem from="1492670038873" duration="13791000" />
+      <workItem from="1492709761497" duration="1157000" />
+      <workItem from="1492781407232" duration="2792000" />
+      <workItem from="1492786063407" duration="1486000" />
+      <workItem from="1492801624570" duration="312000" />
+      <workItem from="1492804629218" duration="2393000" />
+      <workItem from="1492866807962" duration="17213000" />
+      <workItem from="1492924845234" duration="5470000" />
+      <workItem from="1492959916071" duration="16357000" />
+      <workItem from="1493017470876" duration="5600000" />
+      <workItem from="1493042960454" duration="17659000" />
+      <workItem from="1493067228177" duration="7588000" />
+      <workItem from="1493217758074" duration="3784000" />
+      <workItem from="1493275821662" duration="2027000" />
+      <workItem from="1493278964611" duration="5058000" />
+      <workItem from="1493307304681" duration="2303000" />
+      <workItem from="1493365941544" duration="955000" />
+      <workItem from="1493385609617" duration="330000" />
+      <workItem from="1493388497534" duration="2168000" />
+      <workItem from="1493415072589" duration="585000" />
+      <workItem from="1493486113480" duration="10021000" />
+      <workItem from="1493546024909" duration="11793000" />
+      <workItem from="1493639141322" duration="10441000" />
+      <workItem from="1493740763800" duration="3737000" />
+      <workItem from="1493835215997" duration="5000" />
+      <workItem from="1493836625018" duration="321000" />
+      <workItem from="1493836984944" duration="431000" />
+      <workItem from="1493839657120" duration="1438000" />
+      <workItem from="1493842819907" duration="4573000" />
+      <workItem from="1493890589923" duration="621000" />
+      <workItem from="1493921203464" duration="6870000" />
+      <workItem from="1493995215211" duration="438000" />
+      <workItem from="1493996680166" duration="1085000" />
+      <workItem from="1494007743802" duration="8529000" />
+      <workItem from="1494140518596" duration="29484000" />
+      <workItem from="1494262243525" duration="6815000" />
+      <workItem from="1494314061821" duration="1405000" />
+      <workItem from="1494316947901" duration="61000" />
+      <workItem from="1494318060443" duration="16178000" />
+      <workItem from="1494432437161" duration="7307000" />
+      <workItem from="1494440872459" duration="2513000" />
+      <workItem from="1494486245835" duration="6516000" />
+      <workItem from="1494623747220" duration="673000" />
+      <workItem from="1494625010339" duration="786000" />
+      <workItem from="1494676688478" duration="12392000" />
+      <workItem from="1494755338570" duration="3329000" />
+      <workItem from="1494801541799" duration="1695000" />
+      <workItem from="1494826962209" duration="2711000" />
+      <workItem from="1494877902179" duration="1082000" />
+      <workItem from="1494920646529" duration="3645000" />
+      <workItem from="1494951130066" duration="825000" />
+      <workItem from="1494964030045" duration="3935000" />
+      <workItem from="1495195970323" duration="6831000" />
+      <workItem from="1495220989051" duration="680000" />
+      <workItem from="1495391468798" duration="6865000" />
+      <workItem from="1495532441066" duration="1309000" />
+      <workItem from="1495533787541" duration="562000" />
+      <workItem from="1495534358262" duration="15958000" />
+      <workItem from="1495560723173" duration="9945000" />
+      <workItem from="1495612878363" duration="3464000" />
+      <workItem from="1495628945386" duration="13680000" />
+      <workItem from="1495653463099" duration="1806000" />
+      <workItem from="1496070288516" duration="505000" />
+      <workItem from="1503142917638" duration="420000" />
     </task>
+    <task id="LOCAL-00022" summary="Add many many services and dao">
+      <created>1491747418808</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1491747418808</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added fill method">
+      <created>1491885931973</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1491885931973</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added fill method">
+      <created>1491885949737</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1491885949737</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Added field Room">
+      <created>1491886156949</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1491886156949</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added correct filling with field &quot;Room&quot;">
+      <created>1491887496474</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1491887496474</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Added get_all_reservations query">
+      <created>1491888192030</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1491888192030</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Corrected filling.">
+      <created>1491920014028</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1491920014029</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Bad commit">
+      <created>1491921013804</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1491921013804</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Corrected">
+      <created>1491921864620</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1491921864620</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Added auth. Corrected user etc.">
+      <created>1492199781421</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1492199781421</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added bootstrap.">
+      <created>1492440765120</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1492440765120</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Merge branches 'Alex' and 'Igor' of https://github.com/Alex0319/Hotel&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/by/hotel/bean/User.java&#10;#&#9;src/main/java/by/hotel/dao/constants/Constants.java&#10;#&#9;src/main/java/by/hotel/dao/daoimpl/RegistrationCardDaoImpl.java&#10;#&#9;src/main/java/by/hotel/dao/daoimpl/UserDaoImpl.java&#10;#&#9;src/main/java/by/hotel/service/ServiceMapper.java&#10;#&#9;src/main/resources/config.properties&#10;">
+      <created>1492494613982</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1492494613982</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Merge branches 'Alex' and 'Igor' of https://github.com/Alex0319/Hotel&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/by/hotel/bean/User.java&#10;#&#9;src/main/java/by/hotel/dao/constants/Constants.java&#10;#&#9;src/main/java/by/hotel/dao/daoimpl/RegistrationCardDaoImpl.java&#10;#&#9;src/main/java/by/hotel/dao/daoimpl/UserDaoImpl.java&#10;#&#9;src/main/java/by/hotel/service/ServiceMapper.java&#10;#&#9;src/main/resources/config.properties&#10;">
+      <created>1492519756283</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1492519756283</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Raise connection.&#10;">
+      <created>1492548388953</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1492548388953</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Raise connection.&#10;">
+      <created>1492550812325</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1492550812325</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Added path">
+      <created>1492584558600</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1492584558600</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added path">
+      <created>1492867143410</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1492867143410</updated>
+    </task>
+    <task id="LOCAL-00039" summary=".">
+      <created>1492870417064</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1492870417064</updated>
+    </task>
+    <task id="LOCAL-00040" summary=".">
+      <created>1492870499869</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1492870499869</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add getlastentity method to dao">
+      <created>1493043627379</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1493043627379</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Add filter">
+      <created>1493058100595</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1493058100595</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Add filter">
+      <created>1493058959727</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1493058959727</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Add filter">
+      <created>1493218498360</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1493218498360</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Add authorization and registration">
+      <created>1493277449678</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1493277449678</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Add email">
+      <created>1493284786505</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1493284786505</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fix room entity">
+      <created>1493308266846</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1493308266846</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Merge remote-tracking branch 'origin/Alex'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/by/hotel/bean/Room.java&#10;#&#9;src/main/java/by/hotel/builder/RoomBuilder.java&#10;#&#9;src/main/java/by/hotel/command/impl/AddEntity.java&#10;#&#9;src/main/java/by/hotel/command/impl/UpdateEntity.java&#10;#&#9;src/main/java/by/hotel/dao/impl/ReservationParkingSpaceDaoImpl.java&#10;#&#9;src/main/java/by/hotel/dao/impl/ReservationRoomDaoImpl.java&#10;#&#9;src/main/java/by/hotel/service/impl/RoomServiceImpl.java&#10;#&#9;src/main/webapp/js/adminJS.js&#10;">
+      <created>1493498805083</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1493498805083</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Another stupic commit. Fucking GIT. I hate. i hate it. I want to write code, but now i need to spend an hour of my life for this stupid merge. FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU">
+      <created>1493499031724</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1493499031724</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Another stupic commit. Fucking GIT. I hate. i hate it. I want to write code, but now i need to spend an hour of my life for this stupid merge. FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU">
+      <created>1493499955642</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1493499955643</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Added validators in service without auth and reservation.">
+      <created>1493643977406</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1493643977407</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Fixed bags, add email. Authorization,Registration,Logout.">
+      <created>1493921482050</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1493921482051</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Fixed validateUser">
+      <created>1494013110224</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1494013110225</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Fixed registration">
+      <created>1494019576232</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1494019576232</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Fixed authorization.">
+      <created>1494146104761</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1494146104763</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Fixed filter.">
+      <created>1494157519404</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1494157519404</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Fixed session.">
+      <created>1494176475390</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1494176475390</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Merge remote-tracking branch 'origin/sergei'&#10;&#10;# Conflicts:&#10;#&#9;src/main/webapp/js/formScript.js&#10;">
+      <created>1494178438120</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1494178438121</updated>
+    </task>
+    <task id="LOCAL-00059" summary="deleted Sex.">
+      <created>1494276210662</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1494276210662</updated>
+    </task>
+    <task id="LOCAL-00060" summary="deleted Sex and fised ID.">
+      <created>1494320583815</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1494320583817</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Fixed queries">
+      <created>1494328880620</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1494328880620</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Best commit">
+      <created>1494438411383</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1494438411384</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Change naming">
+      <created>1494488939011</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1494488939012</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Change naming in queries">
+      <created>1494491990023</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1494491990023</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Correct bags">
+      <created>1495205116693</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1495205116694</updated>
+    </task>
+    <task id="LOCAL-00066" summary="+ Little Spring">
+      <created>1495532953648</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1495532953648</updated>
+    </task>
+    <task id="LOCAL-00067" summary="+ Spring">
+      <created>1495571052177</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1495571052178</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Add jump to admin.jsp">
+      <created>1495629574012</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1495629574013</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Add xml files">
+      <created>1495629750730</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1495629750731</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Add documents">
+      <created>1495639478554</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1495639478554</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_web_hotels - 2017.04.27 at 01h 47m 21s.xml">
-      <configuration name="All in web_hotels" configurationId="JUnit" />
+    <history-entry file="All_in_Hotel - 2017.05.10 at 19h 59m 26s.xml">
+      <configuration name="All in Hotel" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_web_hotels - 2017.04.27 at 01h 54m 06s.xml">
-      <configuration name="All in web_hotels" configurationId="JUnit" />
+    <history-entry file="All_in_Hotel - 2017.05.10 at 20h 43m 59s.xml">
+      <configuration name="All in Hotel" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_web_hotels - 2017.04.27 at 01h 54m 30s.xml">
-      <configuration name="All in web_hotels" configurationId="JUnit" />
+    <history-entry file="ReservationTest - 2017.05.10 at 19h 20m 59s.xml">
+      <configuration name="ReservationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserHasDAOTest - 2017.04.27 at 01h 48m 48s.xml">
-      <configuration name="UserHasDAOTest" configurationId="JUnit" />
+    <history-entry file="ReservationTest - 2017.05.10 at 19h 21m 46s.xml">
+      <configuration name="ReservationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserHasDAOTest - 2017.04.27 at 01h 52m 42s.xml">
-      <configuration name="UserHasDAOTest" configurationId="JUnit" />
+    <history-entry file="ReservationTest - 2017.05.10 at 19h 22m 15s.xml">
+      <configuration name="ReservationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserHasDAOTest - 2017.04.27 at 01h 52m 52s.xml">
-      <configuration name="UserHasDAOTest" configurationId="JUnit" />
+    <history-entry file="ReservationTest - 2017.05.10 at 19h 22m 18s.xml">
+      <configuration name="ReservationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserHasDAOTest_add - 2017.04.27 at 01h 49m 17s.xml">
-      <configuration name="UserHasDAOTest.add" configurationId="JUnit" />
+    <history-entry file="ReservationTest - 2017.05.10 at 19h 24m 31s.xml">
+      <configuration name="ReservationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserHasDAOTest_updateError - 2017.04.27 at 01h 48m 25s.xml">
-      <configuration name="UserHasDAOTest.updateError" configurationId="JUnit" />
+    <history-entry file="ReservationTest - 2017.05.10 at 19h 24m 38s.xml">
+      <configuration name="ReservationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserHasDAOTest_updateError - 2017.04.27 at 01h 53m 03s.xml">
-      <configuration name="UserHasDAOTest.updateError" configurationId="JUnit" />
+    <history-entry file="RoleTest - 2017.05.10 at 19h 36m 09s.xml">
+      <configuration name="RoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserHasDAOTest_updateError - 2017.04.27 at 01h 53m 47s.xml">
-      <configuration name="UserHasDAOTest.updateError" configurationId="JUnit" />
+    <history-entry file="RoleTest - 2017.05.10 at 19h 36m 17s.xml">
+      <configuration name="RoleTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133838000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="516824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2892741" sideWeight="0.18176973" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17004265" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15831557" sideWeight="0.49140048" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36434108" sideWeight="0.79502195" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.004830918" sideWeight="0.39165446" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2892741" sideWeight="0.8182303" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18634886" sideWeight="0.6348614" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3923241" sideWeight="0.48466256" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.48466256" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39687848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32107022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41583055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14765458" sideWeight="0.1851145" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14765458" sideWeight="0.8148855" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18710022" sideWeight="0.26622295" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16204691" sideWeight="0.16774194" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39392325" sideWeight="0.5153374" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12225476" sideWeight="0.5085995" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39409986" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3979933" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32502708" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19826652" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18645833" sideWeight="0.1579602" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1609808" sideWeight="0.8420398" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18710022" sideWeight="0.26622295" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18710022" sideWeight="0.26622295" order="8" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add email" />
+    <MESSAGE value="fix room entity" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Alex'&#10;&#10;# Conflicts:&#10;#&#9;src/main/java/by/hotel/bean/Room.java&#10;#&#9;src/main/java/by/hotel/builder/RoomBuilder.java&#10;#&#9;src/main/java/by/hotel/command/impl/AddEntity.java&#10;#&#9;src/main/java/by/hotel/command/impl/UpdateEntity.java&#10;#&#9;src/main/java/by/hotel/dao/impl/ReservationParkingSpaceDaoImpl.java&#10;#&#9;src/main/java/by/hotel/dao/impl/ReservationRoomDaoImpl.java&#10;#&#9;src/main/java/by/hotel/service/impl/RoomServiceImpl.java&#10;#&#9;src/main/webapp/js/adminJS.js&#10;" />
+    <MESSAGE value="Another stupic commit. Fucking GIT. I hate. i hate it. I want to write code, but now i need to spend an hour of my life for this stupid merge. FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU" />
+    <MESSAGE value="Added validators in service without auth and reservation." />
+    <MESSAGE value="Fixed bags, add email. Authorization,Registration,Logout." />
+    <MESSAGE value="Fixed validateUser" />
+    <MESSAGE value="Fixed registration" />
+    <MESSAGE value="Fixed authorization." />
+    <MESSAGE value="Fixed filter." />
+    <MESSAGE value="Fixed session." />
+    <MESSAGE value="fixed formScript logout." />
+    <MESSAGE value="Merge remote-tracking branch 'origin/sergei'&#10;&#10;# Conflicts:&#10;#&#9;src/main/webapp/js/formScript.js&#10;" />
+    <MESSAGE value="deleted Sex." />
+    <MESSAGE value="deleted Sex and fised ID." />
+    <MESSAGE value="Fixed queries" />
+    <MESSAGE value="Best commit" />
+    <MESSAGE value="Change naming" />
+    <MESSAGE value="Change naming in queries" />
+    <MESSAGE value="Correct bags" />
+    <MESSAGE value="+ Little Spring" />
+    <MESSAGE value="+ Spring" />
+    <MESSAGE value="Add jump to admin.jsp" />
+    <MESSAGE value="Add xml files" />
+    <MESSAGE value="Add documents" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add documents" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="41" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ParkingSpaceDaoImpl.java</url>
+          <line>129</line>
+          <properties />
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationDaoImpl.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="274" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/ParkingSpaceTest.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="451" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="452" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="453" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="454" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="455" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="456" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="457" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="458" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="459" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="461" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="462" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorParkingSpace.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="463" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/ReservationParkingSpaceTransactionTest.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="465" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/ReservationParkingSpaceTransactionTest.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="466" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationParkingSpaceServiceImpl.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="467" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/ReservationRoomTransactionTest.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="469" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationRoomServiceImpl.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="470" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationRoomServiceImpl.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="471" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationRoomServiceImpl.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="472" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/ReservationTest.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="473" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/command/impl/AddEntity.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="479" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/RoleServiceImpl.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="491" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/RoleServiceImpl.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="492" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/RoleServiceImpl.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="493" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/RoleServiceImpl.java</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="494" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/DiscountServiceImpl.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="496" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/DiscountServiceImpl.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="497" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/DiscountServiceImpl.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="498" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/DiscountDaoImpl.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="508" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/DiscountDaoImpl.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="509" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/DiscountDaoImpl.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="510" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/DiscountDaoImpl.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="511" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/DiscountDaoImpl.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="512" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/DiscountDaoImpl.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="513" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/DiscountDaoImpl.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="514" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/UserDaoImpl.java</url>
+          <line>169</line>
+          <properties />
+          <option name="timeStamp" value="524" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/controller/AddEntity.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="556" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/controller/UpdateEntity.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="562" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/controller/Registration.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="563" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/controller/Registration.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="564" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/controller/Registration.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="565" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/controller/GetEntityHeaders.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="566" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/controller/GetAllEntities.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="567" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/filter/MainFilter.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="584" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/DiscountDao.java</url>
+          <line>11</line>
+          <properties class="by.hotel.dao.DiscountDao" method="addDiscount" />
+          <option name="timeStamp" value="507" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/ReservationDao.java</url>
+          <line>12</line>
+          <properties class="by.hotel.dao.ReservationDao" method="addReservation" />
+          <option name="timeStamp" value="571" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="585" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="((Map)a).entrySet().toArray()[1]" custom="java.util.Map" />
+      </configuration>
+      <configuration name="JUnit">
+        <watch expression="roomType.additionalInfo" language="JAVA" />
+        <watch expression="((UserTest)this).arrOfUserData[3]" custom="UserTest" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/DiscountDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="69" column="20" lean-forward="false" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.7.RELEASE/spring-test-4.3.7.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.7.RELEASE/spring-test-4.3.7.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestClassCallbacks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.7.RELEASE/spring-test-4.3.7.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunBeforeTestClassCallbacks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.7.RELEASE/spring-test-4.3.7.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/AuthDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="49" lean-forward="false" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/RoleDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/UserRoom.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/UserHasRoomDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="47" lean-forward="false" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/TransactionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/AbstractDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="1428">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/controller/HomeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/GetAllEntities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1495636663689" expanded="false" signature="37:46" ph="..." />
+            <marker date="1495636663689" expanded="true" signature="1046:1093" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/Hotel-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ac1dbffd-fdae-4ca2-8514-473eaf1aaacf/console.sql">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/ReservationVoucherBuilderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/formScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="182" column="41" lean-forward="true" selection-start-line="182" selection-start-column="41" selection-end-line="182" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/AuthServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/GetTableNames.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/main/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/pages/main/contentMain.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/documents.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/pages/documents/documents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/command/controller/Documents.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/admin/rooms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="22" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/validator/ValidatorUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="51" column="20" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/security/MD5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="108" column="33" lean-forward="false" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/filter/MainFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="35" column="132" lean-forward="false" selection-start-line="35" selection-start-column="132" selection-end-line="35" selection-end-column="132" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/RemoveEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/UpdateEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+          <folding>
+            <marker date="1495639538580" expanded="false" signature="37:46" ph="..." />
+            <marker date="1495639538580" expanded="true" signature="1327:1334" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/impl/RoomReportByMonthBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/impl/RoomDocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/impl/ReservationConfirmDocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/ExcelDocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/impl/UserDocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/factory/DocumentBuilderServiceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/DocumentBuilderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/ReservationReportBuilderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/FinancialReportBuilderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/factory/impl/DocumentBuilderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/ReservationConfirmDocumentBuilderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/DocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/CsvDocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/PdfDocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/impl/FinancialReportByMonthBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/impl/FinancialReportByQuarterBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/EntityReportCsvBuilderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/CreateDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/Authorization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/14795b40-1e80-4b36-b5c9-ff7576c9b0d8/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1482,301 +2356,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="51">
+          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Auth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="20" column="54" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/RestroomType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#561#567#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/ReviewMark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/RoomType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/ToiletType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/UserSex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/UserHasRoom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/AuthDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding>
-            <element signature="e#639#640#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/ReservationDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/RoleDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/RoomDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/RoomTypeDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/TransactionDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/UserHasRoomDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/RestroomTypeDAOImpl.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b951d779-93a3-447f-bb6a-7e69f6e93cf2/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Reservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/ReservationDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="126" column="45" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/RoomDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="91" column="28" lean-forward="false" selection-start-line="91" selection-start-column="28" selection-end-line="91" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/RoomTypeDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="110" column="24" lean-forward="false" selection-start-line="110" selection-start-column="24" selection-end-line="110" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/AuthDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="90" column="52" lean-forward="false" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/RestroomTypeDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="84" column="48" lean-forward="false" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
-          <folding>
-            <element signature="e#2719#2720#0" expanded="true" />
-            <element signature="e#2763#2764#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/DAO/Impl/ReviewDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="23" column="46" lean-forward="true" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aliaksey/entity/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/ReviewDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/TransactionDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="40" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="32" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/UserDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/RoleDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="70" column="35" lean-forward="false" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/DAO/UserHasDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-          <folding>
-            <element signature="e#2560#2561#0" expanded="true" />
-            <element signature="e#2600#2601#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1786,11 +2378,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>web_hotels:Web exploded</last-edited>
+          <last-edited>Hotel:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.37356323" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1799,11 +2391,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring</last-edited>
+          <last-edited>Detection</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.37356323" />
               </list>
             </option>
           </splitter-proportions>
@@ -1834,7 +2426,19 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>JPA|web_hotels</last-edited>
+          <last-edited>Web|Hotel</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37356323" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1846,11 +2450,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>log4j-api-2.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.37356323" />
               </list>
             </option>
           </splitter-proportions>
