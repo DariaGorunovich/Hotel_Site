@@ -113,6 +113,9 @@ function sendUserDataRegistration(login,email,pass,phone,name,surname,passport) 
                 loadTemplate('/templates/pages/signin/personalInfo.html');
                 setNewValueEntryDiv(currentUser.name);
             }
+        },
+        error: function() {
+            alert("Error!");
         }
     });
 }
