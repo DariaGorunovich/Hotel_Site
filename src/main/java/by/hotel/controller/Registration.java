@@ -14,6 +14,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,6 +39,13 @@ public class Registration  {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
         return user;
+    }
+
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public RedirectView localRedirect() {
+        RedirectView redirectView = new RedirectView();
+        redirectView.setUrl("http://localhost:8080/main.jsp#entry");
+        return redirectView;
     }
 
     public static String getRights(User user){

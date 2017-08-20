@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
@@ -32,5 +33,12 @@ public class Authorization  {
             logger.error(e);
         }
         return user;
+    }
+
+    @RequestMapping(value = "/authorization", method = RequestMethod.GET)
+    public RedirectView localRedirect() {
+        RedirectView redirectView = new RedirectView();
+        redirectView.setUrl("http://localhost:8080/main.jsp#entry");
+        return redirectView;
     }
 }

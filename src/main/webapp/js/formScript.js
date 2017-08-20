@@ -130,7 +130,7 @@ function sendUserDataLogin(email,pass){
              if(typeof data =='object' && data!=null) {
                  currentUser = data;
 
-                 if(sessionStorage.length==0) {
+                 if (sessionStorage.length == 0) {
                      for (var fieldUser in currentUser) {
                          if (typeof currentUser[fieldUser] == 'object')
                              sessionStorage['role'] = JSON.stringify(currentUser['role']);
@@ -143,7 +143,12 @@ function sendUserDataLogin(email,pass){
                  document.getElementById('idDocsRef').style.display = 'block';
                  loadTemplate('/templates/pages/signin/personalInfo.html');
                  setNewValueEntryDiv(currentUser.name);
+             } else {
+                 alert("Error in login or password!");
              }
+         },
+         error: function () {
+             alert("Error login!");
          }
      });
 }
@@ -172,10 +177,10 @@ function validateInForm (){
     var email = document.getElementById("emailIn");
     var passw = document.getElementById("passIn");
 
-    if (!validEmail(email.value) || !validPassword(passw.value)){
-        alert ("Данные заполнены неверно!");
-        return  false;
-    }
+    // if (!validEmail(email.value) || !validPassword(passw.value)){
+    //     alert ("Данные заполнены неверно!");
+    //     return  false;
+    // }
     alert ("Данные успешно отправлены на сервер!");
     sendUserDataLogin(email.value,passw.value);
 }
