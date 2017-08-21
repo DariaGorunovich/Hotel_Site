@@ -356,18 +356,25 @@ idReservation</ColNames>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="83" parent="15" name="idRole">
+    <column id="83" parent="15" name="role_id">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="84" parent="15" name="id_role1_idx">
-      <ColNames>idRole</ColNames>
+    <index id="84" parent="15" name="fk_user_role_idx">
+      <ColNames>role_id</ColNames>
     </index>
     <key id="85" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>id
+role_id</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="86" parent="15" name="fk_user_role">
+      <ColNames>role_id</ColNames>
+      <RefSchemaName>db_hotel</RefSchemaName>
+      <RefTableName>role</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

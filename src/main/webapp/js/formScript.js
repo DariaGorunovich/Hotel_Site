@@ -61,7 +61,7 @@ function getUpdateDataUser() {
         });
     });
     result = result.concat('&','id','=', currentUser.id);
-    result = result.concat('&','idRole','=', currentUser.role.id);
+    result = result.concat('&','role_id','=', currentUser.role.id);
     return result;
 }
 
@@ -104,7 +104,7 @@ function sendUserDataRegistration(login,email,pass,phone,name,surname,passport) 
     $.ajax({
         type: 'POST',
         url: '/registration',
-        data:{"rights":4,"login":login,"email":email,"password":pass,"mobilePhone":phone,"name":name,"surname":surname,"passportNumber":passport,"id":0,"idRole":1},
+        data:{"rights":4,"login":login,"email":email,"password":pass,"mobilePhone":phone,"name":name,"surname":surname,"passportNumber":passport,"id":0,"role_id":1},
         success: function(data) {
             if(typeof data =='object') {
                 currentUser = data;
@@ -118,6 +118,29 @@ function sendUserDataRegistration(login,email,pass,phone,name,surname,passport) 
             alert("Incorrect data!");
         }
     });
+}
+
+function test(data) {
+    //console.log(data);
+    if(typeof data =='object' && data!=null) {
+        currentUser = data;
+
+        if (sessionStorage.length == 0) {
+            for (var fieldUser in currentUser) {
+                if (typeof currentUser[fieldUser] == 'object')
+                    sessionStorage['role'] = JSON.stringify(currentUser['role']);
+                else
+                    sessionStorage[fieldUser] = currentUser[fieldUser];
+            }
+
+        }
+        document.getElementById('idAdminRef').style.display = 'block';
+        document.getElementById('idDocsRef').style.display = 'block';
+        loadTemplate('/templates/pages/signin/personalInfo.html');
+        setNewValueEntryDiv(currentUser.name);
+    } else {
+        alert("Error in login or password!");
+    }
 }
 
 function sendUserDataLogin(email,pass){

@@ -110,7 +110,7 @@ public class UserServiceImpl extends AbstractService implements CrudServiceExten
                         .password(password)
                         .passportNumber(params.get("passportNumber")[0])
                         .mobilePhone(params.get("mobilePhone")[0])
-                        .role(new RoleBuilder().id(Integer.parseInt(params.get("idRole")[0])).build())
+                        .role(new RoleBuilder().id(Integer.parseInt(params.get("role_id")[0])).build())
                         .build();
             }
         } catch (IncorrectPassportNumberException

@@ -17,6 +17,7 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/layout.css" rel="stylesheet" type="text/css" />
     <script src="js/maxheight.js" type="text/javascript"></script>
+    <script src="js/validator.js" type="text/javascript"></script>
     <!--[if lt IE 7]>
     <link href="ie_style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="ie_png.js"></script>
@@ -47,7 +48,15 @@
                             <a href="#documents">Документы</a>
                         </div>
                     </div>
-
+                </div>
+                <div class="sign-wrapper">
+                    <div class="nav">
+                        <a href="#login">Вход</a>
+                        <a href="#registration">Регистрация</a>
+                    </div>
+                    <div class="nav">
+                        <a href="#logout">Выход</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,7 +71,8 @@
                             <li><a href="#contentGallery">Галерея</a></li>
                             <li><a href="#contentTestimonials">Отзывы</a></li>
                             <li><a id="idBookingA">Бронирование</a></li>
-                            <li><a href="#entry" click="" id="idEntryA">Вход</a></li>
+                            <%--<li><a href="#entry" click="" id="idEntryA">Вход</a></li>--%>
+
                         </ul>
                     </div>
                 </div>
@@ -74,7 +84,8 @@
         <section id=contentBooking class="container" src="/templates/pages/booking/contentBooking.html"></section>
         <section id=contentGallery class="container" src="/templates/pages/gallery/contentGallery.html"></section>
         <section id=contentServices class="container" src="/templates/pages/services/contentServices.html"></section>
-        <section id=entry class="container" src="/templates/pages/signin/entry.html"></section>
+        <section id=login class="container" src="/templates/pages/signin/entry.html"></section>
+        <section id=registration class="container" src="/templates/pages/signin/registration.html"></section>
         <section id=contentTestimonials class="container" src="/templates/pages/testimonials/contentTestimonials.html"></section>
         <section id=documents class="container" src="/templates/pages/documents/documents.html"></section>
     </div>
