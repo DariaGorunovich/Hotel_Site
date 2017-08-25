@@ -11,9 +11,10 @@
     <script type="text/javascript" src=js/formScript.js></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/styleSignIn.css">
-    <link rel="stylesheet" href="css/sliderStyle.css"/>
+    <link rel="stylesheet" href="css/gallery.css"/>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/layout.css" rel="stylesheet" type="text/css" />
     <script src="js/maxheight.js" type="text/javascript"></script>
@@ -32,22 +33,9 @@
         <div class="row-1">
             <div class="wrapper">
                 <div class="logo">
-                    <h1><a href="main.jsp">Бобруйск</a></h1>
-                    <em>Отель</em>
-                    <strong>Настоящая роскошь</strong>
-                </div>
-                <div>
-                    <div class="phones">
-                        +375(29)179-07-46
-                        <br>
-                        <div id="idAdminRef" style="display: none">
-                            <a href="/admin_start">Администратор</a>
-                        </div>
-                        <div id="idDocsRef" style="display: none">
-                            <a href="#documents">Документы</a>
-                        </div>
-                    </div>
-
+                    <p class="p_header_icon"><img class="header_icon" src="images/header_icon.png" alt=""/></p>
+                    <h1 class="hotel_name"><a href="main.jsp">Minsk See Resort</a></h1>
+                    <h1 class="hotel_slogan">Make your dreams come true!</h1>
                 </div>
             </div>
         </div>
@@ -57,12 +45,14 @@
                 <div class="header-box">
                     <div class="inner">
                         <ul class="nav">
-                            <li><a href="#contentMain" class="current">Главная</a></li>
+                            <li><a href="#contentMain" class="current" id="idConMain">Главная</a></li>
                             <li><a href="#contentServices" id="idServicesA">Услуги</a></li>
-                            <li><a href="#contentGallery">Галерея</a></li>
-                            <li><a href="#contentTestimonials">Отзывы</a></li>
-                            <li><a id="idBookingA">Бронирование</a></li>
-                            <li><a href="#entry" click="" id="idEntryA">Вход</a></li>
+                            <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
+                            <li><a href="#contentTestimonials" id="idConTest">Отзывы</a></li>
+                            <li><a id="idBookingA">Бронь</a></li>
+                            <li><a href="#entry" id="idEntryA" style="float: right">Авторизация</a></li>
+                            <li><a id="idDocsRef" href="#documents" style="display: none;">Документы</a></li>
+                            <li><a id="idAdminRef" href="/admin_start" style="display: none;">Админка</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,17 +68,9 @@
         <section id=contentTestimonials class="container" src="/templates/pages/testimonials/contentTestimonials.html"></section>
         <section id=documents class="container" src="/templates/pages/documents/documents.html"></section>
     </div>
-    <div id="footer" style="width: 976px;margin: auto">
-        <ul class="nav nav-pills" style="align:center;">
-            <li><a href="#contentMain" class="current">Главная</a></li>
-            <li><a href="#contentServices">Услуги</a></li>
-            <li><a href="#contentGallery">Галерея</a></li>
-            <li><a href="#contentTestimonials">Отзывы</a></li>
-            <li><a href="#contentBooking">Бронирование</a></li>
-            <li><a href="#entry">Вход</a></li>
-        </ul>
+    <div id="footer" style="width: 1100px; margin: auto">
         <div class="wrapper">
-            <div class="fleft">Copyright (c) 2017 Бобруйск Отель</div>
+            <h4 class="fleft">Copyright (c) 2017 Minsk See Resort</h4>
         </div>
     </div>
 </div>
