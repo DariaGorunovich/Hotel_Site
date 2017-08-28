@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/main/main.js"></script>
     <script src="js/formScript.js" type="text/javascript"></script>
     <script type="text/javascript" src=js/formScript.js></script>
+    <meta name='viewport', content='width=device-width, initial-scale=1'/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
@@ -49,7 +50,6 @@
                             <li><a href="#contentServices" id="idServicesA">Услуги</a></li>
                             <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
                             <li><a href="#contentTestimonials" id="idConTest">Отзывы</a></li>
-                            <li><a id="idBookingA">Бронь</a></li>
                             <li><a href="#entry" id="idEntryA" style="float: right">Авторизация</a></li>
                             <li><a id="idDocsRef" href="#documents" style="display: none;">Документы</a></li>
                             <li><a id="idAdminRef" href="/admin_start" style="display: none;">Админка</a></li>
@@ -68,7 +68,7 @@
         <section id=contentTestimonials class="container" src="/templates/pages/testimonials/contentTestimonials.html"></section>
         <section id=documents class="container" src="/templates/pages/documents/documents.html"></section>
     </div>
-    <div id="footer" style="width: 1100px; margin: auto">
+    <div id="footer" style="max-width: 1100px; margin: auto">
         <div class="wrapper">
             <h4 class="fleft">Copyright (c) 2017 Minsk See Resort</h4>
         </div>

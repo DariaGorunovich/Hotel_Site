@@ -1,3 +1,9 @@
+.container_header {overflow: hidden; padding-left: 20px;}
+.container_header_box {white-space: nowrap}
+.container_header_box h3 {width: 300px; display: inline-block}
+.table_header {overflow: hidden; display: none}
+.col-lg-12 {width: 75%}
+
 .animationColor{
     animation: colorChange 2s infinite;
     animation-iteration-count: 5;
@@ -17,4 +23,26 @@
     0%{background-color: rgb(235, 235, 228)}
     50%{background-color: greenyellow}
     100%{background-color: rgb(235, 235, 228)}
+}
+
+@media screen and (max-width: 1680px) {
+    .col-lg-3 {
+        width: 100%
+    }
+
+    .col-lg-12 {
+        width: 100%
+    }
+
+    .table_header {
+        display: inline-block;
+        float: left;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .col-lg-12 {width: 75%}
+
 }

@@ -1,9 +1,9 @@
-#main {width: 1100px;       margin:0 auto;position:relative}
+#main {max-width: 1100px;       margin:0 auto;position:relative}
 #header.small {height:414px}
 #header, #content, #footer {}
 .col-1, .col-2, .col-3 {float:left}
 .aside {float:left;width:236px;margin-right:50px}
-.content {float:left;width:1100px;position:relative}
+.content {float:left;max-width:1100px;position:relative}
 /* index.html */
 #page1 #content .line-ver {background-position:297px top}
 #page1 #content .col-1 {width:214px;margin-right:112px}

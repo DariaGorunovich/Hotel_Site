@@ -63,6 +63,8 @@ a{color:inherit;text-decoration:none}
 }
 .login-form{
 	min-height:345px;
+	margin-right: 5px;
+	margin-left: 5px;
 	position:relative;
 	-webkit-perspective:1000px;
 	        perspective:1000px;
@@ -90,10 +92,7 @@ a{color:inherit;text-decoration:none}
 	text-security:circle;
 	-webkit-text-security:circle;
 }
-.login-form .group .label{
-	color:#aaa;
-	font-size:12px;
-}
+.login-form .group .label{font-size:12px;}
 .login-form .group .button{
 	background:#1161ee;
 }
@@ -103,7 +102,7 @@ a{color:inherit;text-decoration:none}
 	border-radius:2px;
 	position:relative;
 	display:inline-block;
-	background:rgba(255,255,255,.1);
+	background:white;
 }
 .login-form .group label .icon:before,
 .login-form .group label .icon:after{
@@ -159,6 +158,8 @@ a{color:inherit;text-decoration:none}
 .foot-lnk{
 	text-align:center;
 }
+
+.login-form label {color: #ffffff;}
 
 
 /*part bootstrap
