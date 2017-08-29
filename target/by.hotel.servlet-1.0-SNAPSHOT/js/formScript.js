@@ -21,14 +21,6 @@ function setPersonalInfo() {
     });
 }
 
-function addOrRemoveAccountPage(isLogin) {
-    if (isLogin) {
-        var section = "<section id=entry class=\"container\" src=\"/templates/pages/signin/personalinfo.html\"></section>"
-        $("#entry").remove();
-        $("#content").append();
-    }
-}
-
 function loadTemplate(url) {
     var request = new XMLHttpRequest();
     request.open('GET', url);
@@ -128,18 +120,6 @@ function sendUserDataRegistration(login,email,pass,phone,name,surname,passport) 
     });
 }
 
-function showAccount(data) {
-    $.ajax({
-        type: 'GET',
-        url: '/account',
-        data: data,
-        success: function(data) {
-            console.log(data);
-
-        },
-    })
-}
-
 function sendUserDataLogin(email,pass){
      $.ajax({
          type: 'POST',
@@ -185,12 +165,12 @@ function validateUpForm (){
     var password = document.getElementById("passUp");
     var phone = document.getElementById("mobilePhone");
 
-    // if (!validEmail(email.value) || !validPassword(password.value) || !validLogin(login.value)
-    //     || !validPhone(phone.value)  || !validName(name.value)
-    //     || !validName(surname.value) || !validPassport(passport.value)){
-    //     alert ("Данные заполнены неверно!");
-    //     return  false;
-    // }
+    if (!validEmail(email.value) || !validPassword(password.value) || !validLogin(login.value)
+        || !validPhone(phone.value)  || !validName(name.value)
+        || !validName(surname.value) || !validPassport(passport.value)){
+        alert ("Данные заполнены неверно!");
+        return  false;
+    }
     alert ("Данные успешно отправлены на сервер!");
     sendUserDataRegistration(login.value,email.value,password.value,phone.value,name.value,surname.value,passport.value);
 }
@@ -199,10 +179,10 @@ function validateInForm (){
     var email = document.getElementById("emailIn");
     var passw = document.getElementById("passIn");
 
-    // if (!validEmail(email.value) || !validPassword(passw.value)){
-    //     alert ("Данные заполнены неверно!");
-    //     return  false;
-    // }
+    if (!validEmail(email.value) || !validPassword(passw.value)){
+        alert ("Данные заполнены неверно!");
+        return  false;
+    }
     alert ("Данные успешно отправлены на сервер!");
     sendUserDataLogin(email.value,passw.value);
 }

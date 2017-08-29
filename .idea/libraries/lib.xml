@@ -1,0 +1,42 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-security-taglibs-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/super-csv-2.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/itextpdf-5.5.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.19.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/log4j-api-2.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-security-acl-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/thymeleaf-extras-springsecurity4-3.0.2.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-6.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/testng-6.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/poi-3.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/HikariCP-2.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-security-config-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/snakeyaml-1.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/junit-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/jcommander-1.64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/gson-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/log4j-core-2.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-security-web-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/spring-security-core-4.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/javax.servlet-api-3.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

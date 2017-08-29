@@ -31,7 +31,7 @@
     </script>
     <![endif]-->
 </head>
-<body class="contentMain    ">
+<body class="contentMain" onload="new ElementMaxHeight();">
 <div id="main">
     <!— header —>
     <div id="header">
