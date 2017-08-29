@@ -1,4 +1,7 @@
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -12,6 +15,7 @@
     <meta name='viewport', content='width=device-width, initial-scale=1'/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name='viewport', content='width=device-width, initial-scale=1'/>
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/styleSignIn.css">
@@ -27,7 +31,7 @@
     </script>
     <![endif]-->
 </head>
-<body class="contentMain" onload="new ElementMaxHeight();">
+<body class="contentMain    ">
 <div id="main">
     <!— header —>
     <div id="header">
@@ -50,9 +54,20 @@
                             <li><a href="#contentServices" id="idServicesA">Услуги</a></li>
                             <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
                             <li><a href="#contentTestimonials" id="idConTest">Отзывы</a></li>
-                            <li><a href="#entry" id="idEntryA" style="float: right">Авторизация</a></li>
-                            <li><a id="idDocsRef" href="#documents" style="display: none;">Документы</a></li>
-                            <li><a id="idAdminRef" href="/admin_start" style="display: none;">Админка</a></li>
+                            <li><a id="idBookingA">Бронь</a></li>
+
+                            <c:if test = "${sessionScope.email == null}">
+                                <li><a href="#entry" id="idEntryA">Вход</a></li>
+                            </c:if>
+                            <c:if test = "${sessionScope.email != null}">
+                                <li><a href="/account" style="float: right">${sessionScope.login}</a></li>
+                            </c:if>
+                            <c:out value = "${sessionScope.role}"/>
+                            <c:if test = "${sessionScope.role == 'ROLE_ADMIN'}">
+                                <li><a id="idDocsRef" href="#documents" style="">Документы</a></li>
+                                <li><a id="idAdminRef" href="/admin_start" style="">Админка</a></li>
+                            </c:if>
+
                         </ul>
                     </div>
                 </div>
@@ -60,11 +75,13 @@
         </div>
     </div>
     <div id="content">
+        
         <section id=contentMain class="container" src="/templates/pages/main/contentMain.html"></section>
         <section id=contentBooking class="container" src="/templates/pages/booking/contentBooking.html"></section>
         <section id=contentGallery class="container" src="/templates/pages/gallery/contentGallery.html"></section>
         <section id=contentServices class="container" src="/templates/pages/services/contentServices.html"></section>
         <section id=entry class="container" src="/templates/pages/signin/entry.html"></section>
+
         <section id=contentTestimonials class="container" src="/templates/pages/testimonials/contentTestimonials.html"></section>
         <section id=documents class="container" src="/templates/pages/documents/documents.html"></section>
     </div>

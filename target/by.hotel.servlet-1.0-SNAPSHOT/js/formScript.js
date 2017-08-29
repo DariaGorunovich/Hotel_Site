@@ -21,6 +21,14 @@ function setPersonalInfo() {
     });
 }
 
+function addOrRemoveAccountPage(isLogin) {
+    if (isLogin) {
+        var section = "<section id=entry class=\"container\" src=\"/templates/pages/signin/personalinfo.html\"></section>"
+        $("#entry").remove();
+        $("#content").append();
+    }
+}
+
 function loadTemplate(url) {
     var request = new XMLHttpRequest();
     request.open('GET', url);
@@ -61,7 +69,7 @@ function getUpdateDataUser() {
         });
     });
     result = result.concat('&','id','=', currentUser.id);
-    result = result.concat('&','idRole','=', currentUser.role.id);
+    result = result.concat('&','role_id','=', currentUser.role.id);
     return result;
 }
 
@@ -104,7 +112,7 @@ function sendUserDataRegistration(login,email,pass,phone,name,surname,passport) 
     $.ajax({
         type: 'POST',
         url: '/registration',
-        data:{"rights":4,"login":login,"email":email,"password":pass,"mobilePhone":phone,"name":name,"surname":surname,"passportNumber":passport,"id":0,"idRole":1},
+        data:{"rights":4,"login":login,"email":email,"password":pass,"mobilePhone":phone,"name":name,"surname":surname,"passportNumber":passport,"id":0,"role_id":1},
         success: function(data) {
             if(typeof data =='object') {
                 currentUser = data;
@@ -118,6 +126,18 @@ function sendUserDataRegistration(login,email,pass,phone,name,surname,passport) 
             alert("Incorrect data!");
         }
     });
+}
+
+function showAccount(data) {
+    $.ajax({
+        type: 'GET',
+        url: '/account',
+        data: data,
+        success: function(data) {
+            console.log(data);
+
+        },
+    })
 }
 
 function sendUserDataLogin(email,pass){
@@ -139,10 +159,12 @@ function sendUserDataLogin(email,pass){
                      }
 
                  }
-                 document.getElementById('idAdminRef').style.display = 'block';
-                 document.getElementById('idDocsRef').style.display = 'block';
-                 loadTemplate('/templates/pages/signin/personalInfo.html');
-                 setNewValueEntryDiv(currentUser.name);
+                 window.location.replace("http://localhost:8080/account");
+                 //showAccount(data)
+                 //document.getElementById('idAdminRef').style.display = 'block';
+                 //document.getElementById('idDocsRef').style.display = 'block';
+                 //loadTemplate('/templates/pages/signin/personalInfo.html');
+                 //setNewValueEntryDiv(currentUser.name);
              } else {
                  alert("Error in login or password!");
              }
@@ -163,12 +185,12 @@ function validateUpForm (){
     var password = document.getElementById("passUp");
     var phone = document.getElementById("mobilePhone");
 
-    if (!validEmail(email.value) || !validPassword(password.value) || !validLogin(login.value)
-        || !validPhone(phone.value)  || !validName(name.value)
-        || !validName(surname.value) || !validPassport(passport.value)){
-        alert ("Данные заполнены неверно!");
-        return  false;
-    }
+    // if (!validEmail(email.value) || !validPassword(password.value) || !validLogin(login.value)
+    //     || !validPhone(phone.value)  || !validName(name.value)
+    //     || !validName(surname.value) || !validPassport(passport.value)){
+    //     alert ("Данные заполнены неверно!");
+    //     return  false;
+    // }
     alert ("Данные успешно отправлены на сервер!");
     sendUserDataRegistration(login.value,email.value,password.value,phone.value,name.value,surname.value,passport.value);
 }
@@ -188,10 +210,14 @@ function validateInForm (){
 function LogOut() {
     currentUser = null;
     sessionStorage.clear();
-    setNewValueEntryDiv("Вход","#entry");
-    loadTemplate('/templates/pages/signin/entry.html');
-    document.getElementById('idAdminRef').style.display = 'none';
-    document.getElementById('idDocsRef').style.display = 'none';
+    //setNewValueEntryDiv("Вход","#entry");
+    //loadTemplate('/templates/pages/signin/entry.html');
+    //document.getElementById('idAdminRef').style.display = 'none';
+    //document.getElementById('idDocsRef').style.display = 'none';
+    $.ajax({
+        type: 'GET',
+        url: '/logout',
+    });
 }
 
 function validPassport(passport) {

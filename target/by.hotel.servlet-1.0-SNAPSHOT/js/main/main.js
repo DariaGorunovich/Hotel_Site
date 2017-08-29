@@ -7,10 +7,20 @@ function setRoleAttributes(roleObj) {
         currentUser['role'][fieldRole] = roleObj[fieldRole];
 }
 
+function checkRole() {
+    $.ajax({
+        type: 'GET',
+        url: '/checkrole',
+        success: function(data) {
+
+        },
+    });
+}
+
 $( document ).ready(function() {
     if(sessionStorage.length!=0) {
-        document.getElementById('idAdminRef').style.display = 'block';
-        document.getElementById('idDocsRef').style.display = 'block';
+        //document.getElementById('idAdminRef').style.display = 'block';
+        //document.getElementById('idDocsRef').style.display = 'block';
         currentUser = {
             'role':{}
         };
@@ -20,12 +30,12 @@ $( document ).ready(function() {
             else
                 currentUser[fieldUser] = sessionStorage[fieldUser];
         }
-        loadTemplate('/templates/pages/signin/personalInfo.html');
-        setNewValueEntryDiv(currentUser.name);
+        //loadTemplate('/templates/pages/signin/personalInfo.html');
+        //setNewValueEntryDiv(currentUser.name);
         generatePermissionsUser();
     }else{
-        document.getElementById('idAdminRef').style.display = 'none';
-        document.getElementById('idDocsRef').style.display = 'none';
+        //document.getElementById('idAdminRef').style.display = 'none';
+        //document.getElementById('idDocsRef').style.display = 'none';
     }
 });
 

@@ -192,7 +192,7 @@ public class UserDaoImpl extends AbstractDao implements UserDao,AuthDao {
                 .mobilePhone(resultSet.getString("mobilePhone"))
                 .password(resultSet.getString("password"))
                 .login(resultSet.getString("login"))
-                .role(roleBuilder.id(resultSet.getInt("idRole"))
+                .role(roleBuilder.id(resultSet.getInt("role_id"))
                         .nameRole(resultSet.getString("nameRole"))
                         .update(resultSet.getByte("update"))
                         .delete(resultSet.getByte("delete"))
