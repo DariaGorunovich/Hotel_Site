@@ -2,6 +2,7 @@ package by.hotel.controller;
 
 import by.hotel.bean.Review;
 import by.hotel.bean.User;
+import by.hotel.util.CheckRole;
 import by.hotel.util.SessionHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,8 @@ import java.util.List;
 
 @Controller
 public class ReviewController {
+    @Autowired
+    private CheckRole checkRole;
     private DataSource dataSource;
 
     @Autowired
@@ -27,6 +30,7 @@ public class ReviewController {
 
     @RequestMapping(value = "/reviews", method = RequestMethod.GET )
     public ModelAndView getReviews(HttpServletRequest request) throws SQLException {
+        checkRole.checkCurrentRole(request);
         List<Review> reviews = new ArrayList<Review>(0);
         Connection connection = null;
         try {

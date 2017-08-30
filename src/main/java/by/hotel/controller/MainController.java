@@ -18,11 +18,7 @@ public class MainController {
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public ModelAndView main(HttpServletRequest request) throws SQLException {
-        Object email = request.getSession().getAttribute("email");
-        if (email != null) {
-            String role = checkRole.checkCurrentRole(request.getSession().getAttribute("email").toString());
-            SessionHelper.SetUserRoleSession(request,role);
-        }
+        checkRole.checkCurrentRole(request);
         return new ModelAndView("main");
     }
 }

@@ -190,14 +190,15 @@ function validateInForm (){
 function LogOut() {
     currentUser = null;
     sessionStorage.clear();
-    //setNewValueEntryDiv("Вход","#entry");
-    //loadTemplate('/templates/pages/signin/entry.html');
-    //document.getElementById('idAdminRef').style.display = 'none';
-    //document.getElementById('idDocsRef').style.display = 'none';
     $.ajax({
         type: 'GET',
         url: '/logout',
+        success: function () {
+            window.location.replace("http://localhost:8080/main");
+        }
     });
+
+
 }
 
 function validPassport(passport) {

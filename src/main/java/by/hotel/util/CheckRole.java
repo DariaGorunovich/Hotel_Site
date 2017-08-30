@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,7 +22,7 @@ public class CheckRole {
         this.dataSource = dataSource;
     }
 
-    public String checkCurrentRole(String email) throws SQLException {
+    private String getCurrentRoleFromDb(String email) throws SQLException {
         String role = null;
         List<String> headers = new ArrayList<String>();
         StringBuilder stringBuilder = new StringBuilder();
@@ -40,5 +41,13 @@ public class CheckRole {
             connection.close();
         }
         return role;
+    }
+
+    public void checkCurrentRole(HttpServletRequest request) throws SQLException {
+        Object email = request.getSession().getAttribute("email");
+        if (email != null) {
+            String role = getCurrentRoleFromDb(email.toString());
+            SessionHelper.SetUserRoleSession(request,role);
+        }
     }
 }
