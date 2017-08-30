@@ -1,21 +1,17 @@
-<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Main</title>
+    <title>Reviews</title>
     <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
     <script src="js/bootstrap.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/SPA_JS.js"></script>
     <script type="text/javascript" src="js/main/main.js"></script>
     <script src="js/formScript.js" type="text/javascript"></script>
     <script type="text/javascript" src=js/formScript.js></script>
-    <meta name='viewport', content='width=device-width, initial-scale=1'/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta name='viewport', content='width=device-width, initial-scale=1'/>
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/styleSignIn.css">
@@ -32,7 +28,7 @@
     <![endif]-->
 </head>
 <body class="contentMain" onload="new ElementMaxHeight();">
-<div id="main">
+<div class="main">
     <!— header —>
     <div id="header">
         <div class="row-1">
@@ -50,10 +46,10 @@
                 <div class="header-box">
                     <div class="inner">
                         <ul class="nav">
-                            <li><a href="#contentMain" class="current" id="idConMain">Главная</a></li>
-                            <li><a href="#contentServices" id="idServicesA">Услуги</a></li>
-                            <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
-                            <li><a href="#contentTestimonials" id="idConTest">Отзывы</a></li>
+                            <li><a href="main#contentMain" class="current" id="idConMain">Главная</a></li>
+                            <li><a href="main#contentServices" id="idServicesA">Услуги</a></li>
+                            <li><a href="main#contentGallery" id="idConGal">Галерея</a></li>
+                            <li><a href="main#contentTestimonials" id="idConTest">Отзывы</a></li>
                             <li><a id="idBookingA">Бронь</a></li>
 
                             <c:if test = "${sessionScope.email == null}">
@@ -67,7 +63,6 @@
                                 <li><a id="idDocsRef" href="#documents" style="">Документы</a></li>
                                 <li><a id="idAdminRef" href="/admin_start" style="">Админка</a></li>
                             </c:if>
-
                         </ul>
                     </div>
                 </div>
@@ -75,15 +70,26 @@
         </div>
     </div>
     <div id="content">
-        
-        <section id=contentMain class="container" src="/templates/pages/main/contentMain.html"></section>
-        <section id=contentBooking class="container" src="/templates/pages/booking/contentBooking.html"></section>
-        <section id=contentGallery class="container" src="/templates/pages/gallery/contentGallery.html"></section>
-        <section id=contentServices class="container" src="/templates/pages/services/contentServices.html"></section>
-        <section id=entry class="container" src="/templates/pages/signin/entry.html"></section>
-
-        <section id=contentTestimonials class="container" src="/templates/pages/testimonials/contentTestimonials.html"></section>
-        <section id=documents class="container" src="/templates/pages/documents/documents.html"></section>
+        <section id=contentTestimonials class="container" style = "display: block">
+            <div class="indent">
+                <h2 class="indent_h2">Отзывы клиентов</h2>
+                <div class="button1">
+                    <span>
+                        <span>
+                            <h4 class="add_indent"><a href="#">Добавь свой отзыв</a></h4>
+                        </span>
+                    </span>
+                </div>
+                <ul class="list4">
+                    <c:forEach items="${reviews}" var="review">
+                        <li>
+                            <h4>${review.userName} ${review.userSurname}</h4>
+                            <h5>${review.text}</h5>
+                        </li>
+                    </c:forEach>
+                </ul>
+            </div>
+        </section>
     </div>
     <div id="footer" style="max-width: 1100px; margin: auto">
         <div class="wrapper">
@@ -91,5 +97,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>
