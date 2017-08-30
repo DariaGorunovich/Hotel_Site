@@ -22,4 +22,17 @@ public class SessionHelper {
     public static void SetUserRoleSession(HttpServletRequest request, String role) {
         request.getSession().setAttribute("role", role);
     }
+
+    public static Boolean ckeckUserSession(HttpServletRequest request) {
+        if (request.getSession().getAttribute("id") == null)
+            return false;
+        return true;
+    }
+
+    public static Integer getUserId(HttpServletRequest request) {
+        return (Integer)request.getSession().getAttribute("id");
+    }
+
+
+
 }

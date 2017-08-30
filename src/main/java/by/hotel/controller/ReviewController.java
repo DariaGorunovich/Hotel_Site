@@ -5,6 +5,7 @@ import by.hotel.bean.User;
 import by.hotel.util.SessionHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -30,7 +31,7 @@ public class ReviewController {
         Connection connection = null;
         try {
             connection = dataSource.getConnection();
-            PreparedStatement statement = connection.prepareStatement("SELECT `review`.`*`, `us`.`name`, `us`.`surname` FROM `db_hotel`.`review` `review` INNER JOIN `user` `us` ON (`review`.`user_id` = `us`.`id`) ");
+            PreparedStatement statement = connection.prepareStatement("SELECT `review`.`*`, `us`.`name`, `us`.`surname` FROM `db_hotel`.`review` `review` INNER JOIN `user` `us` ON (`review`.`user_id` = `us`.`id`) ORDER by `review`.`id` desc ");
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Review review = new Review();
@@ -49,5 +50,25 @@ public class ReviewController {
         ModelAndView model = new ModelAndView("reviews");
         model.addObject("reviews",reviews);
         return model;
+    }
+
+    @RequestMapping(value = "/reviews/add", method = RequestMethod.POST )
+    public ModelAndView addReview(HttpServletRequest request, @ModelAttribute("review")Review review) throws SQLException {
+        Connection connection = null;
+        if (!SessionHelper.ckeckUserSession(request))
+            return new ModelAndView("redirect:http://localhost:8080/main#entry");
+        try {
+            connection = dataSource.getConnection();
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO `db_hotel`.`review` (`text`, `user_id`) VALUES (?,?)");
+            statement.setString(1,review.getText());
+            statement.setInt(2, SessionHelper.getUserId(request));
+            statement.execute();
+        } catch (Exception e){
+            System.out.println(e);
+            return new ModelAndView("redirect:http://localhost:8080/main.jsp#entry");
+        } finally {
+            connection.close();
+        }
+        return new ModelAndView("redirect:http://localhost:8080/reviews");
     }
 }

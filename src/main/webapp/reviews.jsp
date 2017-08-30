@@ -73,13 +73,14 @@
         <section id=contentTestimonials class="container" style = "display: block">
             <div class="indent">
                 <h2 class="indent_h2">Отзывы клиентов</h2>
-                <div class="button1">
-                    <span>
-                        <span>
-                            <h4 class="add_indent"><a href="#">Добавь свой отзыв</a></h4>
-                        </span>
-                    </span>
-                </div>
+
+                <c:if test = "${sessionScope.email != null}">
+                    <form method="post" action="/reviews/add" modelAttribute="review">
+                        <p><textarea rows="10" name="text" style="width: 50%; color: black;"></textarea></p>
+                        <p><input class="button1 add_indent" type="submit" value="Добавь свой отзыв" style="height: 60px"/></p>
+                    </form>
+                </c:if>
+
                 <ul class="list4">
                     <c:forEach items="${reviews}" var="review">
                         <li>
