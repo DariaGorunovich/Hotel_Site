@@ -10,6 +10,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,16 +31,17 @@ public class Authorization  {
         User user = null;
         try {
             Map<String, String[]> requestParams = request.getParameterMap();
+            String password = requestParams.get("password")[0];
             AuthService service = new AuthServiceImpl();
-            user = service.checkUser(requestParams.get("email")[0], MD5.crypt(requestParams.get("password")[0]));
+            user = service.checkUser(requestParams.get("email")[0], password);
             if (user != null) {
                 SessionHelper.SetUserSession(request,user);
+                return user;
             }
-            return user;
         } catch (ServiceException e) {
             logger.error(e);
         }
-        return user;
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
     }
 
 }

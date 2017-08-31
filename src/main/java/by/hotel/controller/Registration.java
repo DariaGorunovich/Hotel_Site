@@ -34,6 +34,7 @@ public class Registration  {
             RegistrationService registrationService = new RegistrationServiceImpl();
             CrudService<User> userService = new UserServiceImpl();
             user = registrationService.registration(userService.buildEntity(requestParams));
+            user.setTempPassword(requestParams.get("password")[0]);
         } catch (ServiceException e) {
            logger.error(e);
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);

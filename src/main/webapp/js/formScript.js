@@ -107,11 +107,12 @@ function sendUserDataRegistration(login,email,pass,phone,name,surname,passport) 
         data:{"rights":4,"login":login,"email":email,"password":pass,"mobilePhone":phone,"name":name,"surname":surname,"passportNumber":passport,"id":0,"role_id":1},
         success: function(data) {
             if(typeof data =='object') {
-                currentUser = data;
-                document.getElementById('idAdminRef').style.display = 'block';
-                document.getElementById('idDocsRef').style.display = 'block';
-                loadTemplate('/templates/pages/signin/personalInfo.html');
-                setNewValueEntryDiv(currentUser.name);
+                sendUserDataLogin(data.email, data.tempPassword);
+                // currentUser = data;
+                // document.getElementById('idAdminRef').style.display = 'block';
+                // document.getElementById('idDocsRef').style.display = 'block';
+                // loadTemplate('/templates/pages/signin/personalInfo.html');
+                // setNewValueEntryDiv(currentUser.name);
             }
         },
         error: function() {
@@ -137,14 +138,8 @@ function sendUserDataLogin(email,pass){
                          else
                              sessionStorage[fieldUser] = currentUser[fieldUser];
                      }
-
                  }
                  window.location.replace("http://localhost:8080/account");
-                 //showAccount(data)
-                 //document.getElementById('idAdminRef').style.display = 'block';
-                 //document.getElementById('idDocsRef').style.display = 'block';
-                 //loadTemplate('/templates/pages/signin/personalInfo.html');
-                 //setNewValueEntryDiv(currentUser.name);
              } else {
                  alert("Error in login or password!");
              }
@@ -165,12 +160,12 @@ function validateUpForm (){
     var password = document.getElementById("passUp");
     var phone = document.getElementById("mobilePhone");
 
-    if (!validEmail(email.value) || !validPassword(password.value) || !validLogin(login.value)
-        || !validPhone(phone.value)  || !validName(name.value)
-        || !validName(surname.value) || !validPassport(passport.value)){
-        alert ("Данные заполнены неверно!");
-        return  false;
-    }
+    // if (!validEmail(email.value) || !validPassword(password.value) || !validLogin(login.value)
+    //     || !validPhone(phone.value)  || !validName(name.value)
+    //     || !validName(surname.value) || !validPassport(passport.value)){
+    //     alert ("Данные заполнены неверно!");
+    //     return  false;
+    // }
     alert ("Данные успешно отправлены на сервер!");
     sendUserDataRegistration(login.value,email.value,password.value,phone.value,name.value,surname.value,passport.value);
 }

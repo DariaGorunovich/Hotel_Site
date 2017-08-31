@@ -8,6 +8,7 @@ import by.hotel.dao.AuthDao;
 import by.hotel.dao.UserDao;
 import by.hotel.dao.constants.Constants;
 import by.hotel.dao.exception.DAOException;
+import by.hotel.security.MD5;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -145,12 +146,16 @@ public class UserDaoImpl extends AbstractDao implements UserDao,AuthDao {
         UserBuilder userBuilder = new UserBuilder();
         PreparedStatement statement = null;
         ResultSet resultSet = null;
+        String passwordHash = null;
         try {
-            statement = connection.prepareStatement(Constants.AUTH_USER);
-            statement = fillStatement(statement, email,password);
-            resultSet = statement.executeQuery();
-            if(resultSet.next()){
-                return fillUser(resultSet, userBuilder);
+            if (password.length() != 0) {
+                passwordHash = MD5.crypt(password);
+                statement = connection.prepareStatement(Constants.AUTH_USER);
+                statement = fillStatement(statement, email,passwordHash);
+                resultSet = statement.executeQuery();
+                if(resultSet.next()){
+                    return fillUser(resultSet, userBuilder);
+                }
             }
         } catch (SQLException e) {
             throw new DAOException(e);
