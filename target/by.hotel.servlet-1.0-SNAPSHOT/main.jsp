@@ -51,7 +51,7 @@
                     <div class="inner">
                         <ul class="nav">
                             <li><a href="#contentMain" class="current" id="idConMain">Главная</a></li>
-                            <li><a href="#contentServices" id="idServicesA">Услуги</a></li>
+                            <li><a href="/services" id="idServicesA">Услуги</a></li>
                             <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
                             <li><a href="/reviews" id="idConTest">Отзывы</a></li>
                             <li><a id="idBookingA">Бронь</a></li>

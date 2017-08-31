@@ -20,7 +20,7 @@
                 <div class="inner">
                     <ul class="nav">
                         <li><a href="main#contentMain" class="current" id="idConMain">Главная</a></li>
-                        <li><a href="main#contentServices" id="idServicesA">Услуги</a></li>
+                        <li><a href="/services" id="idServicesA">Услуги</a></li>
                         <li><a href="main#contentGallery" id="idConGal">Галерея</a></li>
                         <li><a href="/reviews" id="idConTest">Отзывы</a></li>
                         <li><a id="idBookingA">Бронь</a></li>
@@ -33,7 +33,7 @@
                         </c:if>
                         <c:out value = "${sessionScope.role}"/>
                         <c:if test = "${sessionScope.role == 'ROLE_ADMIN'}">
-                            <li><a id="idDocsRef" href="#documents" style="">Документы</a></li>
+                            <li><a id="idDocsRef" href="main#documents" style="">Документы</a></li>
                             <li><a id="idAdminRef" href="/admin_start" style="">Админка</a></li>
                         </c:if>
                     </ul>
