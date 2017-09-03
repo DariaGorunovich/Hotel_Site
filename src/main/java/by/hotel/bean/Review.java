@@ -4,10 +4,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Review {
-    private int id;
+    private Integer id;
     private String text;
     private String userName;
     private String userSurname;
+    private Integer userId;
     private User user;
 
     public int getId() {
@@ -40,6 +41,14 @@ public class Review {
 
     public void setUserSurname(String userSurname) {
         this.userSurname = userSurname;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public User getUser() {

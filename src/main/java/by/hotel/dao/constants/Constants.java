@@ -97,6 +97,8 @@ public class Constants {
     public static final String GET_ROLE = GET_ALL_ROLES.concat(" WHERE `role`.`id` = ?");
     public static final String GET_ALL_ROLES_HEADERS = "SELECT `id`, `nameRole` FROM `db_hotel`.`role`";
 
+    public static final String GET_ALL_REVIEWS_HEADERS = "SELECT `id`, `name` FROM `db_hotel`.`discount`";
+
     public static final String GET_LAST_INSERT_ID = "SELECT LAST_INSERT_ID()";
     public static final String AUTH_USER = GET_ALL_USERS.concat("WHERE `email`=? AND `password`=?");
 

@@ -3,6 +3,7 @@ package by.hotel.controller;
 import by.hotel.service.CrudService;
 import by.hotel.service.CrudServiceMapper;
 import by.hotel.service.exception.ServiceException;
+import by.hotel.service.impl.ReviewServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -23,8 +24,14 @@ public class RemoveEntity   {
         String result = null;
         Map<String, String[]> requestParams = req.getParameterMap();
         try {
-            CrudService service =  CrudServiceMapper.getService(requestParams.get("tableName")[0]);
-            service.removeEntity(service.buildEntity(requestParams));
+            if (requestParams.get("tableName")[0].equals("review")) {
+                ReviewServiceImpl reviewService = new ReviewServiceImpl();
+                reviewService.deleteEntity(reviewService.buildReview(requestParams));
+                //resultList = reviewService.getAllEntities();
+            } else {
+                CrudService service =  CrudServiceMapper.getService(requestParams.get("tableName")[0]);
+                service.removeEntity(service.buildEntity(requestParams));
+            }
         }catch (ServiceException e){
             logger.error(e);
             result = e.getMessage().substring(e.getMessage().lastIndexOf(":")+1);

@@ -162,6 +162,8 @@ function sendUpdateData() {
         success: function (result) {
             if(result != null && result.length !=0){
                 alert(result);
+            } else {
+                alert("Данные успешно обновлены!");
             }
         }});
 }
@@ -201,11 +203,10 @@ var mapStringTable = {
     "user":"user",
     "room":"room",
     "role":"role",
-    "reservation_room":"reservation_room",
-    "reservation_parking_space":"reservation_parking_space",
+    // "reservation_room":"reservation_room",
     "reservation":"reservation",
-    "parkingSpace":"parking_space",
-    "discount":"discount"
+    "discount":"discount",
+    "review":"review"
 };
 
 function deleteRow(obj) {
