@@ -9,7 +9,7 @@
     <title>Admin</title>
     <script>
         <%@include file ="/js/jquery-3.2.0.min.js"%>
-        <%@include file="/js/adminJS.js"%>
+        <%--<%@include file="/js/adminJS.js"%>--%>
         <%@include file="/js/bootstrap.min.js"%>
     </script>
     <style>
@@ -56,4 +56,5 @@
         <div id="myModalAdd" class="modal fade"></div>
         <div id="modalWindow"></div>
     </body>
+<script type="text/javascript" src="js/adminJS.js"></script>
 </html>
