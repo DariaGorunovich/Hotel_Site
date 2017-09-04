@@ -57,7 +57,6 @@
                     <div class="inner" id="inner">
                         <ul class="nav" id="nav">
                             <li><a href="#contentMain" class="current" id="idConMain">Главная</a></li>
-<<<<<<< HEAD
                             <li><a href="/services" id="idServicesA">Услуги</a></li>
                             <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
                             <li><a href="/reviews" id="idConTest">Отзывы</a></li>
@@ -75,14 +74,6 @@
                                 <li><a id="idAdminRef" href="/admin_start" style="">Админка</a></li>
                             </c:if>
 
-=======
-                            <li><a href="#contentServices" id="idServicesA" onclick="noneMenu('nav')">Услуги</a></li>
-                            <li><a href="#contentGallery" id="idConGal" onclick="noneMenu('nav')">Галерея</a></li>
-                            <li><a href="#contentTestimonials" id="idConTest" onclick="noneMenu('nav')">Отзывы</a></li>
-                            <li><a href="#entry" id="idEntryA" style="float: right" onclick="noneMenu('nav')">Авторизация</a></li>
-                            <li><a id="idDocsRef" href="#documents" style="display: none;" onclick="noneMenu('nav')">Документы</a></li>
-                            <li><a id="idAdminRef" href="/admin_start" style="display: none;" onclick="noneMenu('nav')">Админка</a></li>
->>>>>>> document-huekument
                         </ul>
                     </div>
                 </div>

@@ -17,6 +17,12 @@
         <div class="indent">
             <!— header-box begin —>
             <div class="header-box">
+                <div class="menu-btn" id="menu-btn" onclick="">
+                    <div></div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <div class="inner">
                     <ul class="nav">
                         <li><a href="main#contentMain" class="current" id="idConMain">Главная</a></li>
@@ -38,6 +44,19 @@
                         </c:if>
                     </ul>
                 </div>
+                <script type="text/javascript">
+                    jQuery(function($){
+                        $( '.menu-btn' ).click(function(){
+                            $('.nav').toggleClass('expand')
+                            $('.menu-btn').addClass('btn-none')
+                        })
+
+                        $( '.inner' ).click(function(){
+                            $('.nav').removeClass('expand')
+                            $('.menu-btn').removeClass('btn-none')
+                        })
+                    })
+                </script>
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@
     <script type="text/javascript" src="js/main/main.js"></script>
     <script src="js/formScript.js" type="text/javascript"></script>
     <script type="text/javascript" src=js/formScript.js></script>
-    <script type="text/javascript" src="js/booking/booking.js"></script>>
+    <script type="text/javascript" src="js/booking/booking.js"></script>
     <script type="text/javascript" src="js/services/services.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
