@@ -78,6 +78,26 @@ public class RoomDaoImpl extends AbstractDao implements RoomDao {
         return room;
     }
 
+    public Room getRoomforDocs(Connection connection, int idRoom) throws DAOException{
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        RoomBuilder roomBuilder = new RoomBuilder();
+        Room room = null;
+        try {
+            statement = connection.prepareStatement(GET_LAST_RESERVATION_ROOM_BY_USER);
+            statement.setInt(1, idRoom);
+            resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                room = fillRoom(resultSet,roomBuilder);
+            }
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            closeStatement(statement, resultSet);
+        }
+        return room;
+    }
+
     public void addRoom(Room room,Connection connection) throws DAOException {
         PreparedStatement statement = null;
         try {

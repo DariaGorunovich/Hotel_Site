@@ -55,6 +55,20 @@ public class RoomTypeServiceImpl extends AbstractService implements CrudServiceE
         return roomType;
     }
 
+    public RoomType getEntityforDocs(int id) throws ServiceException {
+        Connection connection = null;
+        RoomType roomType;
+        try {
+            connection = getConnection();
+            roomType = roomTypeDao.getRoomTypeForDocs(connection, id);
+        } catch (DAOException e) {
+            throw new ServiceException(e);
+        } finally {
+            closeConnection(connection);
+        }
+        return roomType;
+    }
+
     public List<RoomType> addEntity(RoomType entity) throws ServiceException {
         Connection connection = null;
         List<RoomType> roomTypes;

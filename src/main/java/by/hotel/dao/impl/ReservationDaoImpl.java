@@ -130,6 +130,28 @@ public class ReservationDaoImpl extends AbstractDao implements ReservationDao {
         return reservation;
     }
 
+    public Reservation getReservationforDocs(Integer id,Connection connection) throws DAOException {
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        Reservation reservation = null;
+        ReservationBuilder reservationBuilder = new ReservationBuilder();
+        UserBuilder userBuilder = new UserBuilder();
+        DiscountBuilder discountBuilder = new DiscountBuilder();
+        try {
+            statement = connection.prepareStatement(GET_LAST_RESERVATION_ROOM_BY_USER);
+            statement.setInt(1, id);
+            resultSet = statement.executeQuery();
+            if(resultSet.next()) {
+                reservation = fillReservation(resultSet, reservationBuilder, userBuilder, discountBuilder);
+            }
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            closeStatement(statement, resultSet);
+        }
+        return reservation;
+    }
+
     public Reservation getLastInsertedReservation(Connection connection) throws DAOException {
         PreparedStatement statement = null;
         Reservation reservation = null;
@@ -168,7 +190,7 @@ public class ReservationDaoImpl extends AbstractDao implements ReservationDao {
     }
 
     private Reservation fillReservation(ResultSet resultSet, ReservationBuilder reservationBuilder, UserBuilder userBuilder, DiscountBuilder discountBuilder) throws SQLException{
-        return reservationBuilder.id(resultSet.getInt("id"))
+        return reservationBuilder.id(resultSet.getInt("idReservation"))
                 .dateIn(resultSet.getDate("dateIn"))
                 .dateOut(resultSet.getDate("dateOut"))
                 .user(userBuilder.id(resultSet.getInt("idUser"))

@@ -64,6 +64,20 @@ public class ReservationServiceImpl extends AbstractService implements CrudServi
         return reservation;
     }
 
+    public Reservation getEntityforDocs(Integer id) throws ServiceException {
+        Connection connection = null;
+        Reservation reservation;
+        try {
+            connection = getConnection();
+            reservation = reservationDao.getReservationforDocs(id, connection);
+        } catch (DAOException e) {
+            throw new ServiceException(e);
+        } finally {
+            closeConnection(connection);
+        }
+        return reservation;
+    }
+
     public List<Reservation> addEntity(Reservation entity) throws ServiceException {
         List<Reservation> reservations;
         Connection connection = null;

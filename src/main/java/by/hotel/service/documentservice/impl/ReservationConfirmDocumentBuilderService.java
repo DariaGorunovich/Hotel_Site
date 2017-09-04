@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class ReservationConfirmDocumentBuilderService implements DocumentBuilderService{
     public DocumentObject buildDocument(Map<String, String[]> documentParams) throws ServiceException {
-        Reservation reservation = new ReservationServiceImpl().getEntity(Integer.parseInt(documentParams.get("id")[0]));
+        Reservation reservation = new ReservationServiceImpl().getEntityforDocs(Integer.parseInt(documentParams.get("id")[0]));
         if(reservation != null) {
             DocumentBuilder reservationConfirmDocumentBuilder = ReservationConfirmDocumentBuilder.getInstance();
             return reservationConfirmDocumentBuilder.buildDocument(reservation);
