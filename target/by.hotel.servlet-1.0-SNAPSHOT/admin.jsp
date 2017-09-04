@@ -23,9 +23,14 @@
     </script>
 </head>
     <body>
-        <div class="container" style="padding-left: 0px;margin-left: 0px;width: 100%">
+        <div class="container" style="padding-left: 30px;margin-left: 0px;width: 100%">
             <div class="row" style="width: 100%;position: relative">
-                <div class="col-lg-3" style="width:15%;">
+                <div class="container_header">
+                    <div class="container_header_box">
+                        <h3 style="padding-right: 30px;">Таблицы базы данных:</h3>
+                    </div>
+                </div>
+                <div class="col-lg-3">
                     <table class="table table-hover table-bordered">
                         <tbody>
                             <c:forEach var="item" items="${names}">
@@ -34,11 +39,14 @@
                         </tbody>
                     </table>
                     <br>
-                    <button type="button" style="width: 100%" onclick="Click()" class="btn btn-primary">Сайт
+                    <button type="button" style="width: 100%" onclick="Click()" class="btn btn-primary">Вернуться на сайт
                         <a id="idHrefAdmin" href="main.jsp"></a>
                     </button>
                 </div>
-                <div class="col-lg-12" style="float: right;width: 85%;">
+                <div class="table_header">
+                    <h3>Существующие записи:</h3>
+                </div>
+                <div class="col-lg-12">
                     <table class="table table-bordered table-hover" id="tableHotel" style="border-right: none; border-bottom: none">
                     </table>
                 </div>

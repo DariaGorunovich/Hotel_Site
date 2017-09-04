@@ -55,7 +55,7 @@
 
         if(pageName=='undefined')
             pageName = currentPageName;
-        
+
         var $page = $(document.body).find("section#" + pageName);
 
         var src = $page.attr("src");
