@@ -68,6 +68,27 @@ public class ReviewServiceImpl extends AbstractService {
         }
     }
 
+    public List<Review> addEntity(Review review) throws ServiceException {
+        Connection connection = null;
+        List<Review> reviews = new ArrayList<Review>();
+        try {
+            if (review.getText() == null)
+                throw new NumberFormatException();
+            connection = getConnection();
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO `db_hotel`.`review` (`id`,`text`,`user_id`) VALUES (?,?,?)");
+            statement.setInt(1,review.getId());
+            statement.setString(2,review.getText());
+            statement.setInt(3,review.getUserId());
+            statement.execute();
+            reviews = getAllEntities();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeConnection(connection);
+        }
+        return reviews;
+    }
+
     public void deleteEntity(Review review) throws ServiceException {
         Connection connection = null;
         try {

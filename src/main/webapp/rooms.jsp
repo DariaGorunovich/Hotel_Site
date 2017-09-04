@@ -43,7 +43,7 @@
                                 <div class="room">
                                     <img src="images/2page-img11.jpg" class="extra-img png"/>
                                     <dl class="list1">
-                                        <dt name="name">${room.name}</dt>
+                                        <dt name="name" id="room_name">${room.name}</dt>
                                         <dd><span name="floor">${room.floor}</span>Этаж:</dd>
                                         <dd><span name="roomsCount">${room.roomType.roomsCount}</span>Количество комнат:</dd>
                                         <dd><span name="bedsCount">${room.roomType.bedsCount}</span>Количество кроватей:</dd>
@@ -51,7 +51,7 @@
                                         <dd class="alt"><span name="bathroomsCount">${room.roomType.bathroomsCount}</span>Ванна:</dd>
                                         <dd class="last"><span name="costPerDay">${room.roomType.costPerDay}</span>Цена за день ($):</dd>
                                     </dl>
-                                    <div class="button" id="idRoom" onclick='reservateRoom(this)'>
+                                    <div class="button" id="idRoom${room.id}" onclick='reservateRoom(this)'>
                                         <div class="button_opacity">
                                             <h4 class="button_opacity_h4">
                                                 <a class="classReservationRoom">Забронировать сейчас!</a>

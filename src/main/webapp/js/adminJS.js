@@ -138,7 +138,12 @@ function getData(editBody) {
                     value ="0";
                 }else{
                     if($(this.firstElementChild).get(0).tagName == 'SELECT'){
-                        value = value.substr(0,value.indexOf(' '))
+                        if (value != null) {
+                            value = value.substr(0,value.indexOf(' '))
+                        } else {
+                            value = "";
+                        }
+
                     }
                 }
                 result = result.concat('&',key,'=', value);
@@ -183,7 +188,12 @@ function sendAddData() {
                 $('#myModalAdd').find('.modal-footer > .btn').click();
                 setHtml();
             }
-        }});
+        },
+        error: function (result) {
+            alert(result.responseText);
+        }
+
+    });
 }
 
 var NameTable = "";
