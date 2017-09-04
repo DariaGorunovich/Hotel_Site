@@ -1,18 +1,80 @@
 <div class="all_documents">
     <h2>Ваши документы:</h2>
-    <h3><a class="docRef" href="/create_doc?docname=reservation_voucher&id=4">1) Электронный ваучер на проживание</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=reservation_confirm&id=4">2) Подтверждение брони</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=room_document&id=2">3)Информация о номере</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=user_document&id=2">4)Информация о пользователе</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=room_type_document&id=4">5) Информация о типе номера</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=room_report&type=by_month&year=2017">6) Отчет по комнатам по месяцам</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=room_report&type=by_quarter&year=2017">7) Отчет по комнатам по кварталам</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=financial_report&type=by_month&year=2017">8) Годовой отчет по месяцам</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=financial_report&type=by_quarter&year=2017">9) Годовой отчет по кварталам</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=reservation_report&id=4">10) Брони пользователя</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=room">11) Отчет по комнатам</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=reservation">12) Отчет по броням</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=room_type">13) Отчет по типам комнат</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=user">14) Отчет по пользователям</a></h3>
-    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=role">15) Отчет по ролям</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=reservation_voucher&id=16">1) Электронный ваучер на проживание (PDF файл)</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=reservation_confirm&id=16">2) Подтверждение брони (PDF файл)</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=room_document&id=1">3) Информация о номере (PDF файл)</a><br>
+        <form method="post">
+            <select class="select_doc_3" name="select_doc">
+                <optgroup label="Выберите номер: ">
+                    <option value="Номер 1">Номер 1</option>
+                    <option value="Номер 2">Номер 2</option>
+                    <option value="Номер 3">Номер 3</option>
+                    <option value="Номер 4">Номер 4</option>
+                    <option value="Номер 5">Номер 5</option>
+                    <option value="Номер 6">Номер 6</option>
+                </optgroup>
+            </select>
+        </form>
+    </h3>
+    <h3><a class="docRef" href="/create_doc?docname=room_type_document&id=4">4) Информация о типе номера (PDF файл)</a><br>
+        <form method="post">
+            <select class="select_doc_3" name="select_doc">
+                <optgroup label="Выберите тип номер: ">
+                    <option value="Тип номер 1">Тип номер 1</option>
+                    <option value="Тип номер 2">Тип номер 2</option>
+                    <option value="Тип номер 3">Тип номер 3</option>
+                    <option value="Тип номер 4">Тип номер 4</option>
+                    <option value="Тип номер 5">Тип номер 5</option>
+                    <option value="Тип номер 6">Тип номер 6</option>
+                </optgroup>
+            </select>
+        </form>
+    </h3>
+    <h3><a class="docRef" href="/create_doc?docname=user_document&id=2">5) Информация о пользователе (PDF файл)</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=room_report&type=by_month&year=2017">6) Отчет по комнатам по месяцам за год (XLS файл)</a><br>
+        <form method="post">
+            <select class="select_doc_3" name="select_doc">
+                <optgroup label="Выберите год: ">
+                    <option value="2016">2016 год</option>
+                    <option value="2017">2017 год</option>
+                </optgroup>
+            </select>
+        </form>
+    </h3>
+    <h3><a class="docRef" href="/create_doc?docname=room_report&type=by_quarter&year=2017">7) Отчет по комнатам по кварталам за год (XLS файл)</a><br>
+        <form method="post">
+            <select class="select_doc_3" name="select_doc">
+                <optgroup label="Выберите год: ">
+                    <option value="2016">2016 год</option>
+                    <option value="2017">2017 год</option>
+                </optgroup>
+            </select>
+        </form>
+    </h3>
+    <h3><a class="docRef" href="/create_doc?docname=financial_report&type=by_month&year=2017">8) Годовой отчет по месяцам (XLS файл)</a><br>
+        <form method="post">
+            <select class="select_doc_3" name="select_doc">
+                <optgroup label="Выберите год: ">
+                    <option value="2016">2016 год</option>
+                    <option value="2017">2017 год</option>
+                </optgroup>
+            </select>
+        </form>
+    </h3>
+    <h3><a class="docRef" href="/create_doc?docname=financial_report&type=by_quarter&year=2017">9) Годовой отчет по кварталам (XLS файл)</a><br>
+        <form method="post">
+            <select class="select_doc_3" name="select_doc">
+                <optgroup label="Выберите год: ">
+                    <option value="2016">2016 год</option>
+                    <option value="2017">2017 год</option>
+                </optgroup>
+            </select>
+        </form>
+    </h3>
+    <h3><a class="docRef" href="/create_doc?docname=reservation_report&id=4">10) Брони пользователя (XLS файл)</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=room">11) Отчет по комнатам (CSV файл)</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=reservation">12) Отчет по броням (CSV файл)</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=room_type">13) Отчет по типам комнат (CSV файл)</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=user">14) Отчет по пользователям (CSV файл)</a></h3>
+    <h3><a class="docRef" href="/create_doc?docname=entity_csv_report&entity=role">15) Отчет по ролям (CSV файл)</a></h3>
 </div>

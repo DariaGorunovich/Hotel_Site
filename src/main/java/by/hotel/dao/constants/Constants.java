@@ -81,7 +81,8 @@ public class Constants {
     public static final String UPDATE_RESERVATION_ROOM = "UPDATE `db_hotel`.`reservation_room` SET `idRoom`=?, `idReservation`=? WHERE `idRoom`=? AND `idReservation`=?";
     public static final String GET_RESERVATION_ROOM = GET_ALL_RESERVATION_ROOMS.concat(" WHERE `idRoom` = ? AND `idReservation` = ?");
     public static final String GET_RESERVATION_ROOM_BY_USER = GET_ALL_RESERVATION_ROOMS.concat(" WHERE `idUser` = ?");
-    public static final String GET_RESERVATION_ROOM_BY_RESERVATION = GET_ALL_RESERVATION_ROOMS.concat(" WHERE `idReservation` = ?");
+    public static final String GET_RESERVATION_ROOM_BY_RESERVATION = GET_ALL_RESERVATION_ROOMS.concat(" WHERE `idUser` = ?");
+    public static final String GET_LAST_RESERVATION_ROOM_BY_USER = GET_ALL_RESERVATION_ROOMS.concat(" WHERE `idUser` = ? ORDER  BY  `dateIn` DESC LIMIT 1");
 
     public static final String GET_ALL_DISCOUNTS = "SELECT `id`, `name` FROM `db_hotel`.`discount`";
     public static final String ADD_DISCOUNT = "INSERT INTO `db_hotel`.`discount` (`name`) VALUES (?)";
@@ -123,16 +124,18 @@ public class Constants {
             "LEFT OUTER JOIN `db_hotel`.`room_type` ON `idRoomType` = `room_type`.`id`) \n" +
             "WHERE EXTRACT(YEAR FROM `dateIn`) = ?\n" +
             "GROUP BY `quarter` WITH ROLLUP";
-    public static final String GET_ROOM_REPORT_BY_MONTH_FOR_YEAR = "SELECT `room`.`name`, EXTRACT(MONTH FROM `dateIn`) AS `month`, SUM(((UNIX_TIMESTAMP(`dateOut`) - UNIX_TIMESTAMP(`dateIn`)) / (3600 * 24) * `costPerDay`) + `costAdditionalServices`) AS `total` FROM (((`db_hotel`.`reservation_room` \n" +
+    public static final String GET_ROOM_REPORT_BY_MONTH_FOR_YEAR = "(SELECT `room`.`name`, EXTRACT(MONTH FROM `dateIn`) AS `month`, SUM(((UNIX_TIMESTAMP(`dateOut`) - UNIX_TIMESTAMP(`dateIn`)) / (3600 * 24) * `costPerDay`) + `costAdditionalServices`) AS `total` FROM (((`db_hotel`.`reservation_room`\n" +
+            "RIGHT OUTER JOIN `db_hotel`.`room` ON `reservation_room`.`idRoom` = `room`.`id`)\n" +
             "LEFT OUTER JOIN `db_hotel`.`reservation` ON `reservation_room`.`idReservation` = `reservation`.`id`)\n" +
-            "LEFT OUTER JOIN `db_hotel`.`room` ON `reservation_room`.`idRoom` = `room`.`id`)\n" +
-            "LEFT OUTER JOIN `db_hotel`.`room_type` ON `idRoomType` = `room_type`.`id`) \n" +
-            "WHERE EXTRACT(YEAR FROM `dateIn`) = ?\n" +
-            "GROUP BY `room`.`name`, `month` WITH ROLLUP";
-    public static final String GET_ROOM_REPORT_BY_QUARTER_FOR_YEAR = "SELECT `room`.`name`, (EXTRACT(MONTH FROM `dateIn`) DIV 3) + 1 AS `quarter`, SUM(((UNIX_TIMESTAMP(`dateOut`) - UNIX_TIMESTAMP(`dateIn`)) / (3600 * 24) * `costPerDay`) + `costAdditionalServices`) AS `total` FROM (((`db_hotel`.`reservation_room` \n" +
+            "LEFT OUTER JOIN `db_hotel`.`room_type` ON `idRoomType` = `room_type`.`id`)\n" +
+            "WHERE EXTRACT(YEAR FROM `dateIn`) = ? OR  ISNULL(`dateIn`) \n" +
+            "GROUP BY `room`.`name`, `month` WITH ROLLUP) UNION DISTINCT\n" +
+            "(SELECT `room`.`name`, null, null FROM `db_hotel`.`room` WHERE \t(SELECT COUNT(*) FROM `db_hotel`.`reservation_room` WHERE `reservation_room`.`idRoom` = `room`.`id`) = 0)";
+    public static final String GET_ROOM_REPORT_BY_QUARTER_FOR_YEAR = "(SELECT `room`.`name`, (EXTRACT(MONTH FROM `dateIn`) DIV 3) + 1 AS `quarter`, SUM(((UNIX_TIMESTAMP(`dateOut`) - UNIX_TIMESTAMP(`dateIn`)) / (3600 * 24) * `costPerDay`) + `costAdditionalServices`) AS `total` FROM (((`db_hotel`.`reservation_room`\n" +
+            "RIGHT OUTER JOIN `db_hotel`.`room` ON `reservation_room`.`idRoom` = `room`.`id`)\n" +
             "LEFT OUTER JOIN `db_hotel`.`reservation` ON `reservation_room`.`idReservation` = `reservation`.`id`)\n" +
-            "LEFT OUTER JOIN `db_hotel`.`room` ON `reservation_room`.`idRoom` = `room`.`id`)\n" +
-            "LEFT OUTER JOIN `db_hotel`.`room_type` ON `idRoomType` = `room_type`.`id`) \n" +
-            "WHERE EXTRACT(YEAR FROM `dateIn`) = ?\n" +
-            "GROUP BY `room`.`name`, `quarter` WITH ROLLUP";
+            "LEFT OUTER JOIN `db_hotel`.`room_type` ON `idRoomType` = `room_type`.`id`)\n" +
+            "WHERE EXTRACT(YEAR FROM `dateIn`) = ? OR  ISNULL(`dateIn`)\n" +
+            "GROUP BY `room`.`name`, `quarter` WITH ROLLUP) UNION DISTINCT\n" +
+            "(SELECT `room`.`name`, null, null FROM `db_hotel`.`room` WHERE \t(SELECT COUNT(*) FROM `db_hotel`.`reservation_room` WHERE `reservation_room`.`idRoom` = `room`.`id`) = 0)";
 }

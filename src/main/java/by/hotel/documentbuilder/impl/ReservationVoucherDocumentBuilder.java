@@ -41,7 +41,7 @@ public class ReservationVoucherDocumentBuilder extends PdfDocumentBuilder<List<R
     }
 
     private String getTime(String date) throws ParseException{
-        return new SimpleDateFormat("EEEE, dd MMM yyy").format(new Date(new SimpleDateFormat("yyyy-MM-dd").parse(date).getTime()));
+        return new SimpleDateFormat("EEEE, dd MMM yyy").format(new SimpleDateFormat("yyyy-MM-dd").parse(date));
     }
 
     private String getReservationInfo(List<ReservationRoom> documentData, int daysCount){

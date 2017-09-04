@@ -14,4 +14,6 @@ public interface RoomDao {
     void updateRoom(Room room, Connection connection) throws DAOException;
     Room getLastInsertedRoom(Connection connection) throws DAOException;
     Room getRoom(Connection connection, int idRoom) throws DAOException;
+    Room getRoomforDocs(Connection connection, int idRoom) throws DAOException;
+
 }

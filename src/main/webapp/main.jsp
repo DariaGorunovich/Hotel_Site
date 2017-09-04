@@ -44,15 +44,21 @@
             <div class="indent">
                 <!— header-box begin —>
                 <div class="header-box">
-                    <div class="inner">
-                        <ul class="nav">
+                    <div class="menu-btn" id="menu-btn" onclick="">
+                        <div></div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="inner" id="inner">
+                        <ul class="nav" id="nav">
                             <li><a href="#contentMain" class="current" id="idConMain">Главная</a></li>
-                            <li><a href="#contentServices" id="idServicesA">Услуги</a></li>
-                            <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
-                            <li><a href="#contentTestimonials" id="idConTest">Отзывы</a></li>
-                            <li><a href="#entry" id="idEntryA" style="float: right">Авторизация</a></li>
-                            <li><a id="idDocsRef" href="#documents" style="display: none;">Документы</a></li>
-                            <li><a id="idAdminRef" href="/admin_start" style="display: none;">Админка</a></li>
+                            <li><a href="#contentServices" id="idServicesA" onclick="noneMenu('nav')">Услуги</a></li>
+                            <li><a href="#contentGallery" id="idConGal" onclick="noneMenu('nav')">Галерея</a></li>
+                            <li><a href="#contentTestimonials" id="idConTest" onclick="noneMenu('nav')">Отзывы</a></li>
+                            <li><a href="#entry" id="idEntryA" style="float: right" onclick="noneMenu('nav')">Авторизация</a></li>
+                            <li><a id="idDocsRef" href="#documents" style="display: none;" onclick="noneMenu('nav')">Документы</a></li>
+                            <li><a id="idAdminRef" href="/admin_start" style="display: none;" onclick="noneMenu('nav')">Админка</a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,5 +80,18 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    jQuery(function($){
+        $( '.menu-btn' ).click(function(){
+            $('.nav').toggleClass('expand')
+            $('.menu-btn').addClass('btn-none')
+        })
+
+        $( '.inner' ).click(function(){
+            $('.nav').removeClass('expand')
+            $('.menu-btn').removeClass('btn-none')
+        })
+    })
+</script>
 </body>
 </html>

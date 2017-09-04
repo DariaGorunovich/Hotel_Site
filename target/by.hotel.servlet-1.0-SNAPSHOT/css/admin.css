@@ -13,6 +13,10 @@
     -webkit-animation-fill-mode: forwards;
 }
 
+.container {
+    min-width: 1065px;
+}
+
 @keyframes colorChange {
     0%{background-color: rgb(235, 235, 228)}
     50%{background-color: greenyellow}
@@ -43,6 +47,14 @@
 }
 
 @media screen and (max-width: 1330px) {
-    .col-lg-12 {width: 75%}
+    .col-lg-12 {width: 100%}
 
+}
+
+@media screen and (max-width: 1200px) {
+    .col-lg-12 {font-size: 12px;}
+}
+
+@media screen and (max-width: 1065px) {
+    .col-lg-12 {font-size: 10px;}
 }

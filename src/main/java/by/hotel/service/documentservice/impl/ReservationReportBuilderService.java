@@ -14,7 +14,7 @@ import java.util.Map;
 public class ReservationReportBuilderService implements DocumentBuilderService{
     @Override
     public DocumentObject buildDocument(Map<String, String[]> documentInfo) throws ServiceException {
-        List<ReservationRoom> reservationRoomList = new ReservationRoomServiceImpl().getReservationRoomByUser(Integer.parseInt(documentInfo.get("id")[0]));
+        List<ReservationRoom> reservationRoomList = new ReservationRoomServiceImpl().getReservationRoomByUserforDocs(Integer.parseInt(documentInfo.get("id")[0]));
         if(reservationRoomList != null){
             DocumentBuilder documentBuilder = ReservationRoomReportBuilder.getInstance();
             return documentBuilder.buildDocument(reservationRoomList);
