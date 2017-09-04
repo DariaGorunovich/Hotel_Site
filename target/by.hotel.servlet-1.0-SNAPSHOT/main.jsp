@@ -31,7 +31,7 @@
     </script>
     <![endif]-->
 </head>
-<body class="contentMain    ">
+<body class="contentMain" onload="new ElementMaxHeight();">
 <div id="main">
     <!— header —>
     <div id="header">
@@ -51,9 +51,9 @@
                     <div class="inner">
                         <ul class="nav">
                             <li><a href="#contentMain" class="current" id="idConMain">Главная</a></li>
-                            <li><a href="#contentServices" id="idServicesA">Услуги</a></li>
+                            <li><a href="/services" id="idServicesA">Услуги</a></li>
                             <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
-                            <li><a href="#contentTestimonials" id="idConTest">Отзывы</a></li>
+                            <li><a href="/reviews" id="idConTest">Отзывы</a></li>
                             <li><a id="idBookingA">Бронь</a></li>
 
                             <c:if test = "${sessionScope.email == null}">
@@ -80,7 +80,11 @@
         <section id=contentBooking class="container" src="/templates/pages/booking/contentBooking.html"></section>
         <section id=contentGallery class="container" src="/templates/pages/gallery/contentGallery.html"></section>
         <section id=contentServices class="container" src="/templates/pages/services/contentServices.html"></section>
-        <section id=entry class="container" src="/templates/pages/signin/entry.html"></section>
+
+        <c:if test = "${sessionScope.email == null}">
+            <section id=entry class="container" src="/templates/pages/signin/entry.html"></section>
+        </c:if>
+
 
         <section id=contentTestimonials class="container" src="/templates/pages/testimonials/contentTestimonials.html"></section>
         <section id=documents class="container" src="/templates/pages/documents/documents.html"></section>

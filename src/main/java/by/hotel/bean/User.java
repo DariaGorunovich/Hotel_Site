@@ -15,6 +15,19 @@ public class User {
     private String password;
     private Role role;
 
+
+
+
+    private String tempPassword;
+
+    public String getTempPassword() {
+        return tempPassword;
+    }
+
+    public void setTempPassword(String tempPassword) {
+        this.tempPassword = tempPassword;
+    }
+
     public User(){super();}
 
     public User(UserBuilder userBuilder){

@@ -3,6 +3,7 @@ package by.hotel.controller;
 import by.hotel.service.CrudService;
 import by.hotel.service.CrudServiceMapper;
 import by.hotel.service.exception.ServiceException;
+import by.hotel.service.impl.ReviewServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -22,8 +23,14 @@ public class GetAllEntities  {
     public Object execute(String tableName){
         List<?> resultList = null;
         try {
-            CrudService service =  CrudServiceMapper.getService(tableName);
-            resultList = service.getAllEntities();
+            if (tableName.equals("review")) {
+                ReviewServiceImpl reviewService = new ReviewServiceImpl();
+                resultList = reviewService.getAllEntities();
+            } else {
+                CrudService service =  CrudServiceMapper.getService(tableName);
+                resultList = service.getAllEntities();
+            }
+
         }catch (ServiceException e){
             logger.error(e);
         }

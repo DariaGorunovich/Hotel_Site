@@ -35,10 +35,11 @@ function generateRooms(arrayRooms) {
 function reservateRoom(e) {
     if (currentUser != null) {
         var idRoom = e.id.substr(6);
-        var booking = document.getElementById("idBookingA");
-        setTimeout(setReservationForm, 200,idRoom);
-        booking.setAttribute('href', '#contentBooking');
-        booking.click();
+        //var booking = document.getElementById("idBookingA");
+        setReservationForm(idRoom);
+        //setTimeout(setReservationForm, 200,idRoom);
+        //booking.setAttribute('href', 'main#contentBooking');
+        //booking.click();
     }else
         alert("Вы не авторизованы!")
 }

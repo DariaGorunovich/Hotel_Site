@@ -106,7 +106,12 @@ function updateData(obj) {
                 console.log(arrayType);
                 var number = (arrayObj[arrayType])[j].substr(0, (arrayObj[arrayType])[j].indexOf(" "));
                 if ($(inputs[i]).val() == number)
-                    $('select[name=id' + arrayType[0].toUpperCase() + arrayType.slice(1) + ']').val((arrayObj[arrayType])[j]);
+                    if (arrayType == 'role') {
+                        $('select[name=role_id]').val((arrayObj[arrayType])[j]);
+                    } else {
+                        $('select[name=id' + arrayType[0].toUpperCase() + arrayType.slice(1) + ']').val((arrayObj[arrayType])[j]);
+                    }
+
                 j++;
             }
             i++;
@@ -133,7 +138,12 @@ function getData(editBody) {
                     value ="0";
                 }else{
                     if($(this.firstElementChild).get(0).tagName == 'SELECT'){
-                        value = value.substr(0,value.indexOf(' '))
+                        if (value != null) {
+                            value = value.substr(0,value.indexOf(' '))
+                        } else {
+                            value = "";
+                        }
+
                     }
                 }
                 result = result.concat('&',key,'=', value);
@@ -157,6 +167,8 @@ function sendUpdateData() {
         success: function (result) {
             if(result != null && result.length !=0){
                 alert(result);
+            } else {
+                alert("Данные успешно обновлены!");
             }
         }});
 }
@@ -176,7 +188,12 @@ function sendAddData() {
                 $('#myModalAdd').find('.modal-footer > .btn').click();
                 setHtml();
             }
-        }});
+        },
+        error: function (result) {
+            alert(result.responseText);
+        }
+
+    });
 }
 
 var NameTable = "";
@@ -196,11 +213,10 @@ var mapStringTable = {
     "user":"user",
     "room":"room",
     "role":"role",
-    "reservation_room":"reservation_room",
-    "reservation_parking_space":"reservation_parking_space",
+    // "reservation_room":"reservation_room",
     "reservation":"reservation",
-    "parkingSpace":"parking_space",
-    "discount":"discount"
+    "discount":"discount",
+    "review":"review"
 };
 
 function deleteRow(obj) {
@@ -241,8 +257,13 @@ function generateOption(arrayObj, value, arrayType) {
 
 function generateChilds(arrayObj) {
     for(var arrayType in arrayObj) {
-        var editBodyUpdate = $('#myModalUpdate').find('#id' + arrayType[0].toUpperCase() + arrayType.slice(1) +'');
-        var editBodyAdd = $('#myModalAdd').find('#id' + arrayType[0].toUpperCase() + arrayType.slice(1) +'');
+        if (arrayType == "role") {
+            var editBodyUpdate = $('#myModalUpdate').find('#role_id');
+            var editBodyAdd = $('#myModalAdd').find('#role_id');
+        } else {
+            var editBodyUpdate = $('#myModalUpdate').find('#id' + arrayType[0].toUpperCase() + arrayType.slice(1) +'');
+            var editBodyAdd = $('#myModalAdd').find('#id' + arrayType[0].toUpperCase() + arrayType.slice(1) +'');
+        }
         if(editBodyUpdate[0].childElementCount==0)
             for(var value in arrayObj[arrayType]) {
                 editBodyUpdate[0].appendChild(generateOption(arrayObj,value,arrayType));

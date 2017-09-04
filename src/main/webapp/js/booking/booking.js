@@ -10,7 +10,10 @@ function getTemplateReservation(id) {
     $.get("/templates/pages/booking/templateReservation.html", "html")
         .done(function(html){
             $templateReservation = html;
-            $('#idContentReservation').html($templateReservation);
+            $('body').append($templateReservation);
+            var roomName = $('#room_name').text();
+            // $('#idContentReservation').html($templateReservation);
+            var tre = $('#template_room_name');
             $(document.getElementById('mainFormReservationInfo').firstElementChild).children().last().children().last().val(id);
         })
         .fail(function(){ $templateRoom.html("failed to get:" + src); });

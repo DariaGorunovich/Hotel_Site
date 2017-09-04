@@ -9,4 +9,7 @@
     <bean id="AccountController" class="by.hotel.controller.AccountController">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+    <bean id="ReviewController" class="by.hotel.controller.ReviewController">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 </beans>

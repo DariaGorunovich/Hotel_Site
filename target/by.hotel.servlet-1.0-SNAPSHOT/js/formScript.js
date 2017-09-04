@@ -21,14 +21,6 @@ function setPersonalInfo() {
     });
 }
 
-function addOrRemoveAccountPage(isLogin) {
-    if (isLogin) {
-        var section = "<section id=entry class=\"container\" src=\"/templates/pages/signin/personalinfo.html\"></section>"
-        $("#entry").remove();
-        $("#content").append();
-    }
-}
-
 function loadTemplate(url) {
     var request = new XMLHttpRequest();
     request.open('GET', url);
@@ -115,29 +107,18 @@ function sendUserDataRegistration(login,email,pass,phone,name,surname,passport) 
         data:{"rights":4,"login":login,"email":email,"password":pass,"mobilePhone":phone,"name":name,"surname":surname,"passportNumber":passport,"id":0,"role_id":1},
         success: function(data) {
             if(typeof data =='object') {
-                currentUser = data;
-                document.getElementById('idAdminRef').style.display = 'block';
-                document.getElementById('idDocsRef').style.display = 'block';
-                loadTemplate('/templates/pages/signin/personalInfo.html');
-                setNewValueEntryDiv(currentUser.name);
+                sendUserDataLogin(data.email, data.tempPassword);
+                // currentUser = data;
+                // document.getElementById('idAdminRef').style.display = 'block';
+                // document.getElementById('idDocsRef').style.display = 'block';
+                // loadTemplate('/templates/pages/signin/personalInfo.html');
+                // setNewValueEntryDiv(currentUser.name);
             }
         },
         error: function() {
             alert("Incorrect data!");
         }
     });
-}
-
-function showAccount(data) {
-    $.ajax({
-        type: 'GET',
-        url: '/account',
-        data: data,
-        success: function(data) {
-            console.log(data);
-
-        },
-    })
 }
 
 function sendUserDataLogin(email,pass){
@@ -157,14 +138,8 @@ function sendUserDataLogin(email,pass){
                          else
                              sessionStorage[fieldUser] = currentUser[fieldUser];
                      }
-
                  }
                  window.location.replace("http://localhost:8080/account");
-                 //showAccount(data)
-                 //document.getElementById('idAdminRef').style.display = 'block';
-                 //document.getElementById('idDocsRef').style.display = 'block';
-                 //loadTemplate('/templates/pages/signin/personalInfo.html');
-                 //setNewValueEntryDiv(currentUser.name);
              } else {
                  alert("Error in login or password!");
              }
@@ -199,10 +174,10 @@ function validateInForm (){
     var email = document.getElementById("emailIn");
     var passw = document.getElementById("passIn");
 
-    // if (!validEmail(email.value) || !validPassword(passw.value)){
-    //     alert ("Данные заполнены неверно!");
-    //     return  false;
-    // }
+    if (!validEmail(email.value) || !validPassword(passw.value)){
+        alert ("Данные заполнены неверно!");
+        return  false;
+    }
     alert ("Данные успешно отправлены на сервер!");
     sendUserDataLogin(email.value,passw.value);
 }
@@ -210,14 +185,15 @@ function validateInForm (){
 function LogOut() {
     currentUser = null;
     sessionStorage.clear();
-    //setNewValueEntryDiv("Вход","#entry");
-    //loadTemplate('/templates/pages/signin/entry.html');
-    //document.getElementById('idAdminRef').style.display = 'none';
-    //document.getElementById('idDocsRef').style.display = 'none';
     $.ajax({
         type: 'GET',
         url: '/logout',
+        success: function () {
+            window.location.replace("http://localhost:8080/main");
+        }
     });
+
+
 }
 
 function validPassport(passport) {
