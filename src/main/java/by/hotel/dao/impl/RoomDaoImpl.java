@@ -84,7 +84,7 @@ public class RoomDaoImpl extends AbstractDao implements RoomDao {
         RoomBuilder roomBuilder = new RoomBuilder();
         Room room = null;
         try {
-            statement = connection.prepareStatement(GET_LAST_RESERVATION_ROOM_BY_USER);
+            statement = connection.prepareStatement(GET_LAST_RESERVATION_ROOM_BY_USER_3);
             statement.setInt(1, idRoom);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
@@ -97,6 +97,10 @@ public class RoomDaoImpl extends AbstractDao implements RoomDao {
         }
         return room;
     }
+
+
+
+
 
     public void addRoom(Room room,Connection connection) throws DAOException {
         PreparedStatement statement = null;

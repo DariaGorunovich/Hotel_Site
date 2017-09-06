@@ -7,44 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da0b8782-3b56-4728-af40-eecf4e77eabb" name="Default" comment="Dot">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/bean/ReservationRoom.class" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/bean/ReservationRoom.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/builder/ReservationRoomBuilder.class" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/builder/ReservationRoomBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/dao/constants/Constants.class" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/dao/constants/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/dao/impl/ReservationDaoImpl.class" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/dao/impl/ReservationDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/dao/impl/ReservationRoomDaoImpl.class" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/dao/impl/ReservationRoomDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/dao/impl/RoomDaoImpl.class" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/dao/impl/RoomDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/service/impl/ReservationServiceImpl.class" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/WEB-INF/classes/by/hotel/service/impl/ReservationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/by/hotel/bean/ReservationRoom.class" afterPath="$PROJECT_DIR$/target/classes/by/hotel/bean/ReservationRoom.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/by/hotel/builder/ReservationRoomBuilder.class" afterPath="$PROJECT_DIR$/target/classes/by/hotel/builder/ReservationRoomBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/by/hotel/dao/constants/Constants.class" afterPath="$PROJECT_DIR$/target/classes/by/hotel/dao/constants/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/by/hotel/dao/impl/ReservationDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/by/hotel/dao/impl/ReservationDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/by/hotel/dao/impl/ReservationRoomDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/by/hotel/dao/impl/ReservationRoomDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/by/hotel/dao/impl/RoomDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/by/hotel/dao/impl/RoomDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/by/hotel/service/impl/ReservationServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/by/hotel/service/impl/ReservationServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/hotel/bean/ReservationRoom.java" afterPath="$PROJECT_DIR$/src/main/java/by/hotel/bean/ReservationRoom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/hotel/builder/ReservationRoomBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/by/hotel/builder/ReservationRoomBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/hotel/dao/constants/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/by/hotel/dao/constants/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationRoomDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationRoomDaoImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/RoomDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/RoomDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationRoomServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationRoomServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/webapp/bootstrap/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/adminJS.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/adminJS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/reviews.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/reviews.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/admin/reservation.html" afterPath="$PROJECT_DIR$/src/main/webapp/templates/admin/reservation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/admin/reservation_room.html" afterPath="$PROJECT_DIR$/src/main/webapp/templates/admin/reservation_room.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/templates/pages/signin/entry.html" afterPath="$PROJECT_DIR$/src/main/webapp/templates/pages/signin/entry.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/admin.jsp" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/admin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/bootstrap/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/css/style.css" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/js/adminJS.js" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/js/adminJS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/templates/admin/reservation.html" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/templates/admin/reservation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/templates/admin/reservation_room.html" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/templates/admin/reservation_room.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/templates/pages/signin/entry.html" afterPath="$PROJECT_DIR$/target/by.hotel.servlet-1.0-SNAPSHOT/templates/pages/signin/entry.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,8 +72,38 @@
       <file leaf-file-name="ReservationRoomServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationRoomServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="104" column="68" lean-forward="true" selection-start-line="104" selection-start-column="68" selection-end-line="104" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReservationRoomDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/ReservationRoomDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/AuthServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateDocument.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/CreateDocument.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,74 +122,42 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/constants/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="63" column="202" lean-forward="true" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="202" />
+            <state relative-caret-position="467">
+              <caret line="97" column="102" lean-forward="false" selection-start-line="97" selection-start-column="102" selection-end-line="97" selection-end-column="102" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/AuthServiceImpl.java">
+      <file leaf-file-name="ReservationVoucherBuilderService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/ReservationVoucherBuilderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reservation_room.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/admin/reservation_room.html">
+      <file leaf-file-name="PdfDocumentBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/PdfDocumentBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            <state relative-caret-position="248">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="review.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/admin/review.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="22" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="12" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetAllEntities.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/GetAllEntities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <marker date="1504647495798" expanded="true" signature="1258:1367" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReservationRoomDaoImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReservationRoomDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationRoomDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="129" column="30" lean-forward="true" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+            <state relative-caret-position="180">
+              <caret line="197" column="42" lean-forward="true" selection-start-line="197" selection-start-column="42" selection-end-line="197" selection-end-column="42" />
               <folding>
-                <marker date="1504658051480" expanded="true" signature="5456:5539" ph="UPDATE `db_h... " />
-                <marker date="1504658051480" expanded="false" signature="9389:9405" ph="&lt;~&gt;" />
+                <marker date="1504661476534" expanded="true" signature="5456:5539" ph="UPDATE `db_h... " />
+                <marker date="1504661476534" expanded="false" signature="9794:9810" ph="&lt;~&gt;" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReservationRoom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/bean/ReservationRoom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -209,7 +179,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>idAdminRef</find>
       <find>content</find>
       <find>contentMain</find>
       <find>#lA</find>
@@ -239,6 +208,7 @@
       <find>sendUpdateData</find>
       <find>getData</find>
       <find>GET_ALL_RESERVATION_ROOMS</find>
+      <find>GET_ALL_RESERVATION_ROOM</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -303,7 +273,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/rooms.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/RoomDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/hotel/service/CrudServiceMapper.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/admin.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/pages/signin/entry.html" />
@@ -314,11 +283,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/js/adminJS.js" />
         <option value="$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/hotel/builder/ReservationRoomBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/hotel/dao/constants/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/templates/admin/reservation_room.html" />
         <option value="$PROJECT_DIR$/src/main/java/by/hotel/bean/ReservationRoom.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationRoomDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationRoomServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/RoomDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/dao/constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationRoomDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -1504,7 +1474,7 @@
       <workItem from="1504030824270" duration="33994000" />
       <workItem from="1504209795077" duration="25996000" />
       <workItem from="1504548071773" duration="1409000" />
-      <workItem from="1504656301967" duration="2087000" />
+      <workItem from="1504656301967" duration="5186000" />
     </task>
     <task id="LOCAL-00022" summary="Add many many services and dao">
       <created>1491747418808</created>
@@ -1885,11 +1855,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="711108000" />
+    <option name="totallyTimeSpent" value="714207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28913045" sideWeight="0.22334754" order="7" side_tool="true" content_ui="tabs" />
@@ -1901,7 +1870,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3629469" sideWeight="0.75319827" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3629469" sideWeight="0.75319827" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.38859275" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1909,7 +1878,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18586956" sideWeight="0.6321962" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22717391" sideWeight="0.77665246" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22643554" sideWeight="0.77665246" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19829424" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -2306,6 +2275,12 @@
           <properties />
           <option name="timeStamp" value="634" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/ReservationVoucherBuilderService.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="646" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/by/hotel/dao/DiscountDao.java</url>
           <line>11</line>
@@ -2551,7 +2526,7 @@
           <option name="timeStamp" value="645" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="646" />
+      <option name="time" value="647" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -2571,20 +2546,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/bean/DocumentObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/RoomReportBuilderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReportServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -2612,14 +2573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/ReservationRoomDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="57" lean-forward="false" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -2718,22 +2671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/RoomDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/CreateDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -2856,13 +2793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -2901,14 +2831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/AuthServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/admin/reservation_room.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -2921,14 +2843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/constants/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="63" column="202" lean-forward="true" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="202" />
           <folding />
         </state>
       </provider>
@@ -2954,6 +2868,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/RoomDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/ReservationRoomDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/UpdateEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -2962,22 +2900,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/constants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="97" column="102" lean-forward="false" selection-start-line="97" selection-start-column="102" selection-end-line="97" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/documentbuilder/PdfDocumentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/controller/CreateDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/ReservationRoomServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="264">
+          <caret line="104" column="68" lean-forward="true" selection-start-line="104" selection-start-column="68" selection-end-line="104" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/documentservice/impl/ReservationVoucherBuilderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/dao/impl/ReservationRoomDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="129" column="30" lean-forward="true" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+        <state relative-caret-position="180">
+          <caret line="197" column="42" lean-forward="true" selection-start-line="197" selection-start-column="42" selection-end-line="197" selection-end-column="42" />
           <folding>
-            <marker date="1504658051480" expanded="true" signature="5456:5539" ph="UPDATE `db_h... " />
-            <marker date="1504658051480" expanded="false" signature="9389:9405" ph="&lt;~&gt;" />
+            <marker date="1504661476534" expanded="true" signature="5456:5539" ph="UPDATE `db_h... " />
+            <marker date="1504661476534" expanded="false" signature="9794:9810" ph="&lt;~&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/hotel/service/impl/AuthServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

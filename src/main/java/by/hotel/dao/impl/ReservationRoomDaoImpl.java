@@ -192,8 +192,23 @@ public class ReservationRoomDaoImpl extends AbstractDao implements ReservationRo
                 .phone(resultSet.getString("phone"))
                 .build();
 
+        ResultSetMetaData meta = resultSet.getMetaData();
+        int numCol = meta.getColumnCount();
+
+        for (int i = 1; i < numCol+1; i++)
+        {
+            if(meta.getColumnName(i).equals("id"))
+            {
+                return reservationRoomBuilder
+                    .id(resultSet.getInt("id"))
+                    .reservation(reservation)
+                    .room(room)
+                    .build();
+            }
+
+        }
+
         return reservationRoomBuilder
-                .id(resultSet.getInt("id"))
                 .reservation(reservation)
                 .room(room)
                 .build();
