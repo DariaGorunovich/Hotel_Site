@@ -26,7 +26,7 @@ public class ReservationRoomServiceImpl extends AbstractService implements CrudS
         }catch (DAOException e){
             throw new ServiceException(e);
         }finally {
-            closeConnection(connection);
+//            closeConnection(connection);
         }
     }
 

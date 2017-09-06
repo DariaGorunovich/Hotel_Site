@@ -68,6 +68,7 @@ public class ReservationDaoImpl extends AbstractDao implements ReservationDao {
     public void addReservation(Reservation reservation,Connection connection) throws DAOException {
         PreparedStatement statement = null;
         try {
+//            statement = connection.prepareStatement("SELECT TRUE FROM `db_hotel`.`reservation` `res` WHERE `id` IN (SELECT `idReservation` FROM `db_hotel`.`reservation_room`) LIMIT 1 ");
             statement = connection.prepareStatement(ADD_RESERVATION);
             statement = fillStatement(statement, reservation);
             statement.execute();

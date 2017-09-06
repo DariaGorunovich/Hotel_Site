@@ -35,8 +35,12 @@ function generateRooms(arrayRooms) {
 function reservateRoom(e) {
     if (currentUser != null) {
         var idRoom = e.id.substr(6);
+        var roomName = $('#'+e.id).siblings('.list1').find('#room_name').text();
+        $('#idReservation').show();
+        $('#idReservation #template_room_name').val(roomName);
+        $('#idReservation #mainFormReservationInfo #id').val(idRoom);
         //var booking = document.getElementById("idBookingA");
-        setReservationForm(idRoom);
+        //setReservationForm(idRoom);
         //setTimeout(setReservationForm, 200,idRoom);
         //booking.setAttribute('href', 'main#contentBooking');
         //booking.click();

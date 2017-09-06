@@ -215,7 +215,12 @@ public class ReservationRoomDaoImpl extends AbstractDao implements ReservationRo
     }
 
     private PreparedStatement fillStatement(PreparedStatement statement, ReservationRoom reservationRoom) throws SQLException {
-        statement.setInt(1, reservationRoom.getRoom().getId());
+        if (reservationRoom.getRoom() != null) {
+            statement.setInt(1, reservationRoom.getRoom().getId());
+        } else {
+            statement.setInt(1, reservationRoom.getReservationRoomId());
+        }
+       // statement.setInt(1, reservationRoom.getRoom().getId());
         statement.setInt(2, reservationRoom.getReservation().getId());
 
         return statement;

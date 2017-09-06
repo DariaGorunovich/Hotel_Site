@@ -2,24 +2,26 @@
 $templateReservation = null;
 var flag = true;
 
-function setReservationForm(idRoom) {
-    getTemplateReservation(idRoom);
-}
-
-function getTemplateReservation(id) {
-    $.get("/templates/pages/booking/templateReservation.html", "html")
-        .done(function(html){
-            $templateReservation = html;
-            $('body').append($templateReservation);
-            var roomName = $('#room_name').text();
-            // $('#idContentReservation').html($templateReservation);
-            var tre = $('#template_room_name');
-            $(document.getElementById('mainFormReservationInfo').firstElementChild).children().last().children().last().val(id);
-        })
-        .fail(function(){ $templateRoom.html("failed to get:" + src); });
-}
+// function setReservationForm(idRoom) {
+//     getTemplateReservation(idRoom);
+// }
+//
+// function getTemplateReservation(id) {
+//     $.get("/templates/pages/booking/templateReservation.html", "html")
+//         .done(function(html){
+//             $templateReservation = html;
+//             $('body').append($templateReservation);
+//             var roomName = $('#room_name').text();
+//             // $('#idContentReservation').html($templateReservation);
+//             var tre = $('#template_room_name');
+//             $(document.getElementById('mainFormReservationInfo').firstElementChild).children().last().children().last().val(id);
+//         })
+//         .fail(function(){ $templateRoom.html("failed to get:" + src); });
+//}
 
 function getReservationData(editBody) {
+    var firstDate;
+    var secondDate;
     var result = '';
     flag = true;
     $(editBody).each(function(){
@@ -62,13 +64,18 @@ function sendReservation() {
         type: 'POST',
         url: '/add?tableName=RESERVATION' + data +'&rights='+generatePermissionsUser(),
         success: function () {
-        }});
+            var services = document.getElementById("idServicesA");
+            services.click();
+        },
+        error: function (result) {
+            alert(result.responseText);
+        }
+    });
 }
 
 function acceptReservationRoom() {
     sendReservation();
-    if(flag) {
-        var services = document.getElementById("idServicesA");
-        services.click();
-    }
+    // if(flag) {
+    //
+    // }
 }

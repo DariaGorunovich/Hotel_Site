@@ -70,6 +70,49 @@
         </section>
 
     </div>
+    <div class="login-form" id="idReservation" style="color:white; display: none">
+        <div class="modal-header">
+            <h4 class="modal-title">Бронирование</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal" id="mainFormReservationInfo">
+                <div class="form-group">
+                    <%--<label for="id" class="col-sm-3 control-label">ID</label>--%>
+                    <div class="col-sm-9">
+                        <input type="id" class="form-control" readonly id="id" name="id" placeholder="ID" style="display: none">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="template_room_name" class="col-sm-3 control-label">Room name</label>
+                    <div class="col-sm-9">
+                        <input type="name" class="form-control" readonly id="template_room_name" name="template_room_name" placeholder="Room name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dateIn" class="col-sm-3 control-label">Начало</label>
+                    <div class="col-sm-9">
+                        <input type="date" class="form-control" id="dateIn" name="dateIn" placeholder="Date In">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dateOut" class="col-sm-3 control-label">Конец</label>
+                    <div class="col-sm-9">
+                        <input type="date" class="form-control" id="dateOut" name="dateOut" placeholder="Date Out">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12" onclick="acceptReservationRoom()">
+                        <button onclick="" style="width:100%" id="idAcceptReservation"  class="btn btn-success">Подтвердить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" style="max-width: 1100px; margin: auto">
+        <div class="wrapper">
+            <h4 class="fleft">Copyright (c) 2017 Minsk See Resort</h4>
+        </div>
+    </div>
 </div>
 
 </body>

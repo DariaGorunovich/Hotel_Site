@@ -81,16 +81,24 @@ public class ReservationServiceImpl extends AbstractService implements CrudServi
     public List<Reservation> addEntity(Reservation entity) throws ServiceException {
         List<Reservation> reservations;
         Connection connection = null;
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         try {
+            java.util.Date firstDate = formatter.parse(entity.getDateIn());
+            java.util.Date secondDate = formatter.parse(entity.getDateOut());
+            if (firstDate.after(secondDate))
+                throw new ServiceException("Choosed dates incorrect!");
             connection = getConnection();
             reservationDao.addReservation(entity, connection);
 //            reservationRoom.setRoomId(entity);
             reservationRoom.setReservation(reservationDao.getLastInsertedReservation(connection));
             ReservationRoomDao reservationRoomDao = new ReservationRoomDaoImpl();
             reservationRoom.setReservation(reservationDao.getLastInsertedReservation(connection));
+            reservationRoom.setReservationRoomId(entity.getId());
             reservationRoomDao.addReservationRoom(reservationRoom, connection);
             reservations = reservationDao.getAllReservations(connection);
         } catch (DAOException e) {
+            throw new ServiceException(e);
+        } catch (ParseException e) {
             throw new ServiceException(e);
         } finally {
             closeConnection(connection);
