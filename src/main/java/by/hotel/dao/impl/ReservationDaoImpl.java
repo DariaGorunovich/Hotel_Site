@@ -142,7 +142,7 @@ public class ReservationDaoImpl extends AbstractDao implements ReservationDao {
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
             if(resultSet.next()) {
-                reservation = fillReservation(resultSet, reservationBuilder, userBuilder, discountBuilder);
+                reservation = fillReservationForDocs(resultSet, reservationBuilder, userBuilder, discountBuilder);
             }
         } catch (SQLException e) {
             throw new DAOException(e);
@@ -190,6 +190,23 @@ public class ReservationDaoImpl extends AbstractDao implements ReservationDao {
     }
 
     private Reservation fillReservation(ResultSet resultSet, ReservationBuilder reservationBuilder, UserBuilder userBuilder, DiscountBuilder discountBuilder) throws SQLException{
+        return reservationBuilder.id(resultSet.getInt("id"))
+                .dateIn(resultSet.getDate("dateIn"))
+                .dateOut(resultSet.getDate("dateOut"))
+                .user(userBuilder.id(resultSet.getInt("idUser"))
+                        .passportNumber(resultSet.getString("passportNumber"))
+                        .name(resultSet.getString("name"))
+                        .surname(resultSet.getString("surname"))
+                        .mobilePhone(resultSet.getString("mobilePhone"))
+                        .build())
+                .costAdditionalServices(resultSet.getInt("costAdditionalServices"))
+                .discount(discountBuilder.id(resultSet.getInt("idDiscount"))
+                        .name(resultSet.getString("discountName"))
+                        .build())
+                .build();
+    }
+
+    private Reservation fillReservationForDocs(ResultSet resultSet, ReservationBuilder reservationBuilder, UserBuilder userBuilder, DiscountBuilder discountBuilder) throws SQLException{
         return reservationBuilder.id(resultSet.getInt("idReservation"))
                 .dateIn(resultSet.getDate("dateIn"))
                 .dateOut(resultSet.getDate("dateOut"))

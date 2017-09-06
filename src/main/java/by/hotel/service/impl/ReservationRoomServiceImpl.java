@@ -113,6 +113,7 @@ public class ReservationRoomServiceImpl extends AbstractService implements CrudS
 
     public ReservationRoom buildEntity(Map<String, String[]> params) throws ServiceException {
         return new ReservationRoomBuilder()
+                .id(Integer.parseInt(params.get("id")[0]))
                 .reservation(new ReservationBuilder().id(Integer.parseInt(params.get("idReservation")[0])).build())
                 .room(new RoomBuilder().id(Integer.parseInt(params.get("idRoom")[0])).build())
                 .build();

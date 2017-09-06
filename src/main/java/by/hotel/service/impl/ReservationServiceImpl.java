@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ReservationServiceImpl extends AbstractService implements CrudServiceExtended<Reservation> {
-    private ReservationRoom reservationRoom;
+    private ReservationRoom reservationRoom = new ReservationRoom();
     private ReservationDao reservationDao = new ReservationDaoImpl();
 
     public List<String> getAllHeaders() throws ServiceException {
@@ -84,6 +84,7 @@ public class ReservationServiceImpl extends AbstractService implements CrudServi
         try {
             connection = getConnection();
             reservationDao.addReservation(entity, connection);
+//            reservationRoom.setRoomId(entity);
             reservationRoom.setReservation(reservationDao.getLastInsertedReservation(connection));
             ReservationRoomDao reservationRoomDao = new ReservationRoomDaoImpl();
             reservationRoom.setReservation(reservationDao.getLastInsertedReservation(connection));

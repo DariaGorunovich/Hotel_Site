@@ -34,9 +34,9 @@
                     <table class="table table-hover table-bordered">
                         <tbody>
                             <c:forEach var="item" items="${names}">
-                                <c:if test = "${item != 'reservation_room'}">
+                                <%--<c:if test = "${item != 'reservation_room'}">--%>
                                     <tr><td><input type="text" style="width: 100%" disabled="disabled" value="${item}" class="head"/></td></tr>
-                                </c:if>
+                                <%--</c:if>--%>
                             </c:forEach>
                         </tbody>
                     </table>

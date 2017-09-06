@@ -5,14 +5,42 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ReservationRoom {
+    private Integer roomId;
     private Room room;
     private Reservation reservation;
+    private Integer reservationRoomId;
+    private Integer reservationId;
+
+    public Integer getReservationRoomId() {
+        return reservationRoomId;
+    }
+
+    public void setReservationRoomId(Integer reservationRoomId) {
+        this.reservationRoomId = reservationRoomId;
+    }
+
+    public Integer getReservationId() {
+        return reservationId;
+    }
+
+    public void setReservationId(Integer reservationId) {
+        this.reservationId = reservationId;
+    }
+
+    public Integer getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(Integer roomId) {
+        this.roomId = roomId;
+    }
 
     public ReservationRoom(){super();}
 
     public ReservationRoom(ReservationRoomBuilder reservationRoomBuilder){
         this.room = reservationRoomBuilder.getRoom();
         this.reservation = reservationRoomBuilder.getReservation();
+        this.roomId = reservationRoomBuilder.getId();
     }
 
     public Room getRoom() {

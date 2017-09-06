@@ -125,7 +125,19 @@ public class ReservationRoomDaoImpl extends AbstractDao implements ReservationRo
     }
 
     public void updateReservationRoom(ReservationRoom reservationRoom,Connection connection) throws DAOException {
-        throw new UnsupportedOperationException("Unsupported operation!");
+        PreparedStatement statement = null;
+        try {
+            statement = connection.prepareStatement("UPDATE `db_hotel`.`reservation_room` SET `idRoom`=?, `idReservation`=? WHERE `id`=?");
+            statement.setInt(1,reservationRoom.getRoom().getId());
+            statement.setInt(2,reservationRoom.getReservation().getId());
+            statement.setInt(3,reservationRoom.getRoomId());
+            statement.execute();
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            closeStatement(statement, null);
+        }
+        //throw new UnsupportedOperationException("Unsupported operation!");
     }
 
     @Override
@@ -180,7 +192,9 @@ public class ReservationRoomDaoImpl extends AbstractDao implements ReservationRo
                 .phone(resultSet.getString("phone"))
                 .build();
 
-        return reservationRoomBuilder.reservation(reservation)
+        return reservationRoomBuilder
+                .id(resultSet.getInt("id"))
+                .reservation(reservation)
                 .room(room)
                 .build();
     }

@@ -134,6 +134,10 @@ function getData(editBody) {
             if(this.className=='col-sm-8') {
                 var key = $(this.firstElementChild).attr('name');
                 var value = $(this.firstElementChild).val();
+                if (key == 'res_room_id') {
+                    key = 'idRoom';
+                    value = "1";
+                }
                 if(key == 'id' && value == ''){
                     value ="0";
                 }else{
@@ -213,7 +217,7 @@ var mapStringTable = {
     "user":"user",
     "room":"room",
     "role":"role",
-    // "reservation_room":"reservation_room",
+    "reservation_room":"reservation_room",
     "reservation":"reservation",
     "discount":"discount",
     "review":"review"

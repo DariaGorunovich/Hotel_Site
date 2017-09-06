@@ -64,7 +64,7 @@ public class Constants {
     public static final String UPDATE_RESERVATION_PARKING_SPACE = "UPDATE `db_hotel`.`reservation_parking_space` SET `idParkingSpace`=?, `idReservation`=? WHERE `idParkingSpace`=? AND `idReservation`=?";
     public static final String GET_RESERVATION_PARKING_SPACE = GET_ALL_RESERVATION_PARKING_SPACES.concat(" WHERE `idParkingSpace` = ? AND `idReservation` = ?");
 
-    public static final String GET_ALL_RESERVATION_ROOMS = "SELECT `idRoom`,`idRoomType`,`floor`, `phone`, `roomsCount`, `bedsCount`,`costPerDay`, `additionalInfo`,`idReservation`,`idUser`, `user`.`name`, `surname`, `passportNumber`,`mobilePhone`, `dateIn`, `dateOut`, `costAdditionalServices`, `idDiscount`,`discount`.`name` AS `discountName`" +
+    public static final String GET_ALL_RESERVATION_ROOMS = "SELECT `reservation_room`.`id`,`idRoom`,`idRoomType`,`floor`, `phone`,`room`.`name`,`roomsCount`, `bedsCount`,`bathroomsCount`,`path`,`costPerDay`, `additionalInfo`,`idReservation`,`idUser`, `user`.`name`, `surname`, `passportNumber`,`mobilePhone`, `dateIn`, `dateOut`, `costAdditionalServices`, `idDiscount`,`discount`.`name` AS `discountName`" +
             "FROM (((((`db_hotel`.`reservation_room`" +
             "LEFT OUTER JOIN `db_hotel`.`reservation`" +
             "ON `reservation_room`.`idReservation` = `reservation`.`id`)" +
@@ -75,7 +75,7 @@ public class Constants {
             "LEFT OUTER JOIN `db_hotel`.`room_type`" +
             "ON `idRoomType` = `room_type`.`id`)" +
             "LEFT OUTER JOIN `db_hotel`.`discount`" +
-            "ON `idRoom` = `discount`.`id`)";
+            "ON `idRoom` = `discount`.`id`) ORDER BY `reservation_room`.`id` ASC";
     public static final String ADD_RESERVATION_ROOM = "INSERT INTO `db_hotel`.`reservation_room` (`idRoom`, `idReservation`) VALUES (?,?)";
     public static final String REMOVE_RESERVATION_ROOM = "DELETE FROM `db_hotel`.`reservation_room` WHERE `idRoom`=? AND `idReservation`=?";
     public static final String UPDATE_RESERVATION_ROOM = "UPDATE `db_hotel`.`reservation_room` SET `idRoom`=?, `idReservation`=? WHERE `idRoom`=? AND `idReservation`=?";

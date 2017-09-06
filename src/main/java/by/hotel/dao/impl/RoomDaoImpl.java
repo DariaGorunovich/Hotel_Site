@@ -88,7 +88,7 @@ public class RoomDaoImpl extends AbstractDao implements RoomDao {
             statement.setInt(1, idRoom);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                room = fillRoom(resultSet,roomBuilder);
+                room = fillRoomForDocs(resultSet,roomBuilder);
             }
         } catch (SQLException e) {
             throw new DAOException(e);
@@ -179,6 +179,23 @@ public class RoomDaoImpl extends AbstractDao implements RoomDao {
                         .additionalInfo(resultSet.getString("additionalInfo"))
                         .bathroomsCount(resultSet.getInt("bathroomsCount"))
                         .size(resultSet.getInt("size")).build())
+                .floor(resultSet.getInt("floor"))
+                .phone(resultSet.getString("phone"))
+                .name(resultSet.getString("name"))
+                .path(resultSet.getString("path"))
+                .build();
+    }
+
+    private Room fillRoomForDocs(ResultSet resultSet, RoomBuilder roomBuilder) throws SQLException {
+        RoomTypeBuilder roomTypeBuilder  = new RoomTypeBuilder();
+        return roomBuilder.id(resultSet.getInt("idReservation"))
+                .roomType(roomTypeBuilder.id(resultSet.getInt("idRoomType"))
+                        .roomsCount(resultSet.getInt("roomsCount"))
+                        .bedsCount(resultSet.getInt("bedsCount"))
+                        .costPerDay(resultSet.getInt("costPerDay"))
+                        .additionalInfo(resultSet.getString("additionalInfo"))
+                        .bathroomsCount(resultSet.getInt("bathroomsCount"))
+                        .size(resultSet.getInt("costPerDay")).build())
                 .floor(resultSet.getInt("floor"))
                 .phone(resultSet.getString("phone"))
                 .name(resultSet.getString("name"))

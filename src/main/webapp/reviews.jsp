@@ -30,7 +30,7 @@
 <body class="contentMain" onload="new ElementMaxHeight();">
 <div class="main">
     <jsp:include page="header.jsp" />
-    <div id="content">
+    <div id="content" style = "max-width: 800px; margin: 0 auto;">
         <section id=contentTestimonials class="container" style = "display: block">
             <div class="indent">
                 <h2 class="indent_h2">Отзывы клиентов</h2>
