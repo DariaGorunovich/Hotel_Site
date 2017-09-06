@@ -60,7 +60,7 @@
                             <li><a href="/services" id="idServicesA">Услуги</a></li>
                             <li><a href="#contentGallery" id="idConGal">Галерея</a></li>
                             <li><a href="/reviews" id="idConTest">Отзывы</a></li>
-                            <li><a id="idBookingA">Бронь</a></li>
+                            <%--<li><a id="idBookingA">Бронь</a></li>--%>
 
                             <c:if test = "${sessionScope.email == null}">
                                 <li><a href="#entry" id="idEntryA">Вход</a></li>
@@ -70,7 +70,7 @@
                             </c:if>
                             <c:out value = "${sessionScope.role}"/>
                             <c:if test = "${sessionScope.role == 'ROLE_ADMIN'}">
-                                <li><a id="idDocsRef" href="#documents" style="">Документы</a></li>
+                                <li><a id="idDocsRef" href="/documents" style="">Документы</a></li>
                                 <li><a id="idAdminRef" href="/admin_start" style="">Админка</a></li>
                             </c:if>
 
